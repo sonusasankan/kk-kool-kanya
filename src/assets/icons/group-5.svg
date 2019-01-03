@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="333" height="437" viewBox="0 0 333 437">
+    <g fill="none" fill-rule="evenodd" transform="translate(-72 19)">
+        <path stroke="#F6F7FC" stroke-linecap="square" stroke-width="26" d="M124.547 0L.453 130.585M178.546 40.453L.454 224.547M228.546 94.454L22.454 308.546M281.546 144.455l-157.092 160.09M333.547 201.456L228.453 304.544M386.545 253l-39.09 40.544" opacity=".34"/>
+        <circle cx="57" cy="128" r="20" fill="#FEDCC6" opacity=".4"/>
+        <circle cx="118" cy="202" r="20" fill="#FEDCC6" opacity=".4"/>
+        <circle cx="193" cy="277" r="20" fill="#FEDCC6" opacity=".4"/>
+        <circle cx="118" cy="334" r="20" fill="#FEDCC6" opacity=".4"/>
+        <circle cx="57" cy="269" r="20" fill="#FEDCC6" opacity=".4"/>
+        <circle cx="57" cy="128" r="20" fill="#FEDCC6" opacity=".4"/>
+        <circle cx="118" cy="202" r="20" fill="#FEDCC6" opacity=".4"/>
+        <circle cx="193" cy="277" r="20" fill="#FEDCC6" opacity=".4"/>
+        <circle cx="118" cy="334" r="20" fill="#FEDCC6" opacity=".4"/>
+        <circle cx="57" cy="269" r="20" fill="#FEDCC6" opacity=".4"/>
+        <circle cx="57" cy="404" r="20" fill="#FEDCC6" opacity=".4"/>
+    </g>
+</svg>

@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../assets/icons/fonts/icomoon.eot?e83gh0');
+  src:  url('../assets/icons/fonts/icomoon.eot?e83gh0#iefix') format('embedded-opentype'),
+    url('../assets/icons/fonts/icomoon.ttf?e83gh0') format('truetype'),
+    url('../assets/icons/fonts/icomoon.woff?e83gh0') format('woff'),
+    url('../assets/icons/fonts/icomoon.svg?e83gh0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-group-8:before {
+  content: "\e900";
+}
+.icon-ic-achitecture-48:before {
+  content: "\e901";
+}
+.icon-ic-bpo-48:before {
+  content: "\e902";
+}
+.icon-ic-education-48:before {
+  content: "\e904";
+}
+.icon-ic-fmgc-48:before {
+  content: "\e907";
+}
+.icon-ic-heart-active-2-32:before {
+  content: "\e90b";
+}
+.icon-ic-heart-active-24:before {
+  content: "\e90d";
+}
+.icon-ic-heart-disable-24:before {
+  content: "\e90e";
+}
+.icon-ic-heart-disable-24_2:before {
+  content: "\e90f";
+}
+.icon-ic-heart-grey-48:before {
+  content: "\e910";
+}
+.icon-ic-heart-grey-48_2:before {
+  content: "\e911";
+}
+.icon-ic-hospital-48:before {
+  content: "\e912";
+}
+.icon-ic-industry-24:before {
+  content: "\e913";
+}
+.icon-ic-job-24:before {
+  content: "\e914";
+}
+.icon-ic-location-24:before {
+  content: "\e915";
+}
+.icon-ic-location-24_2:before {
+  content: "\e916";
+}
+.icon-ic-location-24_3:before {
+  content: "\e917";
+}
+.icon-ic-logistic-48:before {
+  content: "\e918";
+}
+.icon-ic-loudspeaker-48:before {
+  content: "\e919";
+}
+.icon-ic-mouse-40:before {
+  content: "\e91a";
+}
+.icon-ic-search-48:before {
+  content: "\e91b";
+}

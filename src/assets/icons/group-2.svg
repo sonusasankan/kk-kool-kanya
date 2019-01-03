@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="460" height="195" viewBox="0 0 460 195">
+    <defs>
+        <path id="b" d="M121.93 140.706c63.427 16.156 123.375 24.234 179.844 24.234 57.94 0 125.304-6.676 202.09-20.028 33.192-5.771 64.778 16.457 70.55 49.648a61 61 0 0 1 .046 20.63l-27.6 163.067c-4.967 29.344-30.384 50.82-60.145 50.82H106.422c-33.69 0-61-27.31-61-61v-.163l.451-168.259c.09-33.69 27.474-60.926 61.164-60.836a61 61 0 0 1 14.893 1.887z"/>
+        <filter id="a" width="113.2%" height="124.1%" x="-6.6%" y="-10.7%" filterUnits="objectBoundingBox">
+            <feOffset dy="4" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="11"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.270588235 0 0 0 0 0.188235294 0 0 0 0 0.564705882 0 0 0 1 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#E5D2FD" fill-opacity=".323" d="M393.113 119.798c-71.851-5.936-138.474-4.043-199.867 5.681-60.898 9.646-130.05 32.086-207.459 67.322-30.662 13.957-66.833.415-80.79-30.247a61 61 0 0 1-5.478-25.935l1.966-180.922c.323-29.753 22.065-54.932 51.454-59.587l409.614-64.876c33.274-5.27 64.521 17.432 69.791 50.706l.027.173 26.04 167.523c5.175 33.29-17.616 64.47-50.906 69.646a61 61 0 0 1-14.392.516z" opacity=".1"/>
+        <g opacity=".2" transform="rotate(-161 203.136 140.585)">
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <use fill="#C49EF5" fill-opacity=".459" xlink:href="#b"/>
+        </g>
+    </g>
+</svg>

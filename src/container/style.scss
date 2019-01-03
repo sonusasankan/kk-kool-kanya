@@ -1,0 +1,14 @@
+.tab-pane.active {
+    animation-name: fadeIn;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

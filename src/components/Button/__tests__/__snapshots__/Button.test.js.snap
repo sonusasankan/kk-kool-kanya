@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render correctly in "debug" mode 1`] = `
+<button
+  className="normal sc-bdVaJa kMeujv"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Primary button
+</button>
+`;
+
+exports[`Button should render correctly in "debug" mode 2`] = `
+<button
+  className="clicked sc-bdVaJa kMeujv"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Primary button
+</button>
+`;
+
+exports[`Button should render correctly in "debug" mode 3`] = `
+<button
+  className="leave sc-bdVaJa kMeujv"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Primary button
+</button>
+`;

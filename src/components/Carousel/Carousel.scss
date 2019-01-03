@@ -1,0 +1,34 @@
+.featured-categories{
+    &.owl-theme{
+        .owl-nav{
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            .owl-prev,
+            .owl-next{
+                color: #FFF;
+                font-size: 2rem;
+                width: 25px;
+                // height: 25px;
+                border-radius: 50%;
+            }
+            &.disabled{
+                display: none;
+            }
+        }
+        .owl-item{
+            .item{
+                border-radius: 5px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+.owl-carousel .owl-stage-outer{
+    padding-top: 16px!important;
+    margin-top: -16px!important;
+}

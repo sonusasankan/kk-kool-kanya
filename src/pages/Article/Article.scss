@@ -1,0 +1,107 @@
+.section-bottom-margin{
+    margin-bottom: 56px;
+}
+
+.bottom-clamped{
+    position: sticky;
+    top: 0;
+}
+
+.article-card{
+    &.textOverlay{
+        margin-bottom: 0;
+    }
+    &.landscape{
+        .card__img{
+            min-width: 160px;
+            max-width: 160px;
+        }
+    }
+}
+.article{
+    &__content{
+        font-size: 16px;
+        line-height: 24px;
+        @media (min-width: 768px){
+            max-width: calc(100% - 4rem);
+            padding-right: 24px;
+        }
+        h3{
+            font-size: 1.5rem;
+            padding: 24px 0;
+            line-height: 0.96;
+        }
+        p{
+            line-height: 1.44;
+            color: #8d959d;
+        }
+        &__sidebar{
+            min-width: 4rem;
+            order: -1;
+            @media (min-width: 768px) {
+                order: 0;
+                max-width: 4rem;
+            }
+            &__inner{
+                top: 25vh;
+                @media (min-width: 768px){
+                    flex-direction: column;
+                }
+            }
+        }
+        &__bottom{
+            position: relative;
+            padding: 54px 0;
+            @media (min-width: 768px){
+                padding: 40px 0 36px 4rem;
+            }
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-image: linear-gradient( 90deg, rgba(223, 223, 223, 0) , #DFDFDF ,rgba(223, 223, 223, 0) );
+            }
+        }
+    }
+    &__readmore{
+        color: #9b9b9b;
+        &__wrapper{
+            padding: 39px 0 0 0;
+        }
+    }
+    &__similar{
+        padding: 5rem 0;
+        background: #f6f7fc;
+    }
+}
+.article__banner-img{
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+}
+.kk-article-details{
+    &__title{
+        &--main{
+            padding-bottom: 2rem;
+        }
+    }
+    &__author{
+        margin-bottom: 2.5rem;
+        &__img{
+            display: block;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+        &__name{
+            font-size: 1.125rem;
+            color: #4f565e;
+        }
+    }
+}
