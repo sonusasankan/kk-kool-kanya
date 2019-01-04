@@ -10,7 +10,7 @@ const JobPlainCard = ({ logo, industry, openings }) => {
     <Card cardType="kk-job-plain-card">
       <CardBody>
         <div className="kk-logo-crcle-wrapper text-center my-3">
-          <img src={logo} alt="" />
+          <img src={logo} alt="industry logo" />
         </div>
         <h5 className="text-center kk-color-black">{industry}</h5>
         <CardDetails center={true}>
