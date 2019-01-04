@@ -149,5 +149,19 @@ form {
         }
     } 
   }
-  
+  .custom-checkbox{
+    font-size: 12px;
+    margin-top: 1.5rem;
+    .custom-control-label{
+      &::before{
+        border-radius: 0;
+        border: 1px solid #979797;
+        background-color: #FFF;
+        top: 0;
+      }
+      &::after{
+        top: 0;
+      }
+    }
+  }
 }

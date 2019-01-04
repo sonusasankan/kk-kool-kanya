@@ -25,6 +25,10 @@ const forgotPassword = ({
     backToLogin();
   };
 
+  const _validatorMsg = () => {
+    console.log('it');
+  }
+
   return (
     <Modal title={title} subTitle={subTitle} onClose={onClose}>
       <div className="kk-sign-up-form">
@@ -37,8 +41,9 @@ const forgotPassword = ({
           </div>
           <Button
             styleName="curved w-100 mt-2 mt-md-4"
-            type="submit"
+            // type="submit"
             className="btn btn-primary"
+            onClick={_validatorMsg()}
           >
             Send link
           </Button>

@@ -48,14 +48,20 @@ const signIn = ({ title, onConfirm, afterClose, hideModal, subTitle,  onForgotPa
             />
             <label className="kk-custom-label" htmlFor="Password">Password</label>
           </div>
-          <div className="text-left">
-            <label className="kk-custom-label kk-custom-label--checkbox" htmlFor="remember-me">
+          <div
+            className="custom-control custom-checkbox text-left"
+          >
               <input
-                type="checkbox"
-                id="remember-me"
+                  type="checkbox"
+                  className="custom-control-input"
+                  id="remember-me"
               />
-              <span className="ml-2">Remember Me</span>
-            </label>
+              <label
+                  className="custom-control-label"
+                  htmlFor="remember-me"
+              >
+                Remember Me
+              </label>
           </div>
           <Button styleName="curved w-100 mt-2 mt-md-4" type="submit" className="btn btn-primary">
             Sign In

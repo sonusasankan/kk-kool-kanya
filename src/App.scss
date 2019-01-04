@@ -583,7 +583,7 @@ h3.kk-section-title {
   
   @media (min-width: 576px){
     max-width: 540px;
-}
+  }
   @media (min-width: 768px) {
     max-width: 720px;
   }
@@ -601,6 +601,10 @@ h3.kk-section-title {
       font-size: 54px;
       max-width: 50%;
     }
+  }
+  .kk-search-input{
+    margin-left: 0;
+    max-width: 660px;
   }
 }
 
