@@ -86,7 +86,7 @@ class Home extends Component {
         <div className="col-md-6 col-lg-4">
         <CompanyCard
           companyid={element._id}
-          badges={[BadgeList.MATERNITY_BENEFITS, BadgeList.SAFETY, BadgeList.WORKLIFE_BALANCE]}
+          badges={[BadgeList.MATERNITY_BENEFITS, BadgeList.SAFETY, BadgeList.WORKLIFE_BALANCE, BadgeList.WORKLIFE_BALANCE]}
           badgePosition="top left"
           locations={element.otherlocations.join(", ")}
           title={element.name}

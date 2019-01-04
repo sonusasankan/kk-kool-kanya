@@ -25,16 +25,6 @@ const forgotPassword = ({
     backToLogin();
   };
 
-  // const _submitHandler = (e) => {
-  //   e.preventDefault();
-  //   console.log(e);
-  // }
-
-  function _submitHandler(e){
-    alert(e);
-    e.preventDefault();
-  }
-
   return (
     <Modal title={title} subTitle={subTitle} onClose={onClose}>
       <div className="kk-sign-up-form">

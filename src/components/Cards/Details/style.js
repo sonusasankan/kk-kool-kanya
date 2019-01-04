@@ -13,6 +13,9 @@ export const DetailsWrapper = styled.div`
 export const Details = styled.div`
     color: ${Color.fontLight};
     font-size: 0.875rem;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
     text-align: ${props => (props.center? "center": "left" )}
 `;
 
