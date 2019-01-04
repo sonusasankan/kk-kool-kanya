@@ -50,6 +50,7 @@ class Carousel extends Component {
 
     render(){
         const {
+            ref,
             options,
             onTranslated,
             children
@@ -57,7 +58,7 @@ class Carousel extends Component {
         return (
             <React.Fragment>
                 <OwlCarousel
-                    ref="temp"
+                    ref={(ref) ? ref : "temp"}
                     className="owl-theme featured-categories"
                     options={options}
                     onTranslated = {onTranslated}
