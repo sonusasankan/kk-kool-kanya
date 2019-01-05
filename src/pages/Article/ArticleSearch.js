@@ -43,6 +43,10 @@ class ArticleSearch extends Component {
         console.log(category, e.target);
     }
 
+    componentDidMount(){
+        // console.log(this.refs.trigger('refresh.owl.carousel'))
+    }
+
     render(){
         return(
             <React.Fragment>
@@ -64,7 +68,6 @@ class ArticleSearch extends Component {
                             <div className="dropdown__title">Sort</div>
                             <Dropdown
                                 options={['Latest', 'Popularity', 'Reading Time']}
-                                onSelect={console.log(this)}
                                 defualtOption="Latest"
                             />
                         </div>
