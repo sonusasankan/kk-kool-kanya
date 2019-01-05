@@ -3,24 +3,13 @@ import PropTypes from 'prop-types';
 
 import { Badge, BadgeWrapper } from './style';
 
-// function createBadges(badgesArr) {
-//   badgesArr.map(element => {
-//     console.log(element);
-//     return (
-//       <div>     
-//         <img src={element} alt="badge"/>
-//       </div>
-//     )
-//   });
-//   return badgesArr;
-// }
-
 const badge = ({
   top,
   right,
   bottom,
   left,
   badges,
+  numberOfBadges
 }) => (
   <BadgeWrapper
     top={top}
@@ -28,13 +17,25 @@ const badge = ({
     bottom={bottom}
     left={left}
     className="card__badges"
+    numberOfBadges={numberOfBadges}
   >
     {badges.map((element, index) => {
-      return (
-        <Badge className='kk-badge' style={{zIndex : 10 - index}}>
-          <img className="img-fluid" src={element} alt="badge" />
-        </Badge>
-      )
+      if(!numberOfBadges){
+        return (
+          <Badge className='kk-badge' style={{zIndex : 10 - index}}>
+            <img className="img-fluid" src={element} alt="badge" />
+          </Badge>
+        )
+      }
+      else{
+        if(index < numberOfBadges){
+          return (
+            <Badge className='kk-badge' style={{zIndex : 10 - index}}>
+              <img className="img-fluid" src={element} alt="badge" />
+            </Badge>
+          )
+        }
+      }
     })}
   </BadgeWrapper>
 );

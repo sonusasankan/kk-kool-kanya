@@ -25,25 +25,21 @@ const forgotPassword = ({
     backToLogin();
   };
 
-  const _validatorMsg = () => {
-    console.log('it');
-  }
-
   return (
     <Modal title={title} subTitle={subTitle} onClose={onClose}>
       <div className="kk-sign-up-form">
-        <form>
+        <form className="mx-2">
           <div className="form-group">
             <input type="email" className="form-control" id="Email" />
             <label className="kk-custom-label" htmlFor="Email">
-              Email
+              Enter your registered Email ID
             </label>
           </div>
           <Button
             styleName="curved w-100 mt-2 mt-md-4"
-            // type="submit"
+            type="submit"
+            onClick={onClose}
             className="btn btn-primary"
-            onClick={_validatorMsg()}
           >
             Send link
           </Button>

@@ -12,7 +12,7 @@ const CompanyCard = ({badges, img, alt, title, locations, industry, openings, lo
   //  console.log(data)
   return (
     <Card cardType="card__company">
-      {badges ? <CardBadge top left badges={badges} /> : ""}
+      {badges ? <CardBadge top left badges={badges} numberOfBadges={3} /> : ""}
       <FavButton top right/>
       <CardImage src={img} alt={alt} />
       <CardHead>
