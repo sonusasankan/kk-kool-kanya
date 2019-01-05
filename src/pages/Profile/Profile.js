@@ -7,6 +7,9 @@ import Avatar from '../../components/Avatar';
 import {CardDetails} from '../../components/Cards';
 import {ContentWrapper} from './style';
 import {Sidebar} from '../Saved/style';
+import '../Setting/bgElements.scss';
+
+import {Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 class Profile extends Component{
     constructor(props){
@@ -16,9 +19,36 @@ class Profile extends Component{
 
     render(){
         return(
-            <React.Fragment>
+            <ParallaxProvider>
                 <section className="container-fluid" style={{backgroundColor: '#fbfbfb'}}>
-                    <div className="container">
+                    <Parallax
+                            className="kk-setting-bg kk-setting-bg--1"
+                            offsetYMax={120}
+                            offsetYMin={-120}
+                            slowerScrollRate
+                            tag="figure"
+                        >
+                            <div className="kk-bg-circle--filled" />
+                        </Parallax>
+                        <Parallax
+                            className="kk-setting-bg kk-setting-bg--2"
+                            offsetYMax={80}
+                            offsetYMin={-80}
+                            slowerScrollRate
+                            tag="figure"
+                        >
+                            <div className="kk-bg-circle--bordered" />
+                        </Parallax>
+                        <Parallax
+                            className="kk-setting-bg kk-setting-bg--3"
+                            offsetYMax={40}
+                            offsetYMin={-40}
+                            slowerScrollRate
+                            tag="figure"
+                        >
+                            <div className="kk-bg-circle--light" />
+                        </Parallax>
+                    <div className="container" style={{marginTop: 72}}>
                         <div className="row">
                             <div className="col-3 d-none d-md-block">
                                 <Sidebar>
@@ -26,7 +56,7 @@ class Profile extends Component{
                                         <li><h3>My Profile</h3></li>
                                         <li><Link to='/favourites'><h3>Favourites</h3></Link></li>
                                         <li><Link to='/'><h3>Become a Kool Kanya</h3></Link></li>
-                                        <li><Link to='/'><h3>Settings</h3></Link></li>
+                                        <li><Link to='/settings'><h3>Settings</h3></Link></li>
                                     </ul>
                                 </Sidebar>
                             </div>
@@ -40,7 +70,7 @@ class Profile extends Component{
                                         <div className="kk-avatar__text">
                                             <h2>Deepti Agrawal</h2>
                                             <CardDetails icon="icon-ic-location-24">Banglore, Karnataka</CardDetails>
-                                            <CardDetails icon="icon-ic-location-24">20th February, 1995</CardDetails>
+                                            <CardDetails icon="icon-ic-dob">20th February, 1995</CardDetails>
                                         </div>
                                     </div>
                                     <div className="kk-interest border-bottom">
@@ -94,7 +124,7 @@ class Profile extends Component{
                         </div>
                     </div>
                 </section>
-            </React.Fragment>
+            </ParallaxProvider>
         )
     }
 }

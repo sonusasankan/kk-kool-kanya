@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?wew3hr');
-  src:  url('fonts/icomoon.eot?wew3hr#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?wew3hr') format('truetype'),
-    url('fonts/icomoon.woff?wew3hr') format('woff'),
-    url('fonts/icomoon.svg?wew3hr#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?lk8ihi');
+  src:  url('fonts/icomoon.eot?lk8ihi#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?lk8ihi') format('truetype'),
+    url('fonts/icomoon.woff?lk8ihi') format('woff'),
+    url('fonts/icomoon.svg?lk8ihi#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-ic_heart-liked_32:before {
+  content: "\e90a";
+  color: #f8596c;
+}
+.icon-ic-heart-32:before {
+  content: "\e90b";
+}
+.icon-ic-twitter-32:before {
+  content: "\e90c";
+}
+.icon-ic-linkedin-32:before {
+  content: "\e90d";
+}
+.icon-ic-facebook-32:before {
+  content: "\e90e";
+}
+.icon-ic-dob:before {
+  content: "\e90f";
+}
 .icon-ic-instagram-24:before {
   content: "\e906";
 }

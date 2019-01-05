@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import Colors from '../../themes/color';
 
 const ContentWrapper = styled.div`
-    margin-top: 5rem;
     padding: 2.5rem 1rem;
     background-color: #FFF;
     box-shadow: 0 2px 8px 0 rgba(52, 52, 53, 0.19);
