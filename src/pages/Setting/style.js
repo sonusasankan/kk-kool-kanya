@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import Colors from '../../themes/color';
 
 const ContentWrapper = styled.div`
-    margin-top: 5rem;
     padding: 2.5rem 1rem;
     background-color: #FFF;
     box-shadow: 0 2px 8px 0 rgba(52, 52, 53, 0.19);
@@ -51,17 +50,27 @@ const ContentWrapper = styled.div`
         padding: 2.5rem 0;p{
             margin-bottom: 32px;
         }
-        h4{
+
+        &__sub{
+            font-weight: 600;
+            font-size: 1rem;
             margin-bottom: 20px;
         }
         .kk-options{
             display: flex;
             color: rgba(0, 0, 0, 0.54);
             justify-content: space-between;
+            max-width: 468px;
+            &__text{
+                max-width: 200px;
+                background-color: red;
+            }
         }
         .kk-btn-wrapper{
             border-radius: 4px;
             overflow: hidden;
+            min-width: 96px;
+            height: 36px;
             button{
                 border: none;
                 padding: 6px 14px;
@@ -76,7 +85,10 @@ const ContentWrapper = styled.div`
     .kk-cta-row{
         margin-top: 2.5rem; 
         button{
-            min-width: 148px;
+            min-width: 100% !important;
+            @media (min-width: 768px){
+                min-width: 148px !important;
+            }
         }
     }
 `;

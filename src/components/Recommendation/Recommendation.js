@@ -33,8 +33,8 @@ import Wrapper from './style';
   componentDidMount(){
     console.log(this.props);
     this.setState({
-      personas: this.props.personas.map(element=> element.name),
-      current: this.props.personas[0].name
+      personas: this.props.list,
+      current: this.props.list[0].name
     })
   }
 

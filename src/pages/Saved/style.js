@@ -4,7 +4,7 @@ import Colors from '../../themes/color';
 const Sidebar = styled.div`
     @media (min-width: 768px){
         position: sticky;
-        top: 146px;
+        top: 152px;
         border-right: 1px solid #f0f0f0;
     }
     h3{

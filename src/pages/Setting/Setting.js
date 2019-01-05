@@ -4,6 +4,9 @@ import {MdKeyboardArrowRight} from 'react-icons/md';
 import {Button} from '../../components/Button';
 import {Sidebar} from '../Saved/style';
 import ContentWrapper from './style';
+import './bgElements.scss';
+
+import {Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 class EditSettings extends Component{
     constructor(props){
@@ -30,17 +33,46 @@ class EditSettings extends Component{
 
     render(){
         return(
-            <React.Fragment>
-                <section className="container-fluid" style={{backgroundColor: '#fbfbfb'}}>
-                    <div className="container">
+            <ParallaxProvider>
+
+                <section className="container-fluid position-realtive" style={{backgroundColor: '#fbfbfb'}}>
+                
+                    <Parallax
+                        className="kk-setting-bg kk-setting-bg--1"
+                        offsetYMax={120}
+                        offsetYMin={-120}
+                        slowerScrollRate
+                        tag="figure"
+                    >
+                        <div className="kk-bg-circle--filled" />
+                    </Parallax>
+                    <Parallax
+                        className="kk-setting-bg kk-setting-bg--2"
+                        offsetYMax={80}
+                        offsetYMin={-80}
+                        slowerScrollRate
+                        tag="figure"
+                    >
+                        <div className="kk-bg-circle--bordered" />
+                    </Parallax>
+                    <Parallax
+                        className="kk-setting-bg kk-setting-bg--3"
+                        offsetYMax={40}
+                        offsetYMin={-40}
+                        slowerScrollRate
+                        tag="figure"
+                    >
+                        <div className="kk-bg-circle--light" />
+                    </Parallax>
+                    <div className="container" style={{marginTop: 72}}>
                         <div className="row">
                             <div className="col-3 d-none d-md-block">
                                 <Sidebar>
                                     <ul>
-                                        <li><h3>My Profile</h3></li>
+                                        <li><Link to='/profile'><h3>My Profile</h3></Link></li>
                                         <li><Link to='/favourites'><h3>Favourites</h3></Link></li>
                                         <li><Link to='/'><h3>Become a Kool Kanya</h3></Link></li>
-                                        <li><Link to='/'><h3>Settings</h3></Link></li>
+                                        <li><h3>Settings</h3></li>
                                     </ul>
                                 </Sidebar>
                             </div>
@@ -61,7 +93,7 @@ class EditSettings extends Component{
                                         <h3 className="mb-4">Notification Settings</h3>
                                         <p>You're receiving notigications at <span>agrawal92.deepti@gmail.com</span></p>
 
-                                        <h4>Receiving Notifications for:</h4>
+                                        <div className="kk-notifications__sub">Receiving Notifications for:</div>
                                         <div className="kk-options mb-3">
                                             <div>New Articles</div>
                                             <div className="kk-btn-wrapper">
@@ -91,7 +123,7 @@ class EditSettings extends Component{
                         </div>
                     </div>
                 </section>
-            </React.Fragment>
+            </ParallaxProvider>
         )
     }
 }

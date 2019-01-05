@@ -1,0 +1,42 @@
+.kk-setting-bg{
+    position: absolute;
+    .kk-bg-circle{
+        &--filled{
+            height: 62px;
+            width: 62px;
+            border-radius: 50%;
+            background-color: #703db2;
+            opacity: 0.5;
+        }
+        &--bordered{
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            border: 5px solid hsla(266, 49%, 47%, 0.5);
+        }
+        &--light{
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: #fff1e8;
+        }
+    }
+    &--1{
+        top: 238px;
+        left: 0;
+        @media (min-width: 768px){
+            left: -12px;
+        }
+    }
+    &--2{
+        top: 280px;
+        left: 0;
+        @media (min-width: 768px){
+            left: 30px;
+        }
+    }
+    &--3{
+        top: 320px;
+        left: 80px;
+    }
+}
