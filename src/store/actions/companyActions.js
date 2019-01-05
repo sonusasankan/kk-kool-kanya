@@ -51,7 +51,7 @@ export function fetchCompanyLists(filter) {
             .then(handleErrors)
             .then(res => res.json())
             .then(json => {
-                // console.log(json)
+                console.log(json)
                 dispatch(fetchCompanyListsSuccess(json));
                 return json;
             })

@@ -9,6 +9,7 @@ import BreadCrumb from "../components/BreadCrumb";
 import { Button } from "../components/Button";
 import { CompanyCard } from "../components/CompanyCard";
 import SearchContainer from "../components/Search/SearchContainer"
+import {Pagination} from "../components/Pagination"
 
 //external components//
 import { FiChevronDown } from "react-icons/fi";
@@ -16,48 +17,14 @@ import { FiChevronDown } from "react-icons/fi";
 //images//
 import companyImage from "../assets/images/img-company-descrition-1.jpg";
 
-export default class CompanySearch extends Component {
+// for stores
+import { connect } from "react-redux";
+import { fetchCompanyLists } from "./../store/actions/companyActions";
+
+class CompanySearch extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      companies: [
-        {
-          name: "Godrej",
-          img: companyImage,
-          imgCaption: "Some information about image",
-          locations: ["Bangalore", "Delhi", "Noida"],
-          rating: 4.5,
-          Industry: "Consumer products",
-          openings: 25,
-        },
-        {
-          name: "IBM",
-          img: companyImage,
-          imgCaption: "Some information about image",
-          locations: ["Bangalore", "Noida"],
-          rating: 4.5,
-          Industry: "Information technology",
-          openings: 5
-        },
-        {
-          name: "flipkart",
-          img: companyImage,
-          imgCaption: "Some information about image",
-          locations: ["Delhi", "Noida"],
-          rating: 4.0,
-          Industry: "Consumer products",
-          openings: 21
-        },
-        {
-          name: "Paytm",
-          img: companyImage,
-          imgCaption: "Some information about image",
-          locations: ["Delhi", "Noida"],
-          rating: 3.5,
-          Industry: "Consumer products",
-          openings: 10
-        }
-      ],
     };
   }
 
@@ -80,7 +47,44 @@ export default class CompanySearch extends Component {
     document.querySelector('#kk-filter-wrapper-outer').classList.toggle('show');
     document.querySelector('.kk-header').classList.remove('down');
   }
+
+  componentWillMount() {
+    this.props.dispatch(fetchCompanyLists());
+  }
+
+  displayCompanies = () =>{
+    return(
+      this.props.companyList.items.companylist.slice(0,6).map(company => {
+        return (
+          <div className="col-md-4">
+            <CompanyCard
+              locations={company.otherlocations.join(",")}
+              title={company.name}
+              img={company.img}
+              alt="img alt"
+              industry="IT"
+              openings="23"
+              rating="4.5"
+            />
+          </div>
+        );
+      })
+    )
+  }
+
+
+  //pagination
+  // nextPage = () => {
+  //   this.displayCompanies()
+  // }
+ 
   render() {
+    if(!this.props.companyList.items.companylist) {
+      return (
+        <h1>Loading...</h1>
+      )
+    }
+
     let filters = [
       {inputType: "checkbox", category: "Industry", item: ["Fashion Design","Advertising","UX Design","UI Design","Cooking","People Management"]},
       {inputType: "checkbox", category: "Location", item: ["Bengaluru","Pune","Punjab","Maharastra","Shimla","Mughalsarai","Kerela","Chattisgarh"]},
@@ -144,23 +148,27 @@ export default class CompanySearch extends Component {
                     </div>
                     <div className="d-md-none kk-filter-head__item-count mt-0 mb-3">Showing 158 results</div>
                   </div>
-                  
-                  {this.state.companies.map(company => {
-                    return (
-                      <div className="col-md-4">
-                        <CompanyCard
-                          locations={company.locations.join(",")}
-                          title={company.name}
-                          img={company.img}
-                          alt="img alt"
-                          industry="IT"
-                          openings="23"
-                          rating="4.5"
-                        />
-                      </div>
-                    );
-                  })}
+                    
+                  {
+                    this.displayCompanies()
+                  //   this.props.companyList.items.companylist.slice(0,6).map(company => {
+                  //   return (
+                  //     <div className="col-md-4">
+                  //       <CompanyCard
+                  //         locations={company.otherlocations.join(",")}
+                  //         title={company.name}
+                  //         img={company.img}
+                  //         alt="img alt"
+                  //         industry="IT"
+                  //         openings="23"
+                  //         rating="4.5"
+                  //       />
+                  //     </div>
+                  //   );
+                  // })
+                  }
                 </div>
+                <Pagination nextPage={()=>{this.displayCompanies()}}/>
               </div>
             </div>
           </div>
@@ -169,3 +177,9 @@ export default class CompanySearch extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  companyList : state.companyList
+});
+
+export default connect(mapStateToProps)(CompanySearch);

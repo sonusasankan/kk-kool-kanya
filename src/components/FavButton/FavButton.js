@@ -19,20 +19,31 @@ const ICON = {
 class FavButton extends Component {
   constructor(props) {
     super(props);
+    var { isFavourite } = props;
 
-    this.state = {
-      class: STATUS.NORMAL,
-      icon: ICON.NORMAL
-    };
+    if(isFavourite==='ON') {
+      this.state = {
+        class: STATUS.CLICKED,
+        icon: ICON.ACTIVE
+      };
+    } else {
+      this.state = {
+        class: STATUS.NORMAL,
+        icon: ICON.NORMAL
+      };
+    }
+
   }
 
-  _handleClick = () => {
+   _handleClick = () => {
     let newIcon = (this.state.icon === ICON.NORMAL ? this.state.icon = ICON.ACTIVE : this.state.icon = ICON.NORMAL)
     this.setState({
       class: STATUS.CLICKED,
       icon: newIcon
     });
+    this.props.markFavourite();
   };
+  
 
   _onMouseEnter = () => {
     this.setState({
