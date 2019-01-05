@@ -62,7 +62,7 @@ class Setting extends Component{
                     >
                         <div className="kk-bg-circle--light" />
                     </Parallax>
-                    <div className="container" style={{marginTop: 72}}>
+                    <div className="container">
                         <div className="row">
                             <div className="col-3 d-none d-md-block">
                                 <Sidebar>

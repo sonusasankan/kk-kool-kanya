@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import {FiDownload, FiCamera, FiPrinter} from 'react-icons/fi';
+import {FiDownload, FiCamera, FiUpload, FiPrinter} from 'react-icons/fi';
+import { MdMyLocation, MdCancel } from "react-icons/md";
 import {IoIosClose} from 'react-icons/io';
 import pdfImg from '../../assets/images/ic-pdf-44.svg';
 
@@ -65,7 +66,7 @@ class EditProfile extends Component{
         return(
             <React.Fragment>
                 <section className="container-fluid" style={{backgroundColor: '#fbfbfb'}}>
-                    <div className="container">
+                    <div className="container" style={{marginTop: 72}}>
                         <div className="row">
                             <div className="col-3 d-none d-md-block">
                                 <Sidebar className="kk-profile__sidebar">
@@ -90,12 +91,16 @@ class EditProfile extends Component{
                                             </div>
                                         </div>
                                         <div>
-                                            <label for="name" className="kk-input">
-                                                <div className="kk-input__label">Name</div>
-                                                <input id="name" type="text" placeholder="Enter your name"/>
+                                            <label for="name" className="kk-input kk-input--required">
+                                                <div className="kk-input__label">
+                                                    <span>Name</span>
+                                                </div>
+                                                <input id="name" type="text" placeholder="Enter your name" required/>
                                             </label>
-                                            <div className="kk-input">
-                                                <div className="kk-input__label">Date of birth</div>
+                                            <div className="kk-input kk-input--required">
+                                                <div className="kk-input__label">
+                                                    <span>Date of birth</span>
+                                                </div>
                                                 <div className="d-flex">
                                                     <div className="kk-input__label--dropdown">
                                                         <Dropdown
@@ -120,9 +125,14 @@ class EditProfile extends Component{
                                                     </div>
                                                 </div>
                                             </div>
-                                            <label for="location" className="kk-input">
-                                                <div className="kk-input__label">Location</div>
-                                                <input id="location" type="text" placeholder="Enter your location"/>
+                                            <label for="location" className="kk-input kk-input--required">
+                                                <div className="kk-input__label">
+                                                    <span>Location</span>
+                                                </div>
+                                                <div className="kk-input-group">
+                                                    <input id="location" type="text" placeholder="Enter your location"/>
+                                                    <button className="kk-input-button"><MdMyLocation/></button>
+                                                </div>
                                             </label>
                                         </div>
                                     </div>
@@ -135,19 +145,21 @@ class EditProfile extends Component{
                                                     this.state.selectedInterestOptions.map((item)=>{
                                                         return (
                                                             <li className="kk-list-style-type-none">
-                                                                <input
-                                                                    type="checkbox"
-                                                                    className="custom-control-input"
-                                                                    id={item}
-                                                                    checked
-                                                                />
-                                                                <label
-                                                                    className="custom-control-label"
-                                                                    htmlFor={item}
-                                                                    onClick={this._removeItemFromSelected.bind(this, item)}
-                                                                >
-                                                                    {item}
-                                                                </label>
+                                                                <div className="custom-control custom-checkbox">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        className="custom-control-input"
+                                                                        id={item}
+                                                                        checked
+                                                                    />
+                                                                    <label
+                                                                        className="custom-control-label"
+                                                                        htmlFor={item}
+                                                                        onClick={this._removeItemFromSelected.bind(this, item)}
+                                                                    >
+                                                                        {item}
+                                                                    </label>
+                                                                </div>
                                                             </li> 
                                                         ) 
                                                     })
@@ -160,19 +172,21 @@ class EditProfile extends Component{
                                                         this.state.interestOptions.map((item)=>{
                                                             return (
                                                                 <li className="kk-list-style-type-none">
-                                                                    <input
-                                                                        type="checkbox"
-                                                                        className="custom-control-input"
-                                                                        id={item}
-                                                                        checked={false}
-                                                                    />
-                                                                    <label
-                                                                        className="custom-control-label"
-                                                                        htmlFor={item}
-                                                                        onClick={this._addItemInSelected.bind(this, item)}
-                                                                    >
-                                                                        {item}
-                                                                    </label>
+                                                                    <div className="custom-control custom-checkbox">
+                                                                        <input
+                                                                            type="checkbox"
+                                                                            className="custom-control-input"
+                                                                            id={item}
+                                                                            checked={false}
+                                                                        />
+                                                                        <label
+                                                                            className="custom-control-label"
+                                                                            htmlFor={item}
+                                                                            onClick={this._addItemInSelected.bind(this, item)}
+                                                                        >
+                                                                            {item}
+                                                                        </label>
+                                                                    </div>
                                                                 </li> 
                                                             ) 
                                                         })
@@ -203,9 +217,10 @@ class EditProfile extends Component{
                                                     <span>2MB</span>
                                                 </div>
                                             </div>
+                                            <button><MdCancel/></button>
                                         </div>
                                         <div className="kk-resume__upload">
-                                            <a href="#"><FiDownload /> <span>Upload new resume</span></a>
+                                            <a href="#"><FiUpload /> <span>Upload new resume</span></a>
                                         </div>
                                         <div className="kk-cta-row">
                                             <Button

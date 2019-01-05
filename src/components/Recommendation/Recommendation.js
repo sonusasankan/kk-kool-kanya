@@ -34,7 +34,7 @@ import Wrapper from './style';
     console.log(this.props);
     this.setState({
       personas: this.props.list,
-      current: this.props.list[0].name
+      current: this.props.list[0]
     })
   }
 

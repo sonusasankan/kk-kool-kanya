@@ -115,18 +115,22 @@ const ContentWrapper = styled.div`
             border-radius: 1.5rem;
             line-height: normal;
             font-size: 1.125rem;
+            position: relative;
             button{
                 font-size: 1.5rem;
                 background: none;
                 border: none;
                 padding: 0;
-                position: relative;
-                left: 1rem;
-                cursor: pointer
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 1rem;
+                cursor: pointer;
             }
             &.removable{
                 background: transparent;
                 border: 1px solid #a2a2a2;
+                padding: 10px 40px 10px 30px;
             }
         }
     }
@@ -136,6 +140,17 @@ const ContentWrapper = styled.div`
         border-radius: 6px;
         box-shadow: 0 2px 8px 0 rgba(52, 52, 53, 0.19);
         font-weight: 600;
+        position: relative;
+        button{
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            background-color: transparent;
+            border: none;
+            color: gray;
+            font-size: 1.2rem;
+        }
         &__pdf-icon{
             margin-right: 8px;
             @media (min-width: 768px){
@@ -170,7 +185,11 @@ const ContentWrapper = styled.div`
                 font-weight: normal;
             }
             &__wrapper{
-                width: 80%;
+                width: 70%;
+                @media (min-width: 768px){
+                    width: auto;
+                    max-width: 250px;
+                }
             }
         }
         a{
@@ -192,6 +211,33 @@ const ContentWrapper = styled.div`
     }
     .kk-input{
         margin-bottom: 32px;
+        &-group{
+            position: relative;
+            .kk-input-button{
+                position: absolute;
+                color: ${Colors.brandColor};
+                right: 4px;
+                top: 0;
+                height: 100%;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+            }
+        }
+        &--required{
+            .kk-input__label{
+                span{
+                    position: relative;
+                    &::after{
+                        content: "*";
+                        position: absolute;
+                        top: 0;
+                        right: -16; 
+                        color: #e2574c;
+                    }
+                }
+            }
+        }
         &__label{
             font-weight: 600;
             margin-bottom: 12px;   
@@ -209,6 +255,12 @@ const ContentWrapper = styled.div`
             @media (min-width: 992px){
                 padding: 11px 16px;
             }
+        }
+        .Dropdown-arrow-wrapper{
+            top: 50%;
+            transform: translateY(-50%);
+            right: 4px;
+            color: #9e9e9e;
         }
         .Dropdown-control{
             border: 1px solid rgba(74,74,74,0.3);
