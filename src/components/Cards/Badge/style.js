@@ -17,7 +17,7 @@ export const Badge = styled.div`
     img{
         width: 100%;
     }
-    margin-left: -10px;
+    margin-left: 4px;
     &:nth-child(1){
         margin-left: 0;
     }

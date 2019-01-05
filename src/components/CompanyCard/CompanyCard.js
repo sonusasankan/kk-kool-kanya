@@ -40,7 +40,6 @@ class CompanyCard extends Component {
         </CardBody>
       </Card>
     );
-
 };
 }
 CompanyCard.defaultProps =  {

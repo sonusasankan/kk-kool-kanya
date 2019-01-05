@@ -128,7 +128,7 @@ class Header extends Component {
                   <li><Link to="companies">Companies</Link></li>
                   <li><Link to="jobs">Job</Link></li>
                   <li><Link to="articles">Article</Link></li>
-                  {/* <li><Link to="about">About</Link></li> */}
+                  <li><Link to="about">About</Link></li>
                   <li className="kk-header__login">
                     <div className="kk-header__login__signin">
                       <Button

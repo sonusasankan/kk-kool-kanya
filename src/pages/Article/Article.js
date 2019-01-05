@@ -122,7 +122,7 @@ class Article extends Component {
                 <div className="col-12">
                 <SectionTitle
                   link="article-search"
-                  linkText = "view more"
+                  linkText = "View All"
                 >Recently Published</SectionTitle>
                   <div className="row">
                     <div className="col-12 col-md-6">
