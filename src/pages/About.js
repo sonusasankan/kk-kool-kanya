@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 import { Button } from "../components/Button";
 import {
@@ -155,7 +156,7 @@ export default class About extends Component {
              <p>It is a jungle out there. Millions of jobs and you are trying to find the one that supports you, inspires you, and pays you well. And we, at Kool Kanya believe you can and should love your job-and be successful at it.<br/><br/> 
 
 We want to help make this happen. You are no longer alone on this journey we call our careers.</p>
-             <button className="btn kk-transparent-button w-75 mt-4">Our team</button>
+          <Link to="team"><button className="btn kk-transparent-button w-75 mt-4">Our team</button></Link>
           </div>
           <div className="kk-about-team-second-grid-small mt-3 mt-md-0 ml-md-3">
             <img src={gridSmallImage} alt="about random image"/>
