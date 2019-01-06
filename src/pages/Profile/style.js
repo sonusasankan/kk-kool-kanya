@@ -150,6 +150,9 @@ const ContentWrapper = styled.div`
             border: none;
             color: gray;
             font-size: 1.2rem;
+            @media (min-width: 992px){
+                right: 1.9rem;
+            }
         }
         &__pdf-icon{
             margin-right: 8px;
@@ -190,9 +193,13 @@ const ContentWrapper = styled.div`
                     width: auto;
                     max-width: 250px;
                 }
+                @media (min-width: 992px){
+                    max-width: 365px;
+                }
             }
         }
-        a{
+        &__action-link{
+            display: flex;
             @media (min-width: 992px){
                 display: flex;
                 height: 100%;
@@ -200,6 +207,11 @@ const ContentWrapper = styled.div`
             }
             svg{
                 margin-right: 1rem;
+                position: relative;
+                top: 5px;
+                @media (min-width: 992px){
+                    top: 0;
+                }
             }
         }
         &__upload{
@@ -280,8 +292,14 @@ const ContentWrapper = styled.div`
     }
     .kk-cta-row{
         button{
-            min-width: 148px;
+            min-width: 100%;
+            @media (min-width: 768px){
+                min-width: 148px;
+            }
         }
+    }
+    .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+        background-color: ${Colors.brandColor};
     }
 `;
 

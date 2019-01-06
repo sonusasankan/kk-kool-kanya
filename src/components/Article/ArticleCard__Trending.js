@@ -20,7 +20,7 @@ const articleTrending = ({
     <Card landscape cardType="article-card" link={cardLink}>
         <CardImage src={imgSrc} alt={alt} />
         <CardBody>
-            <CardTitle excerptLength="14">{cardTitle}</CardTitle>
+            <CardTitle excerptLength="8">{cardTitle}</CardTitle>
             <TextMuted>
                 <span>{authorName}</span>
                 <span>{readingTime}</span>

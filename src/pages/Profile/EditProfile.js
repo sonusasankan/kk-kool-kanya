@@ -217,7 +217,7 @@ class EditProfile extends Component{
                                                     <span>2MB</span>
                                                 </div>
                                             </div>
-                                            <button><MdCancel/></button>
+                                            <button className="kk-resume__close-button" ><MdCancel/></button>
                                         </div>
                                         <div className="kk-resume__upload">
                                             <a href="#"><FiUpload /> <span>Upload new resume</span></a>

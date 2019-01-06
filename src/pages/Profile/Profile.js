@@ -106,7 +106,7 @@ class Profile extends Component{
                                                 </div>
                                             </div>
                                             <div>
-                                                <a href="#"><FiDownload /> <span>Download resume</span></a>
+                                                <a href="#" className="kk-resume__action-link"><FiDownload /> <span>Download resume</span></a>
                                             </div>
                                         </div>
                                         {/* <div className="kk-resume">

@@ -12,6 +12,13 @@ import {
   ArticleCard__Overlay
 } from "../../components/Article";
 
+// importing images
+import CareerAdvice from '../../assets/images/article-category/career-advice.png';
+import CoffeeBreak from '../../assets/images/article-category/coffee-break.png';
+import Connect from '../../assets/images/article-category/connect.png';
+import RestartingCareer from '../../assets/images/article-category/restartingcareer.png';
+import Tools from '../../assets/images/article-category/tools.png';
+
 class Article extends Component {
 
   render() {
@@ -33,7 +40,7 @@ class Article extends Component {
                 <div class="item">
                     <ArticleCard__Overlay
                         cardLink="article-category"
-                        imgSrc="https://loremflickr.com/216/262" alt="Alternate text for image"
+                        imgSrc={CareerAdvice} alt="Career Advice"
                         cardTitle="Career Advice"
                         details="28 Articles"
                     />
@@ -41,7 +48,7 @@ class Article extends Component {
                 <div class="item">
                     <ArticleCard__Overlay
                         cardLink="article-category"
-                        imgSrc="https://loremflickr.com/216/262" alt="Alternate text for image"
+                        imgSrc={CoffeeBreak} alt="Coffee Break"
                         cardTitle="Coffee Break"
                         details="20 Articles"
                     />
@@ -49,7 +56,7 @@ class Article extends Component {
                 <div class="item">
                   <ArticleCard__Overlay
                         cardLink="article-category"
-                        imgSrc="https://loremflickr.com/216/262" alt="Alternate text for image"
+                        imgSrc={Connect} alt="Connect"
                         cardTitle="Connect"
                         details="04 Articles"
                     />
@@ -57,7 +64,7 @@ class Article extends Component {
                 <div class="item">
                     <ArticleCard__Overlay
                         cardLink="article-category"
-                        imgSrc="https://loremflickr.com/216/262" alt="Alternate text for image"
+                        imgSrc={RestartingCareer} alt="Restarting Your Career"
                         cardTitle="Restarting your career"
                         details="13 Articles"
                     />
@@ -65,7 +72,7 @@ class Article extends Component {
                 <div class="item">
                     <ArticleCard__Overlay
                         cardLink="article-category"
-                        imgSrc="https://loremflickr.com/216/262" alt="Alternate text for image"
+                        imgSrc={Tools} alt="Tools & Skills"
                         cardTitle="Tools & Skills"
                         details="15 Articles"
                     />

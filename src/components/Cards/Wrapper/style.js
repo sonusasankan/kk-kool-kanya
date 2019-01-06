@@ -126,6 +126,9 @@ const Wrapper = styled.div`
                 }
             }
         }
+        p{
+            color: #FFF;
+        }
     }
     &.hasDescription{
         .card__img{
