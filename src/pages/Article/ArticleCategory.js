@@ -10,6 +10,13 @@ import {
 } from '../../components/Article';
 import Carousel from '../../components/Carousel';
 
+// importing images
+import CareerAdvice from '../../assets/images/article-category/career-advice.png';
+import CoffeeBreak from '../../assets/images/article-category/coffee-break.png';
+import Connect from '../../assets/images/article-category/connect.png';
+import RestartingCareer from '../../assets/images/article-category/restartingcareer.png';
+import Tools from '../../assets/images/article-category/tools.png';
+
 import './ArticleCategory.scss';
 
 class Category extends Component {
@@ -56,7 +63,7 @@ class Category extends Component {
                 <section className="container pt-3 pb-0">
                     <div className="article-category__head">
                         <div className="article-category__img">
-                            <img className="w-100" src="https://loremflickr.com/160/195" />
+                            <img className="w-100" src={CareerAdvice} alt="Career Advice" />
                         </div>
                         <div className="article-category__title">
                             <SectionTitle className="mb-2">Career Advice</SectionTitle>
@@ -148,32 +155,32 @@ class Category extends Component {
                                 <div class="item">
                                     <ArticleCard__Overlay
                                         cardLink="article-category"
-                                        imgSrc="https://loremflickr.com/216/262" alt="Alternate text for image"
-                                        cardTitle="Career Advice"
+                                        imgSrc={CoffeeBreak} alt="Cofee Break"
+                                        cardTitle="Cofee Break"
                                         details="28 Articles"
                                     />
                                 </div>
                                 <div class="item">
                                     <ArticleCard__Overlay
                                         cardLink="article-category"
-                                        imgSrc="https://loremflickr.com/216/262" alt="Alternate text for image"
-                                        cardTitle="Coffee Break"
+                                        imgSrc={Connect} alt="Connect"
+                                        cardTitle="Connect"
                                         details="20 Articles"
                                     />
                                 </div>
                                 <div class="item">
                                     <ArticleCard__Overlay
                                         cardLink="article-category"
-                                        imgSrc="https://loremflickr.com/216/262" alt="Alternate text for image"
-                                        cardTitle="Connect"
+                                        imgSrc={RestartingCareer} alt="Restarting your career"
+                                        cardTitle="Restarting your career"
                                         details="04 Articles"
                                     />
                                 </div>
                                 <div class="item">
                                     <ArticleCard__Overlay
                                         cardLink="article-category"
-                                        imgSrc="https://loremflickr.com/216/262" alt="Alternate text for image"
-                                        cardTitle="Restarting your career"
+                                        imgSrc={Tools} alt="Tools & Skills"
+                                        cardTitle="Tools & Skills"
                                         details="13 Articles"
                                     />
                                 </div>
