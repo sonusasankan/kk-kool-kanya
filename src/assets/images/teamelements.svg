@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="118" height="106" viewBox="0 0 118 106">
+    <g fill="none" fill-rule="evenodd" transform="translate(-13)">
+        <circle cx="37.5" cy="37.5" r="37.5" fill="#C6B1E0" opacity=".5" transform="rotate(180 37.5 37.5)"/>
+        <circle cx="71.5" cy="46.5" r="17.5" stroke="#703DB2" stroke-width="6" opacity=".2" transform="rotate(180 71.5 46.5)"/>
+        <circle cx="113.5" cy="88.5" r="17.5" fill="#FFF1E8" opacity=".6" transform="rotate(180 113.5 88.5)"/>
+    </g>
+</svg>

@@ -6,6 +6,7 @@ import About from '../pages/About';
 import {Article, ArticleDetails, ArticleCategory, ArticleSearch} from '../pages/Article/index';
 import AuthorDetails from '../pages/Author';
 import Career from '../pages/Career';
+import Team from '../pages/Team';
 import Posts from '../pages/Posts';
 import Companies from '../pages/Companies/Companies';
 import CompanyDescription from '../pages/CompanyDescription';
@@ -28,6 +29,7 @@ const Main = () => (
       <Route path="/article-search" component={ArticleSearch} />
       <Route path="/author-detail" component={AuthorDetails} />
       <Route path="/career" component={Career} />
+      <Route path="/team" component={Team} />
       <Route path="/posts" component={Posts} />
       <Route path="/companies" component={Companies} />
       <Route path="/company-description" component={CompanyDescription} />

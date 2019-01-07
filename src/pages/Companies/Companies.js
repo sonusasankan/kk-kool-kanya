@@ -230,7 +230,7 @@ class Companies extends Component {
 }
 
 const mapStateToProps = state => ({
-  companyList : state.companyList
+companyList : state.companyList
 });
 
 export default withRouter(connect(mapStateToProps)(Companies));

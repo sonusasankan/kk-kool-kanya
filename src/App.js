@@ -9,7 +9,6 @@ import "./style/icon.scss";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ModalRoot from './container/ModalRoot';
-import LoginView from "./container/LoginView";
 
 /*routes*/
 import { Main } from "./route";
