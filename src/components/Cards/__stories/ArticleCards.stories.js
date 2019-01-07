@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { MemoryRouter } from 'react-router';
 
 import { storiesOf } from '@storybook/react';
 import 'bootstrap/dist/css/bootstrap-grid.css';
@@ -15,6 +16,9 @@ import {
  import {TextMuted} from '../../TextMuted';
 
 storiesOf('Card', module)
+.addDecorator(story => (
+  <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
+))
 .add('Article Card', ()=>(
     <div className="row">
       <div className='col-12 col-md-12 col-lg-6 mt-5'>

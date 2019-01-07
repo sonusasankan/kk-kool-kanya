@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 // import { linkTo } from '@storybook/addon-links';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { FiArrowRight } from 'react-icons/fi';
 import { withNotes } from '../../docs-addon';
 
@@ -16,19 +16,22 @@ storiesOf('Button', module)
     <Button
       label={text('label', 'Primary button')}
       onClick={action('clicked')}
+      primary={boolean('primary', true)}
     />
   ), { notes: JSON.stringify(Button.__docgenInfo, null, 10) })
-  .add('Curved', () => (
+  .add('Primary Curved', () => (
     <Button
-      styleName="curved"
+      styleName={text('class', 'curved')}
       label={text('label', 'Curved button')}
+      hasBorder={boolean('hasBorder', true)}
       onClick={action('clicked')}
     />
   ), { notes: JSON.stringify(Button.__docgenInfo, null, 10) })
-  .add('Secondary', () => (
+  .add('Secondary Curved', () => (
     <Button
       primary={false}
-      hasBorder
+      styleName={text('class', 'curved')}
+      hasBorder={boolean('hasBorder', true)}
       label={text('label', 'Secondary button')}
     />
   ))

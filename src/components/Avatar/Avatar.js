@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom'
 
 
 //  importing image
@@ -11,12 +12,14 @@ import { AvatarWraper, Image, Name } from './style';
 const Avatar = ({
   className, isLoggedIn, imgSrc, link, avatarTitle,
 }) => (
-  <AvatarWraper className={`avatar ${className}`} href={link}>
+  <Link to={link}>
+  <AvatarWraper className={`avatar ${className}`} >
     <Image className="avatar__img">
       <img src={isLoggedIn === true ? imgSrc : defaultAvatar} alt="User Avatar" />
     </Image>
     {(avatarTitle ? <Name className="avatar__title">{avatarTitle}</Name> : "")}
   </AvatarWraper>
+  </Link>
 );
 
 Avatar.propTypes = {
@@ -29,7 +32,7 @@ Avatar.propTypes = {
 
 Avatar.defaultProps = {
   avatarTitle: false,
-  link: '#',
+  link: '/',
 };
 
 export default Avatar;
