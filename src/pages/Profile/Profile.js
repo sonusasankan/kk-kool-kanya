@@ -12,10 +12,6 @@ import '../Setting/bgElements.scss';
 import {Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 class Profile extends Component{
-    constructor(props){
-        super(props);
-
-    }
 
     render(){
         return(
@@ -106,7 +102,7 @@ class Profile extends Component{
                                                 </div>
                                             </div>
                                             <div>
-                                                <a href="#" className="kk-resume__action-link"><FiDownload /> <span>Download resume</span></a>
+                                                <a href="/" className="kk-resume__action-link"><FiDownload /> <span>Download resume</span></a>
                                             </div>
                                         </div>
                                         {/* <div className="kk-resume">

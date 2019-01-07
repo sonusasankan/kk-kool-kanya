@@ -19,24 +19,26 @@ const badge = ({
     className="card__badges"
     numberOfBadges={numberOfBadges}
   >
-    {badges.map((element, index) => {
-      if(!numberOfBadges){
-        return (
-          <Badge className='kk-badge' style={{zIndex : 10 - index}}>
-            <img className="img-fluid" src={element} alt="badge" />
-          </Badge>
-        )
-      }
-      else{
-        if(index < numberOfBadges){
+    {
+      badges.map((element, index) => {
+        if(!numberOfBadges){
           return (
             <Badge className='kk-badge' style={{zIndex : 10 - index}}>
               <img className="img-fluid" src={element} alt="badge" />
             </Badge>
           )
         }
-      }
-    })}
+        else{
+          if(index < numberOfBadges){
+            return (
+              <Badge className='kk-badge' style={{zIndex : 10 - index}}>
+                <img className="img-fluid" src={element} alt="badge" />
+              </Badge>
+            )
+          }
+        }
+      })
+    }
   </BadgeWrapper>
 );
 

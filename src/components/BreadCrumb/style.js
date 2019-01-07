@@ -11,10 +11,6 @@ const BreadCrumb = styled.nav`
     li{
         position: relative;
         padding-right: 1rem;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        max-width: 140px;
         &::after{
             content: "";
             display: inline-block;

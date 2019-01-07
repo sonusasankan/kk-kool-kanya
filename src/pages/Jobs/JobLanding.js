@@ -11,9 +11,6 @@ import JobCard  from "../../components/Jobs";
 import SearchContainer from "../../components/Search/SearchContainer";
 
 export default class JobLanding extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   _openSortFilters(){
     document.querySelector('.kk-sort-filters').classList.add('show');

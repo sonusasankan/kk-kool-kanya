@@ -11,9 +11,6 @@ import { connect } from "react-redux";
 import { markFavouriteCompany } from "../../store/actions/companyActions";
 
 class CompanyCard extends Component {
-  constructor() {
-    super()
-  }
   markFavourite = () => {
     this.props.markFavourite((this.props.companyid))
   }
@@ -22,7 +19,7 @@ class CompanyCard extends Component {
     return (
       <Card cardType="card__company">
         {numberOfBadges ? <CardBadge numberOfBadges={numberOfBadges} /> : ""}
-        <FavButton top right isFavourite markFavourite={ this.markFavourite }/>
+        <FavButton top right isFavourite={isFavourite} markFavourite={ this.markFavourite }/>
         <CardImage src={img} alt={alt} />
         <CardHead>
           <CardLogo src={logo} alt="Godrej Logo" />

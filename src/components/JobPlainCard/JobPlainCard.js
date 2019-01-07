@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 
 import { Card, CardBody, CardLogo, CardDetails } from "../Cards";
 
 import icon from "../../assets/images/location-grey.svg";
 import { PropTypes } from "prop-types";
 
-const JobPlainCard = ({ logo, industry, openings }) => {
+const JobPlainCard = ({ logo, industry, openings, link }) => {
   return (
-    <Card cardType="kk-job-plain-card">
+    <Card cardType="kk-job-plain-card" link={link}>
       <CardBody>
         <div className="kk-logo-crcle-wrapper text-center my-3">
           <img src={logo} alt="industry logo" />

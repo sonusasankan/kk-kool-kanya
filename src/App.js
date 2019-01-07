@@ -45,6 +45,7 @@ class App extends Component {
         document.body.classList.remove('kk-home')
         header.classList.remove('invert')
       }
+      window.scrollTo(0,0);
     });
   }
   componentWillUnmount() {

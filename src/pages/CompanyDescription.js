@@ -131,7 +131,7 @@ callback = () => {
                 <div className="row">
                   <div className="col-md-2">
                     <div className="company-logo">
-                      <img className="img-fluid" src={godrej} />
+                      <img className="img-fluid" src={godrej} alt="Godrej" />
                     </div>
                   </div>
                   <div className="col-md-10">
@@ -207,16 +207,16 @@ callback = () => {
               <div className="col-md-6">
                 <Carousel option={option}>
                   <div className="item">
-                    <img src={companyImage} alt="" />
+                    <img src={companyImage} alt="Godrej" />
                   </div>
                   <div className="item">
-                    <img src={companyImage} alt="" />
+                    <img src={companyImage} alt="Godrej" />
                   </div>
                   <div className="item">
-                    <img src={companyImage} alt="" />
+                    <img src={companyImage} alt="Godrej" />
                   </div>
                   <div className="item">
-                    <img src={companyImage} alt="" />
+                    <img src={companyImage} alt="Godrej" />
                   </div>
                 </Carousel>
               </div>

@@ -20,7 +20,6 @@ import FavButton from "../../components/FavButton";
 import SearchContainer from './../../components/Search/SearchContainer';
 
 import Recommendation from "./../../components/Recommendation/Recommendation";
-import CompaniesInTopCities from "./CompaniesInTopCities/companiesInTopCities";
 import Logo from "../../assets/images/godrej.png";
 import bangalore from "../../assets/images/location.svg";
 import dummyIcon from "../../assets/images/location-grey.svg";
@@ -41,7 +40,7 @@ class Companies extends Component {
 
   routeChange = e => {
     e.stopPropagation()
-    if(e.target.localName != 'button'){
+    if(e.target.localName !== 'button'){
          let path = `company-description`;
         this.props.history.push(path);
     }
@@ -119,7 +118,7 @@ class Companies extends Component {
                             <CardHead>
                               <CardLogo src={Logo} alt="Godrej Logo" />
                               <CardTitle>{company.name + `this will be next line, and some times third`}</CardTitle>
-                              <CardRating>{company.rating % 1 != 0? company.rating: company.rating + ".0"}</CardRating>
+                              <CardRating>{company.rating % 1 !== 0? company.rating: company.rating + ".0"}</CardRating>
                             </CardHead>
                             <CardBody>
                               <CardDetails icon="icon-ic-location-24">
@@ -179,7 +178,7 @@ class Companies extends Component {
                             <CardLogo src={Logo} />
                             <div>
                               <h6>{company.name} An some text will also comes here</h6>
-                              <span className="kk-rating-numbber d-flex justify-content-center">{company.rating % 1 != 0? company.rating: company.rating + ".0"}</span>
+                              <span className="kk-rating-numbber d-flex justify-content-center">{company.rating % 1 !== 0? company.rating: company.rating + ".0"}</span>
                             </div>
                           </div>
                         </CardDetails>

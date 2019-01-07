@@ -8,7 +8,7 @@ const cardTitle = ({
   excerptLength,
   children,
 }) => (
-  <Title className="kk-card__title">{getExcerpt(children, excerptLength)}{console.log(getExcerpt)}</Title>
+  <Title className="kk-card__title">{getExcerpt(children, excerptLength)}</Title>
 );
 
 cardTitle.propTypes = {

@@ -130,7 +130,7 @@ class ArticleDetails extends Component {
                         <div className="row">
                             <div className="col-12 col-md-6 col-lg-3">
                                 <ArticleCard
-                                    cardLink="https://theparentcue.org/the-stories-of-childhood/"
+                                    cardLink="/article-details"
                                     imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
                                     cardTitle="When Are You Going Back? (Or: Maternity Leave is Complicated.)"
                                     authorName="By Sheeba Chaddha"
@@ -139,7 +139,7 @@ class ArticleDetails extends Component {
                             </div>
                             <div className="col-12 col-md-6 col-lg-3">
                                 <ArticleCard
-                                    cardLink="https://theparentcue.org/the-stories-of-childhood/"
+                                    cardLink="/article-details"
                                     imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
                                     cardTitle="A concise masterclass on how to write infrastructure code"
                                     authorName="By Sheeba Chaddha"
@@ -148,7 +148,7 @@ class ArticleDetails extends Component {
                             </div>
                             <div className="col-12 col-md-6 col-lg-3">
                                 <ArticleCard
-                                    cardLink="https://theparentcue.org/the-stories-of-childhood/"
+                                    cardLink="/article-details"
                                     imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
                                     cardTitle="A concise masterclass on how to write infrastructure code"
                                     authorName="By Sheeba Chaddha"
@@ -157,7 +157,7 @@ class ArticleDetails extends Component {
                             </div>
                             <div className="col-12 col-md-6 col-lg-3">
                                 <ArticleCard
-                                    cardLink="https://theparentcue.org/the-stories-of-childhood/"
+                                    cardLink="/article-details"
                                     imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
                                     cardTitle="Google Employees: Our Executives Engaged in Abuse..."
                                     authorName="By Sheeba Chaddha"

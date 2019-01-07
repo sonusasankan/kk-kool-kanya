@@ -288,7 +288,7 @@ class Home extends Component {
               {topIndustries.map((industry, index) => {
                 return (
                   <div key={index} className="col-md-6 col-lg-3">
-                    <JobPlainCard industry={industry} logo={icons[index]} />
+                    <JobPlainCard industry={industry} logo={icons[index]} link="/jobs" />
                   </div>
                 );
               })}
