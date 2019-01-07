@@ -493,6 +493,16 @@ h3.kk-section-title {
   min-height: 100vh;
   overflow: hidden;
 }
+
+
+//company carousel in homepage
+.kk-home__carousel__wrapper{
+  .card__company{
+    max-width: 270px;
+    margin: auto;
+  }
+}
+
 .kk-home-bg-img {
   position: relative;
   height: 100vh;

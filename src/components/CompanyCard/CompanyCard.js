@@ -10,15 +10,16 @@ import DummyImage from "../../assets/images/img-company-descrition-1.jpg";
 import { connect } from "react-redux";
 import { markFavouriteCompany } from "../../store/actions/companyActions";
 
+
 class CompanyCard extends Component {
   markFavourite = () => {
     this.props.markFavourite((this.props.companyid))
   }
   render() {
-    var {numberOfBadges, img, alt, title, locations, industry, openings, logo, rating, isFavourite } = this.props
+    var {badges, img, alt, title, locations, industry, openings, logo, rating, isFavourite } = this.props
     return (
       <Card cardType="card__company">
-        {numberOfBadges ? <CardBadge numberOfBadges={numberOfBadges} /> : ""}
+        {badges ? <CardBadge top left badges={badges} /> : ""}
         <FavButton top right isFavourite={isFavourite} markFavourite={ this.markFavourite }/>
         <CardImage src={img} alt={alt} />
         <CardHead>
