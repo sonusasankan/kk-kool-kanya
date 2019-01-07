@@ -29,7 +29,7 @@ const articleCard__big = ({
                 <span>{authorName}</span>
                 <span>{readingTime}d</span>
             </TextMuted>
-            <CardDescription excerptLength="24" readMore={readMoreLink} >
+            <CardDescription excerptLength="104" readMore={readMoreLink} >
                 {description}
             </CardDescription>
         </CardBody>
