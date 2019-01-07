@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import { IoMdMenu } from "react-icons/io"
 import {HeaderWrapper} from './style';
@@ -124,11 +124,11 @@ class Header extends Component {
                   </div>
                 </div>
                 <ul>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="companies">Companies</Link></li>
-                  <li><Link to="jobs">Job</Link></li>
-                  <li><Link to="articles">Article</Link></li>
-                  <li><Link to="about">About</Link></li>
+                  <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
+                  <li><NavLink exact activeClassName="active" to="/companies">Companies</NavLink></li>
+                  <li><NavLink exact activeClassName="active" to="/jobs">Job</NavLink></li>
+                  <li><NavLink exact activeClassName="active" to="/articles">Article</NavLink></li>
+                  <li><NavLink exact activeClassName="active" to="/about">About</NavLink></li>
                   <li className="kk-header__login">
                     <div className="kk-header__login__signin">
                       <Button

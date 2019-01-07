@@ -24,10 +24,13 @@ const BreadCrumb = styled.nav`
             transform: rotate(45deg) translateY(-50%);
             right: 0.5rem;
         }
+        a{
+            color: #acacac;
+        }
         &:nth-last-child(1){
             padding-right: 0;
-            color: #4f565e;
             font-weight: 600;
+            color: #4f565e;
             &::after{
                 display: none
             }

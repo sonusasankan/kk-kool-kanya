@@ -23,7 +23,7 @@ class Article extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div style={{backgroundColor: "#fbfbfb"}}>
         <div className="kk-search text-center">
             <SearchContainer placeholder="Search by company name, industry or location"/>
         </div>
@@ -244,7 +244,7 @@ class Article extends Component {
           </div>
         </section>
 
-      </React.Fragment>
+      </div>
     );
   }
 }

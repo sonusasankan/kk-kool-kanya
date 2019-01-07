@@ -19,30 +19,28 @@ import Saved from '../pages/Saved/Saved';
 import Setting, {EditSettings} from '../pages/Setting';
 
 const Main = () => (
-  <div>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path="/articles" component={Article} />
-      <Route path="/about" component={About} />
-      <Route path="/article-category" component={ArticleCategory} />
-      <Route path="/article-details" component={ArticleDetails} />
-      <Route path="/article-search" component={ArticleSearch} />
-      <Route path="/author-detail" component={AuthorDetails} />
-      <Route path="/career" component={Career} />
-      <Route path="/team" component={Team} />
-      <Route path="/posts" component={Posts} />
-      <Route path="/companies" component={Companies} />
-      <Route path="/company-description" component={CompanyDescription} />
-      <Route path="/company-search-results" component={CompanySearch} />
-      <Route path="/jobs" component={jobLanding} />
-      <Route path="/job-description" component={jobDescription} />
-      <Route path="/favourites" component={Saved} />
-      <Route path="/profile" component={Profile} />
-      <Route path="/edit-profile" component={EditProfile} />
-      <Route path="/settings" component={Setting} />
-      <Route path="/edit-settings" component={EditSettings} />
+      <Route exact path="/articles" component={Article} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/article-category" component={ArticleCategory} />
+      <Route exact path="/article-details" component={ArticleDetails} />
+      <Route exact path="/article-search" component={ArticleSearch} />
+      <Route exact path="/author-detail" component={AuthorDetails} />
+      <Route exact path="/career" component={Career} />
+      <Route exact path="/team" component={Team} />
+      <Route exact path="/posts" component={Posts} />
+      <Route exact path="/companies" component={Companies} />
+      <Route exact path="/company-description" component={CompanyDescription} />
+      <Route exact path="/company-search-results" component={CompanySearch} />
+      <Route exact path="/jobs" component={jobLanding} />
+      <Route exact path="/job-description" component={jobDescription} />
+      <Route exact path="/favourites" component={Saved} />
+      <Route exact path="/profile" component={Profile} />
+      <Route exact path="/edit-profile" component={EditProfile} />
+      <Route exact path="/settings" component={Setting} />
+      <Route exact path="/edit-settings" component={EditSettings} />
     </Switch>
-  </div>
 );
 
 export default Main;

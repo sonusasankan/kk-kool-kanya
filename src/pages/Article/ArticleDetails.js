@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import TextMuted from '../../components/TextMuted/TextMuted';
 import BreadCrumb from '../../components/BreadCrumb';
 import Avatar from '../../components/Avatar';
 import SearchContainer from '../../components/Search/SearchContainer';
 import { ArticleCard } from "../../components/Article";
+
+import Author from '../../assets/images/author.jpg';
 
 class ArticleDetails extends Component {
     render(){
@@ -14,21 +17,21 @@ class ArticleDetails extends Component {
                 </div>
                 <section className="container py-0">
                     <BreadCrumb>
-                        <li>Home</li>
-                        <li>Articles</li>
-                        <li>Search results</li>
-                        <li>When Are You Going Back? (Or: Maternity Leave is Complicated.)</li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/articles">Articles</Link></li>
+                        <li><Link to="/article-search">Search results</Link></li>
+                        <li><Link to="/article-details">When Are You Going Back? (Or: Maternity Leave is Complicated.)</Link></li>
                     </BreadCrumb>
                     <div className="kk-article-details__title--main">
                         <h2 className="mb-0">When Are You Going Back? (Or: Maternity Leave is Complicated.) </h2>
                     </div>
 
                     <div className="kk-article-details__author d-flex">
-                        <div className="kk-article-details__author__img">
-                            <img className="img-fluid" src="https://loremflickr.com/160/160" alt="Rennie Bradford"></img>
-                        </div>
+                        <Link to="/author-detail" className="kk-article-details__author__img">
+                            <img className="img-fluid" src={Author} alt="Rennie Bradford"></img>
+                        </Link>
                         <div className="d-flex justify-content-center flex-column">
-                            <div className="kk-article-details__author__name">Rennie Bradford</div>
+                            <Link to="/author-detail" className="kk-article-details__author__name">Rennie Bradford</Link>
                             <TextMuted>
                                 <span>15th October 2018</span>
                                 <span>5 min read</span>
@@ -107,7 +110,7 @@ class ArticleDetails extends Component {
                     <div className="row article__readmore__wrapper">
                         <div className="col-12 col-md-6 mt-3">
                             <div className="article__readmore">Read more by</div>
-                            <Avatar className="mt-2" avatarTitle="Sheeba Chaudhary" />
+                            <Link to="/author-detail"><Avatar className="mt-2" avatarTitle="Sheeba Chaudhary" /></Link>
                         </div>
                         <div className="col-12 col-md-6 mt-3">
                             <div className="article__readmore">Read more in</div>

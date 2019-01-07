@@ -154,6 +154,16 @@ class JobDescription extends Component{
                             <li>Incredible diverse team to work with</li>
                             </ListWrapper>
                         </div>
+
+
+                        <div className="mt-5">
+                            <h3 className="mb-3">The Environment</h3>
+                            <ListWrapper>
+                                <li>Flexibility to work additional hours during peak seasons</li>
+
+                                <li>Office environment working with creative clients</li>
+                            </ListWrapper>
+                        </div>
                     </div>
                 </section>
 

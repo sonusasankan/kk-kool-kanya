@@ -116,6 +116,9 @@ export const HeaderWrapper = styled.div`
                             background-color: transparent;
                         }
                     }
+                    &.active{
+                        font-weight: 600;
+                    }
                 }
             }
         }

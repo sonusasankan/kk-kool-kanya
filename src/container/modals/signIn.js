@@ -38,7 +38,7 @@ const signIn = ({ title, onConfirm, afterClose, hideModal, subTitle,  onForgotPa
               className="form-control"
               id="Email"
             />
-            <label className="kk-custom-label" htmlFor="Email">Email</label>
+            <label className="kk-custom-label" htmlFor="Email">Email ID</label>
           </div>
           <div className="form-group">
             <input
@@ -69,7 +69,7 @@ const signIn = ({ title, onConfirm, afterClose, hideModal, subTitle,  onForgotPa
         </form>
       </div>
       <div className="text-center mt-3">
-         <span className="kk-link mb-2" onClick={handleForgotPassword()}>forgot your password?</span>   
+         <span className="kk-link mb-2" onClick={handleForgotPassword()}>Forgot your password?</span>   
         <p>
         Don’t have an account yet?  <strong className="kk-link" onClick={handleConfirm()}> Sign Up</strong>
         </p>

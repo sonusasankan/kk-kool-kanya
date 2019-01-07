@@ -13,7 +13,7 @@ import Logo from "../../assets/images/godrej.png";
 
 const jobCard = ({favButton}) =>(
     <JobCardWrapper>
-        <Card cardType="kk-card__job">
+        <Card cardType="kk-card__job" link="/job-description">
             <CardLogo src={Logo} alt="Godrej Logo" />
             <div className="flex-grow-1">
                 <CardHead>

@@ -52,6 +52,8 @@ const Dialog = styled.div`
   max-width: 890px;
   cursor: default;
   height: 100vh;
+  border-radius: 4px;
+  overflow: hidden;
   @media(min-width: 768px){
     height: auto;
   }

@@ -102,6 +102,9 @@
         &__name{
             font-size: 1.125rem;
             color: #4f565e;
+            &:hover{
+                color: #4f565e;
+            }
         }
     }
 }

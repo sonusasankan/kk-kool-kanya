@@ -43,6 +43,7 @@ const AuthorDetailsHeader = styled.section`
                 }
             }
             &__title{
+                color: ${Colors.secondaryGray};
                 @media (min-width: 768px){
                     flex-grow: 1;
                 }
@@ -53,6 +54,15 @@ const AuthorDetailsHeader = styled.section`
             &__social{
                 display: flex;
                 align-items: center;
+                &__wrapper{
+                    color: ${Colors.secondaryDarkGray};
+                }
+                a{
+                    color: ${Colors.secondaryDarkGray};
+                    &:hover{
+                        color: ${Colors.brandColor};
+                    }
+                }
             }
         }
     }
