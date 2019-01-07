@@ -6,6 +6,8 @@ import AuthorDetailsHeader from './style';
 import SectionTitle from '../../components/SectionTitle';
 import {ArticleCard__Big, ArticleCard} from '../../components/Article';
 
+import Author from '../../assets/images/author.jpg';
+
 const authorDetails = () => (
     <React.Fragment>
         <div className="kk-search text-center">
@@ -20,7 +22,7 @@ const authorDetails = () => (
 
             <div className="kk-author-detail__author">
                 <div className="kk-author-detail__author__img">
-                    <img className="w-100" src="https://loremflickr.com/160/160" alt="Rennie Bradford"></img>
+                    <img className="w-100" src={Author} alt="Rennie Bradford"></img>
                 </div>
                 <div className="kk-author-detail__author__desc">
                     <div className="kk-author-detail__author__title__wrapper">

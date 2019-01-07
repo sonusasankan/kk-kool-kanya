@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Colors from '../../themes/color';
 
 export const HeaderWrapper = styled.div`
-    z-index: 1;
+    z-index: 97;
     nav{
         display: flex;
     }
