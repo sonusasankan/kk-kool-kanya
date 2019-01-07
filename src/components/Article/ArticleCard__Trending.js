@@ -19,7 +19,7 @@ const CardImage = styled.div`
     background-position: 50% 50%;
     background-image: url(${props=> props.imgSrc});
     min-height: 127px;
-    height:100%;
+    height: inherit;
     display: none;
     @media (min-width: 768px){
         display: block;
@@ -42,7 +42,7 @@ const articleTrending = ({
                 <span>{authorName}</span>
                 <span>{readingTime}</span>
             </TextMuted>
-            {(description) ? <CardDescription>{description}</CardDescription> : ""}
+            {(description) ? <CardDescription excerptLength="100">{description}</CardDescription> : ""}
         </CardBody>
     </Card>
 )
