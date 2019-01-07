@@ -8,14 +8,14 @@ import workLifeBalance from '../../../assets/badges/ic-work-life-balance-28.svg'
 import workSatisfaction from '../../../assets/badges/ic-job-satisfaction-28.svg';
 
 const BadgeList = {
-    MATERNITY_BENEFITS: maternityBenifits,
-    SAFETY: safety,
-    SALARY_BENEFITS: salaryBenifits,
+    MATERNITY_BENEFITS:     maternityBenifits,
+    SAFETY:                 safety,
+    SALARY_BENEFITS:        salaryBenifits,
     FEMALE_REPRESENTATIVES: femaleRepresentatives,
-    CULTURE: culture,
+    CULTURE:                culture,
     LEARNING_OPPORTUNITIES: learning,
-    WORKLIFE_BALANCE: workLifeBalance,
-    WORK_SATISFACTION: workSatisfaction
+    WORKLIFE_BALANCE:       workLifeBalance,
+    WORK_SATISFACTION:      workSatisfaction
 }
 
 export default BadgeList;

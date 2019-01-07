@@ -7,7 +7,11 @@ import { Button } from "../components/Button";
 import Recommendation from "../components/Recommendation/Recommendation";
 import { CompanyCard } from "./../components/CompanyCard";
 import { JobPlainCard } from "./../components/JobPlainCard";
+
+//badges
 import {BadgeList} from './../components/Cards/Badge';
+
+
 //images//
 import homeBg from "../assets/images/home-bg.png";
 import homeBg2x from "../assets/images/home-bg@2x.png";
@@ -22,6 +26,9 @@ import BgDotsElement from "../assets/images/bg-dots-element.svg";
 import BgParallax1 from "../assets/images/home-bg-parallax-1.png";
 import BgParallax2 from "../assets/images/home-bg-parallax-2.png";
 import BgParallax3 from "../assets/images/home-bg-parallax-3.png";
+
+//import carousel component
+import Carousel from '../components/Carousel';
 
 //parallax plugin
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
@@ -55,6 +62,26 @@ const icons = importAll(
 //components for SearchContainer//
 const components = ["Companies", "Jobs", "Articles"];
 
+const carouselOption = {
+  // autoWidth: true,
+  margin: 8,
+  nav: false,
+  items: 1,
+  stagePadding: 16,
+  responsive: {
+    400:{
+      stagePadding: 64,
+    },
+    576:{
+      items: 2,
+      stagePadding: 64
+    },
+    1200:{
+      items: 3
+    }
+  }
+}
+
 class Home extends Component {
   constructor() {
     super();
@@ -83,8 +110,8 @@ class Home extends Component {
     }
     const companyList = this.props.companyList.items.companylist.slice(0,3).map(element => {
       return (
-        <div className="col-md-6 col-lg-4">
-        <CompanyCard
+        <div className="item">
+        {/* <CompanyCard
           companyid={element._id}
           badges={[BadgeList.MATERNITY_BENEFITS, BadgeList.SAFETY, BadgeList.WORKLIFE_BALANCE, BadgeList.WORKLIFE_BALANCE]}
           badgePosition="top left"
@@ -93,6 +120,18 @@ class Home extends Component {
           rating={element.ratings}
           industry={element.industry}
           openings={element.noofjobs}
+          alt="office image"
+          isFavourite={element.isFavourite}
+        /> */}
+        <CompanyCard
+          companyid={element._id}
+          badges={[BadgeList.MATERNITY_BENEFITS, BadgeList.SAFETY, BadgeList.WORKLIFE_BALANCE]}
+          badgePosition="top left"
+          locations={element.otherlocations.join(", ")}
+          title={element.name}
+          rating={element.ratings}
+          industry={element.industry}
+          openings="20"
           alt="office image"
           isFavourite={element.isFavourite}
         />
@@ -270,10 +309,10 @@ class Home extends Component {
                 <Recommendation 
                   list = { ["Culture", "Female Representatives & Opportunities", "Learning Opportunities", "Maternity Benefits", "Safety", "Salary & Benefits", "Work-life Balance", "Work Satisfaction"] } />
               </div>
-              <div className="col-md-9">
-                <div className="row">
+              <div className="col-md-9 kk-home__carousel__wrapper">
+                <Carousel option={carouselOption}>
                   { companyList }
-                </div>
+                </Carousel>
               </div>
             </div>
           </div>
@@ -287,7 +326,7 @@ class Home extends Component {
             <div className="row">
               {topIndustries.map((industry, index) => {
                 return (
-                  <div key={index} className="col-md-6 col-lg-3">
+                  <div key={index} className="col-12 col-sm-6 col-md-6 col-lg-3">
                     <JobPlainCard industry={industry} logo={icons[index]} link="/jobs" />
                   </div>
                 );
