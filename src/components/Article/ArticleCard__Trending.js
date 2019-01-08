@@ -42,7 +42,7 @@ const articleTrending = ({
                 <span>{authorName}</span>
                 <span>{readingTime}</span>
             </TextMuted>
-            {(description) ? <CardDescription excerptLength="100">{description}</CardDescription> : ""}
+            {(description) ? <CardDescription excerptLength="70">{description}</CardDescription> : ""}
         </CardBody>
     </Card>
 )
