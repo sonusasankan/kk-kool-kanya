@@ -1,15 +1,19 @@
-# Stage 1
-FROM node:10 as react-build
-WORKDIR /app
-COPY . ./
+FROM node:8
+# Create app directory
+WORKDIR /usr/src/app
+
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
 
 RUN npm install
-RUN npm run build
+# If you are building your code for production
+# RUN npm install --only=production
 
-# Stage 2 - the production environment
-FROM nginx
+# Bundle app source
+COPY . .
 
-#COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=react-build /app/build /usr/share/nginx/html
-EXPOSE 8080
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 3000
+
+CMD [ "npm", "start" ]
