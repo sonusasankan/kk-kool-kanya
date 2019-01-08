@@ -7,7 +7,7 @@ import SearchContainer from '../../components/Search/SearchContainer';
 import { ArticleCard } from '../../components/Article';
 
 //importing customscroll for swipable category cards
-import HorizontalScroll from '../../container/HorizontalScroll';
+import HorizontalScrollableTags from '../../container/HorizontalScrollableTags';
 
 import './ArticleSearch.scss';
 
@@ -74,7 +74,7 @@ class ArticleSearch extends Component {
                 </section>
         
                 <section className="container article-search__carousel">
-                    <HorizontalScroll />
+                    <HorizontalScrollableTags />
                 </section>
         
                 <section className="container pt-0">

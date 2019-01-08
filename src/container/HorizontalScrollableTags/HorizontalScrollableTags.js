@@ -41,7 +41,7 @@ const Menu = list =>
   const ArrowLeft = Arrow({ text: <FiChevronLeft/>, className: "arrow-prev" });
   const ArrowRight = Arrow({ text: <FiChevronRight/>, className: "arrow-next" });
 
-class HorizontalScroll extends Component {
+class HorizontalScrollableTags extends Component {
     state = {
         alignCenter: false,
         clickWhenDrag: false,
@@ -59,33 +59,6 @@ class HorizontalScroll extends Component {
         this.menu = null;
         this.menuItems = Menu(list.slice(0, list.length), this.state.selected);
       }
-
-      // onUpdate = ({ translate }) => {
-      //   console.log(`onUpdate: translate: ${translate}`);
-      //   this.setState({ translate });
-      // };
-    
-      // onSelect = key => {
-      //   console.log(`onSelect: ${key}`);
-      //   this.setState({ selected: key });
-      // };
-
-      // setItemsCount = ev => {
-      //   const { itemsCount = list.length, selected } = this.state;
-      //   const val = +ev.target.value;
-      //   const itemsCountNew =
-      //     !isNaN(val) && val <= list.length && val >= 0
-      //       ? +ev.target.value
-      //       : list.length;
-      //   const itemsCountChanged = itemsCount !== itemsCountNew;
-    
-      //   if (itemsCountChanged) {
-      //     this.menuItems = Menu(list.slice(0, itemsCountNew), selected);
-      //     this.setState({
-      //       itemsCount: itemsCountNew
-      //     });
-      //   }
-      // };
     
       setSelected = ev => {
         const { value } = ev.target;
@@ -129,12 +102,4 @@ class HorizontalScroll extends Component {
     }
 }
 
-export default HorizontalScroll;
-
-
-{/* <Capsule
-    isSelected = {this.state.selected.includes('Career Advice')}
-    imgSrc="https://loremflickr.com/44/44"
-    imgAlt="capsule image"
-    title="Career Advice"
-/> */}
+export default HorizontalScrollableTags;
