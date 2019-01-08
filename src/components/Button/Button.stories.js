@@ -10,12 +10,13 @@ import { withNotes } from '../../docs-addon';
 import { Button } from './Button';
 
 storiesOf('Button', module)
+  .addDecorator(story => <div className="m-4">{story()}</div>)
   .addDecorator(withKnobs)
   .addDecorator(withNotes)
   .add('Primary', () => (
     <Button
       label={text('label', 'Primary button')}
-      onClick={action('clicked')}
+      click={action('clicked')}
       primary={boolean('primary', true)}
     />
   ), { notes: JSON.stringify(Button.__docgenInfo, null, 10) })

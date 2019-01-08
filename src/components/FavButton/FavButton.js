@@ -49,17 +49,17 @@ class FavButton extends Component {
     this.setState({
       class: STATUS.HOVERED
     });
-    console.log('entered');
   }
   _onMouseLeave = () => {
     this.setState({class: STATUS.LEAVE });
   }
 
   render(){
-    const { top, right, bottom, left, grey, className } = this.props;
+    const { top, right, bottom, left, className, red, grey} = this.props;
     return (
       <StyledFavButton
         grey={grey}
+        red={red}
         top={top}
         right={right}
         bottom={bottom}
@@ -77,7 +77,9 @@ FavButton.propTypes = {
   right: PropTypes.bool,
   bottom: PropTypes.bool,
   left: PropTypes.bool,
-  grey: PropTypes.bool
+  grey: PropTypes.bool,
+  red: PropTypes.bool,
+  classname: PropTypes.string,
 };
 
 FavButton.defaultProps = {
@@ -85,6 +87,8 @@ FavButton.defaultProps = {
   right: false,
   bottom: false,
   left: false,
+  red: false,
+  grey: true,
 };
 
 export default FavButton;

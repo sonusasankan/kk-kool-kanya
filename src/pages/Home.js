@@ -17,7 +17,6 @@ import homeBg from "../assets/images/home-bg.png";
 import homeBg2x from "../assets/images/home-bg@2x.png";
 import iconMouse from "../assets/images/ic-mouse.svg";
 import Browse from "../assets/images/ic-search.svg";
-import Search from "../components/SVG/Search";
 import Score from "../assets/images/ic-koolkanya-score.svg";
 import ApplyJob from "../assets/images/ic-apply-job.svg";
 import TalkToKoolKanya from "../assets/images/ic-talk-to-koolkanya.jpg";
