@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs, text} from "@storybook/addon-knobs";
+import { withKnobs, text, boolean} from "@storybook/addon-knobs";
 import Chip from "./Chip";
 
 import dummyIcon from "../../assets/images/location-grey.svg";
@@ -14,6 +14,6 @@ storiesOf("Chip", module)
   .addDecorator(withKnobs)
   .addDecorator(story => <div style={{ margin: 20}}>{story()}</div>)
   .add("Chip", () => (
-    <Chip logo={text('logo', bangalore)} title={text('title','Bangalore')}/>
+    <Chip isActive={boolean('isActive', true)} logo={text('logo', bangalore)} title={text('title','Bangalore')}/>
 ));
 

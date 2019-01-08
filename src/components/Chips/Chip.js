@@ -5,8 +5,8 @@ import { colors } from "../../themes";
 import styled from "styled-components";
 
 const Btn = styled.button`
-  background-color: "#f4f4fb";
-  color: #4f565e;
+  background-color:${props => (props.isActive? "#703db2": "#f4f4fb")};
+  color:${props => (props.isActive ? "#fff":"#4f565e")};
   font-size: 18px !important;
   border-radius: 30px !important;
   margin-right: 10px;
@@ -33,7 +33,8 @@ class Chip extends Component {
     super(props);
 
     this.state = {
-      class: STATUS.NORMAL
+      class: STATUS.NORMAL,
+      isActive: false
     };
   }
 
@@ -41,16 +42,17 @@ class Chip extends Component {
     if(this.state.class == 'normal'){
       this.setState({ 
         class: STATUS.CLICKED,
-        selected: this.props.title
+        selected: this.props.title,
+        isActive: true
       });
     }else{
-      this.setState({ class: STATUS.NORMAL });
+      this.setState({ class: STATUS.NORMAL, isActive: false});
     }
   };
 
   render() {
     return (
-      <Btn className={"btn kk-chips " + this.state.class} onClick={this._handleClick}>
+      <Btn isActive className={"btn kk-chips " + this.state.class} onClick={this._handleClick}>
         <span className="mr-2">
           <img src={this.props.logo} alt={this.props.alt} />
         </span>
@@ -60,10 +62,13 @@ class Chip extends Component {
   }
 }
 
+
+
 Chip.propTypes = {
   logo: PropTypes.string,
   title: PropTypes.string.isrequired,
-  alt: PropTypes.string
+  alt: PropTypes.string,
+  isActive: PropTypes.boolean
 };
 
 export default Chip;

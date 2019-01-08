@@ -17,6 +17,7 @@ const FavButton = styled.button`
   transition: 0.1s ease-out;
   &:focus{
     outline: none;
+    color: ${props => (props.red? "#F8596C": "#e9e9e9")}
   }
   &.hovered{
     transform: scale(1.1);

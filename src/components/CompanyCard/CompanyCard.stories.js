@@ -8,6 +8,8 @@ import { action } from "@storybook/addon-actions";
 import { withKnobs, boolean, text, number } from "@storybook/addon-knobs";
 import CompanyCard from "./CompanyCard";
 
+import DummyImage from "../../assets/images/img-company-descrition-1.jpg";
+
 
 // import "../../style/icon.scss";
 
@@ -19,4 +21,4 @@ storiesOf("Company Card", module)
     <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
   ))
   .addDecorator(withKnobs)
-  .add("Card", () => <CompanyCard industry={text('industry', 'Information technology')} rating={number('rating', 4.5)} locations={text('locations', 'Bangalore, Delhi, Mumbai')} title={text("title", "Google")} />);
+  .add("Card", () => <CompanyCard industry={text('industry', 'Information technology')} img={text('img', DummyImage )} rating={number('rating', 4.5)} locations={text('locations', 'Bangalore, Delhi, Mumbai')} title={text("title", "Google")} />);

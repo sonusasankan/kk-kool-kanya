@@ -15,7 +15,7 @@ storiesOf('Button', module)
   .add('Primary', () => (
     <Button
       label={text('label', 'Primary button')}
-      onClick={action('clicked')}
+      click={action('clicked')}
       primary={boolean('primary', true)}
     />
   ), { notes: JSON.stringify(Button.__docgenInfo, null, 10) })
