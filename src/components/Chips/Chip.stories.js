@@ -14,6 +14,6 @@ storiesOf("Chip", module)
   .addDecorator(withKnobs)
   .addDecorator(story => <div style={{ margin: 20}}>{story()}</div>)
   .add("Chip", () => (
-    <Chip isActive={boolean('isActive', true)} logo={text('logo', bangalore)} title={text('title','Bangalore')}/>
+    <Chip isActive={boolean('isActive', false)} logo={text('logo', bangalore)} title={text('title','Bangalore')}/>
 ));
 

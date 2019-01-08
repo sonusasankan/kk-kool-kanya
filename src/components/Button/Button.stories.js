@@ -10,6 +10,7 @@ import { withNotes } from '../../docs-addon';
 import { Button } from './Button';
 
 storiesOf('Button', module)
+  .addDecorator(story => <div className="m-4">{story()}</div>)
   .addDecorator(withKnobs)
   .addDecorator(withNotes)
   .add('Primary', () => (

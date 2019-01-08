@@ -52,7 +52,7 @@ class Chip extends Component {
 
   render() {
     return (
-      <Btn isActive className={"btn kk-chips " + this.state.class} onClick={this._handleClick}>
+      <Btn isActive={this.props.isActive} className={"btn kk-chips " + this.state.class} onClick={this._handleClick}>
         <span className="mr-2">
           <img src={this.props.logo} alt={this.props.alt} />
         </span>
