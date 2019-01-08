@@ -11,6 +11,9 @@ import { FiShare2 } from "react-icons/fi";
 
 import {ListWrapper, JobCardWrapper, JdStickyHeader} from './JobsDescription__style';
 
+// dummy company logo
+import Logo from "../../assets/images/godrej.png";
+
 class JobDescription extends Component{
     
     componentDidMount(){
@@ -169,11 +172,61 @@ class JobDescription extends Component{
 
                 <section className="container">
                     <h2 className="mb-4">Similar Job Openings</h2>
-                    <JobCardWrapper><JobCard /></JobCardWrapper>
-                    <JobCardWrapper><JobCard /></JobCardWrapper>
-                    <JobCardWrapper><JobCard /></JobCardWrapper>
-                    <JobCardWrapper><JobCard /></JobCardWrapper>
-                    <JobCardWrapper><JobCard /></JobCardWrapper>
+                    <JobCardWrapper>
+                        <JobCard
+                            companyLogo={Logo}
+                            jobTitle="UI/UX Designer"
+                            location="Bengaluru"
+                            experienceRequired="2+ years"
+                            typeOfJob="Full Time"
+                            postedOn="Posted 3 weeks ago"
+                            detailLink="/job-description"
+                        />
+                    </JobCardWrapper>
+                    <JobCardWrapper>
+                        <JobCard
+                            companyLogo={Logo}
+                            jobTitle="UI/UX Designer"
+                            location="Bengaluru"
+                            experienceRequired="2+ years"
+                            typeOfJob="Full Time"
+                            postedOn="Posted 3 weeks ago"
+                            detailLink="/job-description"
+                        />
+                    </JobCardWrapper>
+                    <JobCardWrapper>
+                        <JobCard
+                            companyLogo={Logo}
+                            jobTitle="UI/UX Designer"
+                            location="Bengaluru"
+                            experienceRequired="2+ years"
+                            typeOfJob="Full Time"
+                            postedOn="Posted 3 weeks ago"
+                            detailLink="/job-description"
+                        />
+                    </JobCardWrapper>
+                    <JobCardWrapper>
+                        <JobCard
+                            companyLogo={Logo}
+                            jobTitle="UI/UX Designer"
+                            location="Bengaluru"
+                            experienceRequired="2+ years"
+                            typeOfJob="Full Time"
+                            postedOn="Posted 3 weeks ago"
+                            detailLink="/job-description"
+                        />
+                    </JobCardWrapper>
+                    <JobCardWrapper>
+                        <JobCard
+                            companyLogo={Logo}
+                            jobTitle="UI/UX Designer"
+                            location="Bengaluru"
+                            experienceRequired="2+ years"
+                            typeOfJob="Full Time"
+                            postedOn="Posted 3 weeks ago"
+                            detailLink="/job-description"
+                        />
+                    </JobCardWrapper>
                 </section>
             </React.Fragment>
         )

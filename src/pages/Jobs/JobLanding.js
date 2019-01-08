@@ -10,6 +10,9 @@ import BreadCrumb from "../../components/BreadCrumb";
 import JobCard  from "../../components/Jobs";
 import SearchContainer from "../../components/Search/SearchContainer";
 
+// dummy company logo
+import Logo from "../../assets/images/godrej.png";
+
 export default class JobLanding extends Component {
 
   _openSortFilters(){
@@ -109,32 +112,80 @@ export default class JobLanding extends Component {
                       <div className="row">
                         <div className="col-12">
                           <JobCardWrapper>
-                            <JobCard />
+                            <JobCard
+                              companyLogo={Logo}
+                              jobTitle="UI/UX Designer"
+                              location="Bengaluru"
+                              experienceRequired="2+ years"
+                              typeOfJob="Full Time"
+                              postedOn="Posted 3 weeks ago"
+                              detailLink="/job-description"
+                            />
                           </JobCardWrapper>
                         </div>
                         <div className="col-12">
                           <JobCardWrapper>
-                            <JobCard />
+                            <JobCard
+                              companyLogo={Logo}
+                              jobTitle="UI/UX Designer"
+                              location="Bengaluru"
+                              experienceRequired="2+ years"
+                              typeOfJob="Full Time"
+                              postedOn="Posted 3 weeks ago"
+                              detailLink="/job-description"
+                            />
                           </JobCardWrapper>
                         </div>
                         <div className="col-12">
                           <JobCardWrapper>
-                            <JobCard />
+                            <JobCard
+                              companyLogo={Logo}
+                              jobTitle="UI/UX Designer"
+                              location="Bengaluru"
+                              experienceRequired="2+ years"
+                              typeOfJob="Full Time"
+                              postedOn="Posted 3 weeks ago"
+                              detailLink="/job-description"
+                            />
                           </JobCardWrapper>
                         </div>
                         <div className="col-12">
                           <JobCardWrapper>
-                            <JobCard />
+                            <JobCard
+                              companyLogo={Logo}
+                              jobTitle="UI/UX Designer"
+                              location="Bengaluru"
+                              experienceRequired="2+ years"
+                              typeOfJob="Full Time"
+                              postedOn="Posted 3 weeks ago"
+                              detailLink="/job-description"
+                            />
                           </JobCardWrapper>
                         </div>
                         <div className="col-12">
                           <JobCardWrapper>
-                            <JobCard />
+                            <JobCard
+                              companyLogo={Logo}
+                              jobTitle="UI/UX Designer"
+                              location="Bengaluru"
+                              experienceRequired="2+ years"
+                              typeOfJob="Full Time"
+                              postedOn="Posted 3 weeks ago"
+                              detailLink="/job-description"
+                            />
                           </JobCardWrapper>
                         </div>
                         <div className="col-12">
                           <JobCardWrapper>
-                            <JobCard />
+                            <JobCard
+                              companyLogo={Logo}
+                              jobTitle="UI/UX Designer"
+                              location="Bengaluru"
+                              experienceRequired="2+ years"
+                              typeOfJob="Full Time"
+                              postedOn="Posted 3 weeks ago"
+                              detailLink="/job-description"
+                            />
                           </JobCardWrapper>
                         </div>
                       </div>
