@@ -24,12 +24,29 @@ const ContentWrapper = styled.div`
                 text-align: center;
             }
         }
+        &__file-input{
+            position: absolute;
+            right: calc( 50% - 45px );
+            bottom: 0;
+            background-color: ${Colors.brandColor};
+            color: #FFF;
+            border: 1px solid #FFF;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            svg{
+                position: relative;
+                top: -2px;
+            }
+        }
         &__wrapper--inner{
             width: 72px;
+            height: 72px;
             margin: auto;
             position: relative;
             @media (min-width: 768px){
                 width: 191px;
+                height: 151px;
                 margin: initial;
             }
         }

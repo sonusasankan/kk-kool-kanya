@@ -62,6 +62,11 @@ class EditProfile extends Component{
         })
     }
 
+    takeInput(){
+        let input = document.querySelector('#upload-file');
+        input.click();
+    }
+
     render(){
         return(
             <React.Fragment>
@@ -87,7 +92,8 @@ class EditProfile extends Component{
                                                     isLoggedIn
                                                     imgSrc="https://loremflickr.com/151/151"
                                                 />
-                                                <button><FiCamera /></button>
+                                                <button className="kk-avatar__file-input" onClick={this.takeInput}><FiCamera /></button>
+                                                <input id="upload-file" type="file" name="upload-file" style={{visibility:'hidden', height: 0, width: 0}}/>
                                             </div>
                                         </div>
                                         <div>
@@ -139,9 +145,9 @@ class EditProfile extends Component{
                                     <div className="kk-interest border-bottom">
                                         <h3>Interested in companies good for </h3>
                                         <div className="row">
-                                            <div className="col-12 col-md-6">
+                                            <div className={"col-12 col-md-6 "+(this.state.selectedInterestOptions.length===0 ? 'd-none' : '')}>
                                                 <ul>
-                                                {
+                                                {   
                                                     this.state.selectedInterestOptions.map((item)=>{
                                                         return (
                                                             <li className="kk-list-style-type-none">

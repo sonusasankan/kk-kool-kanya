@@ -91,7 +91,10 @@ class Companies extends Component {
             </div>
             <div className="row">
               <div className="col-md-3">
-                <Recommendation personas = { this.props.companyList.items.filter.personas } />
+                <Recommendation 
+                  // personas = { this.props.companyList.items.filter.personas } 
+                  list = { ["Culture", "Female Representatives & Opportunities", "Learning Opportunities", "Maternity Benefits", "Safety", "Salary & Benefits", "Work-life Balance", "Work Satisfaction"] }
+                  />
               </div>
               <div className="col-md-9">
                 <div className="row">
