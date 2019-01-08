@@ -67,13 +67,20 @@ const carouselOption = {
   nav: false,
   items: 1,
   stagePadding: 16,
+  center: false,
   responsive: {
     400:{
-      stagePadding: 64,
+      items: 1,
+      stagePadding: 40,
     },
     576:{
       items: 2,
-      stagePadding: 64
+      stagePadding: 16
+    },
+    992:{
+      items: 2,
+      margin: 16,
+      stagePadding: 24,
     },
     1200:{
       items: 3

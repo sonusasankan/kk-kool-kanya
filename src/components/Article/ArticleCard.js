@@ -29,7 +29,7 @@ const articleCard = ({
         <span>{authorName}</span>
         <span>{readingTime}</span>
       </TextMuted>
-      {description ? (<CardDescription excerptLength="24">{description}</CardDescription>) : ''}
+      {description ? (<CardDescription excerptLength="140">{description}</CardDescription>) : ''}
     </CardBody>
   </Card>
 );

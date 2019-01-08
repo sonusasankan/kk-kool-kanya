@@ -495,11 +495,14 @@ h3.kk-section-title {
 }
 
 
-//company carousel in homepage
+// company carousel in homepage
 .kk-home__carousel__wrapper{
+  z-index: 3;
   .card__company{
-    max-width: 270px;
-    margin: auto;
+    @media (min-width: 1200px){
+      max-width: 270px;
+      margin: auto;
+    }
   }
 }
 

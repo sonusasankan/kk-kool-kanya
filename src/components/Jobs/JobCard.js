@@ -9,36 +9,48 @@ import {
     CardFavButton
 } from '../Cards';
 import JobCardWrapper from './style';
-import Logo from "../../assets/images/godrej.png";
 
-const jobCard = ({favButton}) =>(
+//icon import 
+import { IoIosArrowForward } from "react-icons/io";
+
+const jobCard = ({
+    favButton,
+    companyLogo,
+    jobTitle,
+    companyName,
+    location,
+    experienceRequired,
+    typeOfJob,
+    postedOn,
+    detailLink
+}) =>(
     <JobCardWrapper>
-        <Card cardType="kk-card__job" link="/job-description">
-            <CardLogo src={Logo} alt="Godrej Logo" />
+        <Card cardType="kk-card__job" link={detailLink}>
+            <CardLogo src={companyLogo} alt="Godrej Logo" />
             <div className="flex-grow-1">
                 <CardHead>
                     <div>
-                        <CardTitle>UI/UX Designer </CardTitle>
-                        <p className="mb-2 kk-font-secondaryDarkGray">Godrej Consumer Product</p>
+                        <CardTitle>{jobTitle}</CardTitle>
+                        <p className="mb-2 kk-font-secondaryDarkGray">{companyName}</p>
                     </div>
                 </CardHead>
                 <div className="d-flex kk-card__details__wrapper">
                     <CardDetails>
-                        Bengaluru
+                        {location}
                     </CardDetails>
                     <CardDetails>
-                        2+ years
+                        {experienceRequired}
                     </CardDetails>
                     <CardDetails>
-                        Full Time
+                        {typeOfJob}
                     </CardDetails>
                 </div>
-                <CardDetails>Posted 1 week ago</CardDetails>
+                <CardDetails>{postedOn}</CardDetails>
             </div>
             <div className={"d-flex kk-view-more "+(favButton ? "flex-column justify-content-between" : "align-items-center")}>
                 {favButton ? <div className="d-flex justify-content-end"><CardFavButton active /></div> : ""}
                 <div>
-                    <span className="d-none d-sm-none d-md-inline-block">View details </span> >
+                    <span className="d-none d-sm-none d-md-inline-block">View details </span><IoIosArrowForward />
                 </div>
             </div>
         </Card>
