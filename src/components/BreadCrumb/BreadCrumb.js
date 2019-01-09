@@ -13,7 +13,7 @@ const breadCrumb = ({
 );
 
 breadCrumb.propTypes = {
-  children: PropTypes.func.isRequired,
+  children: PropTypes.array.isRequired,
 };
 
 export default breadCrumb;

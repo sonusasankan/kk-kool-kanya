@@ -18,16 +18,31 @@ import { FiArrowRight } from "react-icons/fi";
 import { Chip } from "../../components/Chips";
 import FavButton from "../../components/FavButton";
 import SearchContainer from './../../components/Search/SearchContainer';
+import {BadgeList} from '../../components/Cards/Badge';
+import { CompanyCard } from "./../../components/CompanyCard";
+import HorizontalScrollableTags from '../../container/HorizontalScrollableTags';
+
+
 
 import Recommendation from "./../../components/Recommendation/Recommendation";
 import Logo from "../../assets/images/godrej.png";
 import bangalore from "../../assets/images/location.svg";
 import dummyIcon from "../../assets/images/location-grey.svg";
+import dummyImage from "../../assets/images/img-company-descrition-1.jpg";
 
 // for stores
 import { connect } from "react-redux";
 import { fetchCompanyLists } from "../../store/actions/companyActions";
 
+const list = [
+  <Chip logo={bangalore} alte="bangalore logo" title="Bangalore" />,
+  <Chip logo={bangalore} alte="bangalore logo" title="Delhi" />,
+  <Chip logo={bangalore} alte="bangalore logo" title="Chennai" />,
+  <Chip logo={bangalore} alte="bangalore logo" title="Mumbai" />,
+  <Chip logo={bangalore} alte="bangalore logo" title="Bangalore" />,
+  <Chip logo={bangalore} alte="bangalore logo" title="Pune" />,
+  <Chip logo={bangalore} alte="bangalore logo" title="Hydherabad" />
+];
 
 class Companies extends Component {
   constructor(props) {
@@ -106,35 +121,19 @@ class Companies extends Component {
                           key={company.id}
                           className="col-md-4"
                         >
-                          <Card cardType="card__company">
-                            {company.numberOfBadges ? <CardBadge top left numberOfBadges={company.numberOfBadges} /> : ""}
-                            <CardFavButton
-                              className="kk-fav-btn"
-                              ref={this.button}
-                              top
-                              right
-                            />
-                            <CardImage
-                              src={company.image}
-                              alt="Alternate text for image"
-                            />
-                            <CardHead>
-                              <CardLogo src={Logo} alt="Godrej Logo" />
-                              <CardTitle>{company.name + `this will be next line, and some times third`}</CardTitle>
-                              <CardRating>{company.rating % 1 !== 0? company.rating: company.rating + ".0"}</CardRating>
-                            </CardHead>
-                            <CardBody>
-                              <CardDetails icon="icon-ic-location-24">
-                                {company.otherlocations.join(", ")}
-                              </CardDetails>
-                              <CardDetails icon="icon-ic-industry-24">
-                                {company.industry}
-                              </CardDetails>
-                              <CardDetails icon="icon-ic-job-24">
-                                {company.totalOpenings} Job Openings
-                              </CardDetails>
-                            </CardBody>
-                          </Card>
+                          <CompanyCard
+                            badges={[BadgeList.MATERNITY_BENEFITS, BadgeList.SAFETY, BadgeList.WORKLIFE_BALANCE]}
+                            badgePosition="top left"
+                            locations={company.otherlocations.join(", ")}
+                            title={company.name + `this will be next line, and some times third`}
+                            // rating={company.rating % 1 !== 0? company.rating: company.rating + ".0"}
+                            rating={company.rating % 1 !== 0? company.rating: company.rating + ".0"}
+                            industry={company.industry}
+                            openings={company.totalOpenings}
+                            img={dummyImage}
+                            alt="office image"
+                            isFavourite={company.isFavourite}
+                          />
                         </div>
                       );
                     }
@@ -160,35 +159,32 @@ class Companies extends Component {
             </div>
             <div className="row">
               <div className="col-md-12">
-                {
-                  new Set(
-                    locations.map(location => {
-                      return <Chip logo={bangalore} title={location} />;
-                    })
-                  )
-                }
+              <HorizontalScrollableTags list={list}/>
               </div>
             </div>
             <div className="row my-4">
-              {companyList.map(company => {
-                return (
-                  <div className="col-md-4 kk-card-small">
-                    <Card cardType="card__company">
-                      <CardBody>
-                        <FavButton grey top right />
-                        <CardDetails>
-                          <div className="d-flex">
-                            <CardLogo src={Logo} />
-                            <div>
-                              <h6>{company.name} An some text will also comes here</h6>
-                              <span className="kk-rating-numbber d-flex justify-content-center">{company.rating % 1 !== 0? company.rating: company.rating + ".0"}</span>
+              {companyList.map((company, index) => {
+                if(index < 6){
+                  return (
+                    <div className="col-md-4 kk-card-small">
+                      <Card cardType="card__company">
+                        <CardBody>
+                          <FavButton grey top right />
+                          <CardDetails>
+                            <div className="d-flex">
+                              <CardLogo src={Logo} />
+                              <div>
+                                <h6>{company.name} An some text will also comes here</h6>
+                                {/* <span className="kk-rating-numbber d-flex justify-content-center">{company.rating % 1 !== 0? company.rating: company.rating + ".0"}</span> */}
+                                <span className="kk-rating-numbber d-flex justify-content-center">4.5</span>
+                              </div>
                             </div>
-                          </div>
-                        </CardDetails>
-                      </CardBody>
-                    </Card>
-                  </div>
-                );
+                          </CardDetails>
+                        </CardBody>
+                      </Card>
+                    </div>
+                  );
+                }
               })}
             </div>
           </div>
@@ -208,20 +204,22 @@ class Companies extends Component {
               />
             </div>
             <div className="row">
-              {companyList.map(company => {
-                return (
-                  <div className="col-md-3 text-center">
-                    <Card styleName="my-2" cardType="card__company">
-                    <CardBody>
-                      <img src={dummyIcon} alt=""/>                       
-                       <h6 className="card-title">{company.industry}</h6>
-                       <p className="card-text">
-                          {company.totalOpenings} Openings
-                        </p>
-                    </CardBody>
-                    </Card>
-                  </div>
-                );
+              {companyList.map((company, index) => {
+                if(index < 8){
+                  return (
+                    <div className="col-md-3 text-center">
+                      <Card styleName="my-2" cardType="card__company">
+                      <CardBody>
+                        <img src={dummyIcon} alt=""/>                       
+                         <h6 className="card-title">{company.industry}</h6>
+                         <p className="card-text">
+                            {company.totalOpenings} Openings
+                          </p>
+                      </CardBody>
+                      </Card>
+                    </div>
+                  );
+                }
               })}
             </div>
           </div>

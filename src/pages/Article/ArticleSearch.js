@@ -9,6 +9,15 @@ import { ArticleCard } from '../../components/Article';
 //importing customscroll for swipable category cards
 import HorizontalScrollableTags from '../../container/HorizontalScrollableTags';
 
+
+import {Chip} from '../../components/Chips';
+
+//impor ting images for filter cards
+import CareerAdvice from '../../assets/images/article-category/career-advice-square.png';
+import CoffeeBreak from '../../assets/images/article-category/coffee-break-square.png';
+import Connect from '../../assets/images/article-category/connect-square.png';
+import Restarting from '../../assets/images/article-category/restartingcareer-square.png';
+import Tools from '../../assets/images/article-category/tools-square.png';
 import './ArticleSearch.scss';
 
 const option = {
@@ -22,6 +31,14 @@ const option = {
         }
     }
 };
+
+const list = [
+    <Chip logo={CareerAdvice} alt="Career Advice" title="Career Advice" />,
+    <Chip logo={CoffeeBreak} alt="Coffee Break" title="Coffee Break" />,
+    <Chip logo={Connect} alt="Connect" title="Connect" />,
+    <Chip logo={Restarting} alt="Restarting your Career" title="Restarting your Career" />,
+    <Chip logo={Tools} alt="Tools & Skills" title="Tools & Skills" />
+];
 
 class ArticleSearch extends Component {
 
@@ -74,7 +91,7 @@ class ArticleSearch extends Component {
                 </section>
         
                 <section className="container article-search__carousel">
-                    <HorizontalScrollableTags />
+                    <HorizontalScrollableTags list={list}/>
                 </section>
         
                 <section className="container pt-0">
