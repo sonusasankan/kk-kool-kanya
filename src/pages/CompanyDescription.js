@@ -22,7 +22,8 @@ import {
   FiSmartphone,
   FiGlobe,
   FiChevronDown,
-  FiArrowRight
+  FiArrowRight,
+  FiChevronRight
 } from "react-icons/fi";
 
 const chartData = {
@@ -326,9 +327,8 @@ export default class CompanyDescription extends Component {
           <SectionSpecificStickyHeader
                     targetSectionId="companyDesc"
                     logo={godrej}
-                    titleName="UI/UX Designer"
-                    subTitlename="Godrej Consumer Product"
-                    buttonText="Apply Now"
+                    titleName="Godrej Consumer Product Limited"
+                    buttonText="Talk to a Koolkanya"
           />
         </section>
         <section className="kk-company-score kk-bg-light kk-main-section">
@@ -834,7 +834,7 @@ export default class CompanyDescription extends Component {
                     primary={false}
                     label="Read All Reviews"
                     icon={
-                      <FiArrowRight
+                      <FiChevronRight
                         className="icon"
                         click={() => {
                           console.log("clicked");
@@ -872,7 +872,7 @@ export default class CompanyDescription extends Component {
                         isAlignRight={true}
                         label="View Job Details"
                         icon={
-                          <FiArrowRight className="icon" click={() => {}} />
+                          <FiChevronRight className="icon" click={() => {}} />
                         }
                       />
                     </div>
@@ -898,7 +898,7 @@ export default class CompanyDescription extends Component {
                         isAlignRight={true}
                         label="View Job Details"
                         icon={
-                          <FiArrowRight className="icon" click={() => {}} />
+                          <FiChevronRight className="icon" click={() => {}} />
                         }
                       />
                     </div>
@@ -924,7 +924,7 @@ export default class CompanyDescription extends Component {
                         isAlignRight={true}
                         label="View Job Details"
                         icon={
-                          <FiArrowRight className="icon" click={() => {}} />
+                          <FiChevronRight className="icon" click={() => {}} />
                         }
                       />
                     </div>
