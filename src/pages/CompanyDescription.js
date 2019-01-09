@@ -10,6 +10,7 @@ import Fav from "../components/FavButton";
 import { Button } from "../components/Button";
 import { CompanyCard } from "../components/CompanyCard";
 import BreadCrumb from "../components/BreadCrumb";
+import SectionSpecificStickyHeader from './../container/SectionSpecificStickyHeader/SectionSpecificStickyHeader';
 
 import { FaStar } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
@@ -192,7 +193,7 @@ export default class CompanyDescription extends Component {
             </BreadCrumb>
           </div>
         </section>
-        <section className="company-desc pt-0">
+        <section id="companyDesc" className="company-desc pt-0">
           <div className="container">
             <div className="row">
               <div className="col-md-6">
@@ -322,6 +323,13 @@ export default class CompanyDescription extends Component {
               </div>
             </div>
           </div>
+          <SectionSpecificStickyHeader
+                    targetSectionId="companyDesc"
+                    logo={godrej}
+                    titleName="UI/UX Designer"
+                    subTitlename="Godrej Consumer Product"
+                    buttonText="Apply Now"
+          />
         </section>
         <section className="kk-company-score kk-bg-light kk-main-section">
           <div className="container">
