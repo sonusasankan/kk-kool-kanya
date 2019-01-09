@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Colors from '../../themes/color';
 
-export const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.div`
     z-index: 97;
     nav{
         display: flex;
@@ -118,7 +118,9 @@ export const HeaderWrapper = styled.div`
                     }
                     &.active{
                         font-weight: 600;
-                        color: ${Colors.brandColor};
+                        @media (min-width: 992px){
+                            color: ${Colors.brandColor};
+                        }
                     }
                 }
             }
@@ -133,7 +135,7 @@ export const HeaderWrapper = styled.div`
         @media (min-width: 992px){
             margin: 0 0 0 48px;
         }
-        a{
+        &.link{
             text-align: center;
             padding: 0 0 0 0 !important;
             @media (min-width: 992px){
@@ -179,6 +181,14 @@ export const HeaderWrapper = styled.div`
     }
     &.invert{
         background: transparent;
+        .kk-post-login{
+            color: #FFF;
+            // &-dropdown{
+            //     &__item{
+            //         color:
+            //     }
+            // }
+        }
         .kk-brand-logo{
             img{
                 filter: invert(100%);
@@ -204,3 +214,58 @@ export const HeaderWrapper = styled.div`
         }
     }
 `;
+
+
+const PostLoginWrapper = styled.div`
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+    padding: 0 1rem;
+    color: #FFF;
+    bottom: 2rem;
+
+    @media (min-width: 992px){
+        color: #212121;
+        bottom: initial;
+    }
+
+    .kk-img-wrapper{
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .kk-name{
+        padding: 0 0.5rem;
+        white-space: nowrap;
+    }
+    .kk-postlogin-dropdown{
+        background-color: #FFF;
+        position: absolute;
+        bottom: 56px;
+        left: 1rem;
+        border-radius: 4px;
+        overflow: hidden;
+        width: 100%;
+        box-shadow: 0 15px 30px 0 rgba(74, 74, 74, 0.1);
+        @media (min-width: 992px){
+            bottom: -13.25rem;
+        }
+
+        &__item{
+            font-size: 0.75rem;
+            height: 2.5rem;
+            color: ${Colors.secondaryDarkGray} !important;
+            border: 1px solid #FFF;
+            border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+            &:hover{
+                border-left: 1px solid ${Colors.brandColor};
+                background-color: rgba(237, 224, 253, 0.3) !important;
+            }
+        }
+    }
+`;
+
+
+export {HeaderWrapper, PostLoginWrapper};

@@ -7,8 +7,8 @@ import { IoMdMenu } from "react-icons/io"
 import {HeaderWrapper} from './style';
 import { showModal, hideModal } from  '../../store/actions/modal';
 import { MODAL_TYPE_SIGNUP, MODAL_TYPE_SIGNIN, MODAL_TYPE_FORGOTPASSWORD} from '../../constants/ModalTypes';
+import {Login, PostLogin} from './loginLogout';
 
-import {Button} from '../Button';
 import kkLogoPNG from '../../assets/images/kk-logo.png';
 
 class Header extends Component {
@@ -16,6 +16,7 @@ class Header extends Component {
     super(props);
     this.state = {
       show: false,
+      isLoggedin: false
     }
 
     this.toggle = this.toggle.bind(this);
@@ -138,20 +139,9 @@ class Header extends Component {
                   <li><NavLink exact activeClassName="active" onClick={this.toggle} to="/articles">Article</NavLink></li>
                   <li><NavLink exact activeClassName="active" onClick={this.toggle} to="/about">About</NavLink></li>
                   <li className="kk-header__login">
-                    <div className="kk-header__login__signin">
-                      <Button
-                        click={this.signIn}
-                        label="Sign in"
-                      />
-                    </div>
-                    <Link to="#">
-                      <Button
-                        primary={false}
-                        hasBorder 
-                        label="Sign up"
-                        click={this.signUp}
-                      />
-                    </Link>
+                    {this.state.isLoggedin
+                      ? <PostLogin linkClick={this.toggle.bind(this)} profilePic="https://loremflickr.com/44/44" profileName="Deepti Agrawal" />
+                      : <Login loginClick = {this.signIn.bind(this)} signUpClick={this.signUp.bind(this)} /> }
                   </li>
                 </ul>
                   
