@@ -15,19 +15,27 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false
+      show: false,
     }
 
     this.toggle = this.toggle.bind(this);
   }
 
   body = document.querySelector('body');
-  toggle(){
+  toggle(e){
     if(window.innerWidth < 992){
       this.body.classList.toggle('no-scroll');
       this.setState(state=>({
         show: !state.show
       }))
+    }
+    else{
+      e.target.closest('ul').querySelectorAll('a').forEach((el)=>{
+        if(el.classList.contains('active')){
+          el.classList.remove('active')
+        }
+      });
+      e.target.classList.add('active');
     }
   }
 

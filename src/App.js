@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { createBrowserHistory } from "history";
 import PropTypes from "prop-types";
-import { withRouter } from "react-router";
+import {withRouter } from "react-router";
 
 import "./style/icon.scss";
 

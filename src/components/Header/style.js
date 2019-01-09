@@ -118,6 +118,7 @@ export const HeaderWrapper = styled.div`
                     }
                     &.active{
                         font-weight: 600;
+                        color: ${Colors.brandColor};
                     }
                 }
             }
