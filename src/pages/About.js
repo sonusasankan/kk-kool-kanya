@@ -20,6 +20,7 @@ import aboutImage02 from "../assets/images/aboutimg-1.jpg";
 import aboutImage03 from "../assets/images/aboutimg-4.jpg";
 import aboutImage04 from "../assets/images/aboutimg-5.svg";
 import aboutImage05 from "../assets/images/aboutimg-6.jpg";
+import aboutImage09 from "../assets/images/aboutimg-9.png";
 
 export default class About extends Component {
   render() {
@@ -83,7 +84,7 @@ export default class About extends Component {
           </div>
         </div>
         <div className="row-fluid">
-            <img className="img-fluid" src="http://placehold.jp/1600x550.png" alt=""/>
+            <img className="img-fluid" src={aboutImage09} alt="Banner"/>
           </div>
       </section>
       <section>

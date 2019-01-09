@@ -23,11 +23,12 @@ class Header extends Component {
 
   body = document.querySelector('body');
   toggle(){
-    this.body.classList.toggle('no-scroll');
-    this.setState(state=>({
-      show: !state.show
-    }))
-    console.log(this.state.show);
+    if(window.innerWidth < 992){
+      this.body.classList.toggle('no-scroll');
+      this.setState(state=>({
+        show: !state.show
+      }))
+    }
   }
 
   //Sign Un modal//
@@ -80,7 +81,6 @@ class Header extends Component {
         if(document.body.classList.contains('kk-home')){
           header.classList.add("invert");
         }else{
-          console.log(true)
           header.classList.remove("invert");
         }
 
@@ -124,11 +124,11 @@ class Header extends Component {
                   </div>
                 </div>
                 <ul>
-                  <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
-                  <li><NavLink exact activeClassName="active" to="/companies">Companies</NavLink></li>
-                  <li><NavLink exact activeClassName="active" to="/jobs">Job</NavLink></li>
-                  <li><NavLink exact activeClassName="active" to="/articles">Article</NavLink></li>
-                  <li><NavLink exact activeClassName="active" to="/about">About</NavLink></li>
+                  <li><NavLink exact activeClassName="active" onClick={this.toggle} to="/">Home</NavLink></li>
+                  <li><NavLink exact activeClassName="active" onClick={this.toggle} to="/companies">Companies</NavLink></li>
+                  <li><NavLink exact activeClassName="active" onClick={this.toggle} to="/jobs">Job</NavLink></li>
+                  <li><NavLink exact activeClassName="active" onClick={this.toggle} to="/articles">Article</NavLink></li>
+                  <li><NavLink exact activeClassName="active" onClick={this.toggle} to="/about">About</NavLink></li>
                   <li className="kk-header__login">
                     <div className="kk-header__login__signin">
                       <Button
