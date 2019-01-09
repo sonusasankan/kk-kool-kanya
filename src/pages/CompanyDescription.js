@@ -325,13 +325,13 @@ export default class CompanyDescription extends Component {
             </div>
           </div>
           <SectionSpecificStickyHeader
-                    targetSectionId="companyDesc"
+                    targetSectionId="companyScore"
                     logo={godrej}
                     titleName="Godrej Consumer Product Limited"
                     buttonText="Talk to a Koolkanya"
           />
         </section>
-        <section className="kk-company-score kk-bg-light kk-main-section">
+        <section id="companyScore" className="kk-company-score kk-bg-light kk-main-section">
           <div className="container">
             <div className="row-fluid mb-2 mb-md-5">
               <h3 className="kk-section-title">Kool Kanya Score Analysis</h3>
