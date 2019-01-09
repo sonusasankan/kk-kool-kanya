@@ -773,6 +773,7 @@ h3.kk-section-title {
       max-width: none;
     }
     &__wrapper{
+      z-index: 3;
       @media (min-width: 768px){
         max-width: 248px;
         margin: auto;
