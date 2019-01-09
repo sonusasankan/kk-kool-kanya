@@ -17,37 +17,6 @@ import Logo from "../../assets/images/godrej.png";
 
 class JobDescription extends Component{
     
-    // componentDidMount(){
-
-    //     //show hob description header only when entering into job description fold(2nd fold)
-    //     let jdSection = document.querySelector('#kk-job-description__jd'),
-    //     jdSectionStickyHeader = document.querySelector('#kk-job-description__jd__header'),
-    //     jdSectionHeight = parseInt(jdSection.getBoundingClientRect().height),
-    //     jdSectionHeader = document.querySelector('#kk-job-description__jd__header');
-    //     let currentTop, lastTop=0;
-    //     window.addEventListener('scroll', function(){
-    //         let jdSectiontop = parseInt(jdSection.getBoundingClientRect().top);
-    //         if((jdSectiontop < 0) && ((jdSectiontop + (jdSectionHeight - 187)) > 0)){
-    //             jdSectionHeader.classList.add('show');
-    //         }
-    //         else{
-    //             if(jdSectionHeader.classList.contains("show")){
-    //                 jdSectionHeader.classList.remove('show');
-    //             }
-    //         }
-
-    //         //setting top position of description header accroding to navigation header
-    //         currentTop = window.scrollY;
-    //         if(currentTop > lastTop){
-    //             jdSectionStickyHeader.classList.add('up')
-    //         }
-    //         else{
-    //             jdSectionStickyHeader.classList.remove('up');
-    //         }
-    //         lastTop = currentTop;
-    //     })
-    // }
-
     render(){
         return (
             <React.Fragment>
@@ -70,31 +39,13 @@ class JobDescription extends Component{
 
                 <SectionSpecificStickyHeader
                     targetSectionId="kk-job-description__jd"
-                >
-                    <div className="row">
-                        <div className="col-md-6">
-                            <div className="d-flex py-4">
-                                <CardLogo src={godrej} alt="godrej" />
-                                <div className="d-flex flex-column justify-content-center ml-3">
-                                    <h3 className="mb-0">UI/UX Designer</h3>
-                                    <span>Godrej Consumer Product</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6 d-flex align-items-center justify-content-md-end">
-                            <div>
-                                <Button
-                                    styleName="curved mr-3 mb-2 mb-md-0"
-                                    label="Apply Now"
-                                />
-                                <button className="kk-share-button"><FiShare2 /></button>
-                                <Fav grey />
-                            </div>
-                        </div>
-                    </div>
-                </SectionSpecificStickyHeader>
+                    logo={Logo}
+                    titleName="UI/UX Designer"
+                    subTitlename="Godrej Consumer Product"
+                    buttonText="Apply Now"
+                />
 
-
+                {/* pass target section ID to attatch this sticky header with that section */}
                 <section id="kk-job-description__jd" className="container-fluid position-relative" style={{background: '#f6f7fc'}}>
                     <div className="container">
                         <h2>Job Description</h2>
