@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import {Bar} from 'react-chartjs-2';
 
 import godrej from "../assets/images/godrej.png";
 import companyImage from "../assets/images/img-company-descrition-1.jpg";
 import userAvatar from "../assets/images/user-avatar.png";
-import SearchContainer from "../components/Search/SearchContainer"
+import SearchContainer from "../components/Search/SearchContainer";
 /*Components*/
 import Fav from "../components/FavButton";
 import { Button } from "../components/Button";
@@ -11,6 +12,7 @@ import { CompanyCard } from "../components/CompanyCard";
 import BreadCrumb from "../components/BreadCrumb";
 
 import { FaStar } from "react-icons/fa";
+import { MdClose } from "react-icons/md";
 import Carousel from "../components/Carousel";
 import {
   // import BreadCrumb from './../components/BreadCrumb/style';
@@ -22,20 +24,70 @@ import {
   FiArrowRight
 } from "react-icons/fi";
 
+const chartData = {
+  labels: ["Maternity leaves", "Supported on return"],
+  datasets: [{
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)'
+      ],
+      borderColor: [
+          'rgba(255,99,132,1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+      ],
+      borderWidth: 1
+  }]
+}
+
+const chartOptions = {
+  scales: {
+      yAxes: [{
+          ticks: {
+              beginAtZero:true
+          }
+      }]
+  }
+}
 //carousel options//
 const option = {
-  items: 1,
-  margin: 16,
-  nav: true,
-  dots: true,
-  URLhashListener	: true,
+  loop: true,
+  center: true,
+  margin: 0,
+  callbacks: true,
   responsive: {
+    0: {
+      items: 1
+    },
     768: {
-      margin: 32
+      items: 2,
+      margin: 16,
+      stagePadding: 16
+    },
+    992: {
+      items: 3,
+      margin: 8,
+      nav: true,
+      stagePadding: 32
     }
   }
 };
 
+const onTranslated = function() {
+  let imgsrc = document
+    .querySelector(".owl-item.active.center img")
+    .getAttribute("src");
+  document.querySelector("#imgholder").setAttribute("src", imgsrc);
+};
 
 export default class CompanyDescription extends Component {
   constructor(props) {
@@ -50,7 +102,7 @@ export default class CompanyDescription extends Component {
           locations: ["Bangalore", "Delhi", "Noida"],
           rating: 4.5,
           Industry: "Consumer products",
-          openings: 25,
+          openings: 25
         },
         {
           name: "IBM",
@@ -81,17 +133,24 @@ export default class CompanyDescription extends Component {
         }
       ],
       graph: {
-        isDisplay: false,
+        isDisplay: true,
         number: 0
       },
-      personas: ['culture','Female representatives','Learning opportunities','Maternity benefits','Safety','Salary & benefits'],
+      personas: [
+        "culture",
+        "Female representatives",
+        "Learning opportunities",
+        "Maternity benefits",
+        "Safety",
+        "Salary & benefits"
+      ],
       height: 0
     };
   }
 
   componentDidUpdate() {
     const height = this.graphElement.clientHeight;
-    console.log(height)
+    console.log(height);
   }
 
   graphShow = (index, callback) => {
@@ -100,19 +159,28 @@ export default class CompanyDescription extends Component {
       graph: {
         isDisplay: !prevState.isDisplay,
         number: index
-      },
-    }))
+      }
+    }));
     return callback;
+  };
+
+  closeChart = () => {
+    this.setState((...prevState)=>({
+      ...prevState,
+      graph: {
+        isDisplay: !prevState.isDisplay,
+      }
+    }))
   }
-callback = () => {
-  alert()
-}
+  callback = () => {
+    alert();
+  };
   render() {
     const { companies } = this.state;
     return (
       <React.Fragment>
         <div className="kk-search text-center">
-            <SearchContainer placeholder="Search by company name, industry or location"/>
+          <SearchContainer placeholder="Search by company name, industry or location" />
         </div>
         <section className="kk-breadcrumb py-0">
           <div className="container">
@@ -196,53 +264,85 @@ callback = () => {
                       <Button
                         styleName="curved mr-3 mb-2 mb-md-0"
                         label="Talk to a Kool Kanya"
+                        click={() => {}}
                       />
-                      <Button primary={false} hasBorder styleName="curved mb-4 mb-md-0">
-                        View Jobs <span>(18)</span>
+                      <Button
+                        primary={false}
+                        hasBorder
+                        styleName="curved mb-4 mb-md-0"
+                        click={() => {}}
+                      >
+                        <span>View Jobs(18)</span>
                       </Button>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="col-md-6">
-                <Carousel option={option}>
+                <div>
+                  <img
+                    id="imgholder"
+                    className="img-fluid"
+                    src="https://picsum.photos/560/376/"
+                    alt="carousel-item"
+                  />
+                </div>
+                <Carousel option={option} onTranslated={onTranslated}>
                   <div className="item">
-                    <img src={companyImage} alt="Godrej" />
+                    <img
+                      src="https://picsum.photos/560/376/"
+                      alt="carousel-item"
+                    />
                   </div>
                   <div className="item">
-                    <img src={companyImage} alt="Godrej" />
+                    <img
+                      src="https://picsum.photos/560/376/?random"
+                      alt="carousel-item"
+                    />
                   </div>
                   <div className="item">
-                    <img src={companyImage} alt="Godrej" />
+                    <img
+                      src="https://picsum.photos/560/376/"
+                      alt="carousel-item"
+                    />
                   </div>
                   <div className="item">
-                    <img src={companyImage} alt="Godrej" />
+                    <img
+                      src="https://picsum.photos/560/376/?random"
+                      alt="carousel-item"
+                    />
+                  </div>
+                  <div className="item">
+                    <img
+                      src="https://picsum.photos/560/376/"
+                      alt="carousel-item"
+                    />
                   </div>
                 </Carousel>
               </div>
             </div>
           </div>
         </section>
-        <section className="kk-company-score kk-main-section">
+        <section className="kk-company-score kk-bg-light kk-main-section">
           <div className="container">
             <div className="row-fluid mb-2 mb-md-5">
               <h3 className="kk-section-title">Kool Kanya Score Analysis</h3>
             </div>
             <div className="row">
               <div className="col-md-6">
-              <div className="row">
-                <div className="col-md-4">
+                <div className="row">
+                  <div className="col-md-4">
                     <div className="kk-company-rating-large d-flex align-items-center">
                       <span className="mx-auto kk-number-lg">4.5</span>
                     </div>
                   </div>
                   <div className="col-md-8">
-                      <p>
-                        Kool Kanya rating is an aggregate score based on anonymous
-                        surveys from employees or ex-employees from a company
-                      </p>
-                    </div>
-              </div>
+                    <p>
+                      Kool Kanya rating is an aggregate score based on anonymous
+                      surveys from employees or ex-employees from a company
+                    </p>
+                  </div>
+                </div>
                 <ul className="kk-company-accreditations d-flex">
                   <li>
                     <span className="kk-star lg">
@@ -269,10 +369,10 @@ callback = () => {
               </div>
               <div className="col-md-6">
                 <div className="row">
-                 {
+                  {/* {
                    this.state.personas.map((persona, index) => {
                       return(
-                        <div style={{position: "static"}} className="col-sm-4">
+                        <div key={index} style={{position: "static"}} className="col-sm-4">
                           <div onClick={() => this.graphShow(index)} className="card kk-rating-card">
                               <div className="card-body">
                                 <h2>4.5</h2>
@@ -303,7 +403,378 @@ callback = () => {
                         </div>
                       )
                    })
-                 }              
+                 }               */}
+                  <div className="col-4">
+                    <div
+                      onClick={() => this.graphShow(0)}
+                      className={this.state.graph.number === 0 ? "card kk-rating-card active": "card kk-rating-card"}
+                    >
+                      <div className="card-body d-flex flex-column">
+                        <h2>4.5</h2>
+                        <div className="progress">
+                          <div
+                            className="progress-bar kk-bg-success"
+                            role="progressbar"
+                            style={{ width: "90%" }}
+                            aria-valuenow="90"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          />
+                        </div>
+                        <p className="card-text mt-auto">
+                          <small className="text-muted">Culture</small>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-4">
+                    <div
+                      onClick={() => this.graphShow(1)}
+                      className={this.state.graph.number === 1 ? "card kk-rating-card active": "card kk-rating-card"}
+                    >
+                      <div className="card-body d-flex flex-column">
+                        <h2>3.2</h2>
+                        <div className="progress">
+                          <div
+                            className="progress-bar kk-bg-warning"
+                            role="progressbar"
+                            style={{ width: "60%" }}
+                            aria-valuenow="60"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          />
+                        </div>
+                        <p className="card-text mt-auto">
+                          <small className="text-muted">
+                            Female representatives
+                          </small>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-4">
+                    <div
+                      onClick={() => this.graphShow(2)}
+                      className={this.state.graph.number === 2 ? "card kk-rating-card active": "card kk-rating-card"}
+                    >
+                      <div className="card-body d-flex flex-column">
+                        <h2>1.5</h2>
+                        <div className="progress">
+                          <div
+                            className="progress-bar kk-bg-danger"
+                            role="progressbar"
+                            style={{ width: "25%" }}
+                            aria-valuenow="25"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          />
+                        </div>
+                        <p className="card-text mt-auto">
+                          <small className="text-muted">
+                            Learning opportunities
+                          </small>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/*graph column*/}
+                  <div className="col-sm-12">
+                    {this.state.graph.isDisplay &&
+                    this.state.graph.number === 0 ? (
+                      <div
+                        ref={this.graphElement}
+                        className="kk-company-score-graph-wrap"
+                      >
+                        <div>
+                          <div className={`kk-company-score-graph `}>
+                            <button className="kk-company-score-graph-close" onClick={this.closeChart}><MdClose className="kk-close-icon"/></button>
+                            <h4 className="kk-graph-title">Culture</h4>
+                            <Bar className="mb-2" data={chartData} options={chartOptions} width="600" height="250"/>
+                            <p>
+                            Godrej encourages women staff to team up with male field area officers or sales managers to make sure we are safe during market visits. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+
+                    {this.state.graph.isDisplay &&
+                    this.state.graph.number === 1 ? (
+                      <div
+                        ref={this.graphElement}
+                        className="kk-company-score-graph-wrap"
+                      >
+                        <div>
+                          <div className={`kk-company-score-graph `}>
+                            <button className="kk-company-score-graph-close" onClick={this.closeChart}><MdClose className="kk-close-icon"/></button>
+                            <h4 className="kk-graph-title">Female representatives</h4>
+                            <Bar className="mb-2" data={chartData} options={chartOptions} width="600" height="250"/>
+                            <p>
+                            Godrej encourages women staff to team up with male field area officers or sales managers to make sure we are safe during market visits. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+
+                    {this.state.graph.isDisplay &&
+                    this.state.graph.number === 2 ? (
+                      <div
+                        ref={this.graphElement}
+                        className="kk-company-score-graph-wrap"
+                      >
+                        <div>
+                          <div className={`kk-company-score-graph `}>
+                            <button className="kk-company-score-graph-close" onClick={this.closeChart}><MdClose className="kk-close-icon"/></button>
+                            <h4 className="kk-graph-title">Learning opportunities</h4>
+                            <Bar className="mb-2" data={chartData} options={chartOptions} width="600" height="250"/>
+                            <p>
+                            Godrej encourages women staff to team up with male field area officers or sales managers to make sure we are safe during market visits. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+
+                  </div>
+
+                  {/*graph row second*/}
+                  <div className="col-sm-4">
+                  <div
+                    onClick={() => this.graphShow(3)}
+                    className={this.state.graph.number === 3 ? "card kk-rating-card active": "card kk-rating-card"}
+                  >
+                    <div className="card-body d-flex flex-column">
+                      <h2>4.5</h2>
+                      <div className="progress">
+                        <div
+                          className="progress-bar kk-bg-success"
+                          role="progressbar"
+                          style={{ width: "90%" }}
+                          aria-valuenow="90"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        />
+                      </div>
+                      <p className="card-text mt-auto">
+                        <small className="text-muted">Safety</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                  <div className="col-sm-4">
+                  <div
+                    onClick={() => this.graphShow(4)}
+                    className={this.state.graph.number === 4 ? "card kk-rating-card active": "card kk-rating-card"}
+                  >
+                    <div className="card-body d-flex flex-column">
+                      <h2>4.0</h2>
+                      <div className="progress">
+                        <div
+                          className="progress-bar kk-bg-success"
+                          role="progressbar"
+                          style={{ width: "90%" }}
+                          aria-valuenow="90"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        />
+                      </div>
+                      <p className="card-text mt-auto">
+                        <small className="text-muted">Salary & benefits</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                  <div className="col-sm-4">
+                  <div
+                    onClick={() => this.graphShow(5)}
+                    className={this.state.graph.number === 5 ? "card kk-rating-card active": "card kk-rating-card"}
+                  >
+                    <div className="card-body d-flex flex-column">
+                      <h2>3.5</h2>
+                      <div className="progress">
+                        <div
+                          className="progress-bar kk-bg-warning"
+                          role="progressbar"
+                          style={{ width: "90%" }}
+                          aria-valuenow="90"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        />
+                      </div>
+                      <p className="card-text mt-auto">
+                        <small className="text-muted">Maternity benefits</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-sm-12">
+                    {this.state.graph.isDisplay &&
+                    this.state.graph.number === 3 ? (
+                      <div
+                        ref={this.graphElement}
+                        className="kk-company-score-graph-wrap"
+                      >
+                        <div>
+                          <div className={`kk-company-score-graph `}>
+                            <button className="kk-company-score-graph-close" onClick={this.closeChart}><MdClose className="kk-close-icon"/></button>
+                            <h4 className="kk-graph-title">Maternity benefits</h4>
+                            <Bar className="mb-2" data={chartData} options={chartOptions} width="600" height="250"/>
+                            <p>
+                            Godrej encourages women staff to team up with male field area officers or sales managers to make sure we are safe during market visits. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+
+                    {this.state.graph.isDisplay &&
+                    this.state.graph.number === 4 ? (
+                      <div
+                        ref={this.graphElement}
+                        className="kk-company-score-graph-wrap"
+                      >
+                        <div>
+                          <div className={`kk-company-score-graph `}>
+                            <button className="kk-company-score-graph-close" onClick={this.closeChart}><MdClose className="kk-close-icon"/></button>
+                            <h4 className="kk-graph-title">Safety</h4>
+                            <Bar className="mb-2" data={chartData} options={chartOptions} width="600" height="250"/>
+                            <p>
+                            Godrej encourages women staff to team up with male field area officers or sales managers to make sure we are safe during market visits. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+
+                    {this.state.graph.isDisplay &&
+                    this.state.graph.number === 5 ? (
+                      <div
+                        ref={this.graphElement}
+                        className="kk-company-score-graph-wrap"
+                      >
+                        <div>
+                          <div className={`kk-company-score-graph `}>
+                            <button className="kk-company-score-graph-close" onClick={this.closeChart}><MdClose className="kk-close-icon"/></button>
+                            <h4 className="kk-graph-title">Salary & benefits</h4>
+                            <Bar className="mb-2" data={chartData} options={chartOptions} width="600" height="250"/>
+                            <p>
+                            Godrej encourages women staff to team up with male field area officers or sales managers to make sure we are safe during market visits. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+
+                  </div>      
+
+                {/*graph row third*/}
+                <div className="col-sm-4">
+                  <div
+                    onClick={() => this.graphShow(6)}
+                    className={this.state.graph.number === 6 ? "card kk-rating-card active": "card kk-rating-card"}
+                  >
+                    <div className="card-body d-flex flex-column">
+                      <h2>4.5</h2>
+                      <div className="progress">
+                        <div
+                          className="progress-bar kk-bg-success"
+                          role="progressbar"
+                          style={{ width: "90%" }}
+                          aria-valuenow="90"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        />
+                      </div>
+                      <p className="card-text mt-auto">
+                        <small className="text-muted">Work-life balance </small>
+                      </p>
+                    </div>
+                  </div>
+                </div>   
+                <div className="col-sm-4">
+                  <div
+                    onClick={() => this.graphShow(7)}
+                    className={this.state.graph.number === 7 ? "card kk-rating-card active": "card kk-rating-card"}
+                  >
+                    <div className="card-body d-flex flex-column">
+                      <h2>4.5</h2>
+                      <div className="progress">
+                        <div
+                          className="progress-bar kk-bg-success"
+                          role="progressbar"
+                          style={{ width: "90%" }}
+                          aria-valuenow="90"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        />
+                      </div>
+                      <p className="card-text mt-auto">
+                        <small className="text-muted">Work satisfaction </small>
+                      </p>
+                    </div>
+                  </div>
+                </div>   
+
+                 <div className="col-sm-12">
+                    {this.state.graph.isDisplay &&
+                    this.state.graph.number === 6 ? (
+                      <div
+                        ref={this.graphElement}
+                        className="kk-company-score-graph-wrap"
+                      >
+                        <div>
+                          <div className={`kk-company-score-graph `}>
+                            <button className="kk-company-score-graph-close" onClick={this.closeChart}><MdClose className="kk-close-icon"/></button>
+                            <h4 className="kk-graph-title">Work-life balance </h4>
+                            <Bar className="mb-2" data={chartData} options={chartOptions} width="600" height="250"/>
+                            <p>
+                            Godrej encourages women staff to team up with male field area officers or sales managers to make sure we are safe during market visits. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+
+                    {this.state.graph.isDisplay &&
+                    this.state.graph.number === 7 ? (
+                      <div
+                        ref={this.graphElement}
+                        className="kk-company-score-graph-wrap"
+                      >
+                        <div>
+                          <div className={`kk-company-score-graph `}>
+                            <button className="kk-company-score-graph-close" onClick={this.closeChart}><MdClose className="kk-close-icon"/></button>
+                            <h4 className="kk-graph-title">Work satisfaction </h4>
+                            <Bar className="mb-2" data={chartData} options={chartOptions} width="600" height="250"/>
+                            <p>
+                            Godrej encourages women staff to team up with male field area officers or sales managers to make sure we are safe during market visits. 
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+
+                  </div>      
+
                 </div>
               </div>
             </div>
@@ -330,7 +801,7 @@ callback = () => {
               </div>
               <div className="row mb-5">
                 <div className="col-md-2">
-                <div className="kk-author">
+                  <div className="kk-author">
                     <img className="img-fluid" src={userAvatar} />
                   </div>
                 </div>
@@ -343,7 +814,7 @@ callback = () => {
                   <div className="author">
                     <p className="kk-color-dark my-0">Stuthi Yadav</p>
                     <p className="text-muted">
-                    Project Manager at Godrej Consumer Product 
+                      Project Manager at Godrej Consumer Product
                     </p>
                   </div>
                 </div>
@@ -354,7 +825,14 @@ callback = () => {
                     styleName="p-0"
                     primary={false}
                     label="Read All Reviews"
-                    icon={<FiChevronDown className="icon" />}
+                    icon={
+                      <FiArrowRight
+                        className="icon"
+                        click={() => {
+                          console.log("clicked");
+                        }}
+                      />
+                    }
                   />
                 </div>
               </div>
@@ -385,7 +863,9 @@ callback = () => {
                         primary={false}
                         isAlignRight={true}
                         label="View Job Details"
-                        icon={<FiArrowRight className="icon" />}
+                        icon={
+                          <FiArrowRight className="icon" click={() => {}} />
+                        }
                       />
                     </div>
                   </div>
@@ -394,7 +874,7 @@ callback = () => {
               <div className="card">
                 <div className="card-body pl-0">
                   <div className="row justify-content-between">
-                  <div className="col-md-4">
+                    <div className="col-md-4">
                       <h5 className="card-title">Operation Manager</h5>
                       <ul className="d-flex kk-inline-list-dotted mb-1">
                         <li className="item">Bengaluru</li>
@@ -409,7 +889,9 @@ callback = () => {
                         primary={false}
                         isAlignRight={true}
                         label="View Job Details"
-                        icon={<FiArrowRight className="icon" />}
+                        icon={
+                          <FiArrowRight className="icon" click={() => {}} />
+                        }
                       />
                     </div>
                   </div>
@@ -433,7 +915,9 @@ callback = () => {
                         primary={false}
                         isAlignRight={true}
                         label="View Job Details"
-                        icon={<FiArrowRight className="icon" />}
+                        icon={
+                          <FiArrowRight className="icon" click={() => {}} />
+                        }
                       />
                     </div>
                   </div>
@@ -441,8 +925,13 @@ callback = () => {
               </div>
             </div>
             <div className="row-fluid text-center mt-5">
-              <Button primary={false} hasBorder styleName="curved">
-                View All<span>(18)</span>
+              <Button
+                primary={false}
+                hasBorder
+                click={() => {}}
+                styleName="curved"
+              >
+                <span>View All(18)</span>
               </Button>
             </div>
           </div>

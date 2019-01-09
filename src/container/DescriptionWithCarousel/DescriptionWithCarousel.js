@@ -90,19 +90,19 @@ const descriptionWithCarousel = () => (
                     <img id="imgholder" className="img-fluid" src="https://picsum.photos/560/376/" alt="carousel-item" />
                 </ImgHolder>
                 <Carousel option={option} onTranslated={onTranslated}>
-                    <div class="item">
+                    <div className="item">
                         <img src="https://picsum.photos/560/376/" alt="carousel-item" />
                     </div>
-                    <div class="item">
+                    <div className="item">
                         <img src="https://picsum.photos/560/376/?random" alt="carousel-item" />
                     </div>
-                    <div class="item">
+                    <div className="item">
                         <img src="https://picsum.photos/560/376/" alt="carousel-item" />
                     </div>
-                    <div class="item">
+                    <div className="item">
                         <img src="https://picsum.photos/560/376/?random" alt="carousel-item" />
                     </div>
-                    <div class="item">
+                    <div className="item">
                         <img src="https://picsum.photos/560/376/" alt="carousel-item" />
                     </div>
                 </Carousel></div>

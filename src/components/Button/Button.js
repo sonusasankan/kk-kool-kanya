@@ -23,9 +23,9 @@ class Button extends Component {
     };
   }
 
-  _handleClick = (callback) => {
+  _handleClick = () => {
     this.setState({ class: STATUS.CLICKED });
-    callback()
+    this.props.click()
   };
 
   //hovered stated for button
@@ -48,7 +48,7 @@ class Button extends Component {
         isAlignRight={isAlignRight}
         primary={primary}
         className={classnames(icon != null ? "kk-has-icon"+" "+this.state.class : this.state.class,  this.props.styleName)}
-        onClick={() => this._handleClick(click)}
+        onClick={() => this._handleClick}
         onMouseEnter={this._onMouseEnter}
         onMouseLeave={this._onMouseLeave}
       >

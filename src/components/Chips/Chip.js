@@ -5,7 +5,7 @@ import { colors } from "../../themes";
 import styled from "styled-components";
 
 const Btn = styled.button`
-  background-color:${props => (props.isActive? "#703db2": "#f4f4fb")};
+  background-color:${props => (props.isActive? "#703db2": "#efefef")};
   color:${props => (props.isActive ? "#fff":"#4f565e")};
   font-size: 18px !important;
   border-radius: 30px !important;
@@ -66,9 +66,9 @@ class Chip extends Component {
 
 Chip.propTypes = {
   logo: PropTypes.string,
-  title: PropTypes.string.isrequired,
+  title: PropTypes.string,
   alt: PropTypes.string,
-  isActive: PropTypes.boolean
+  isActive: PropTypes.bool
 };
 
 export default Chip;
