@@ -141,7 +141,7 @@ class Header extends Component {
                   <li className="kk-header__login">
                     {this.state.isLoggedin
                       ? <PostLogin linkClick={this.toggle.bind(this)} profilePic="https://loremflickr.com/44/44" profileName="Deepti Agrawal" />
-                      : <Login loginClick = {this.signIn.bind(this)} signUpClick={this.signUp.bind(this)} /> }
+                      : <Login loginClick = {this.signIn} signUpClick={this.signUp} /> }
                   </li>
                 </ul>
                   
