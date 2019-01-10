@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <path id="b" d="M13 6.382c0 4.963-6.5 9.218-6.5 9.218S0 11.345 0 6.382C0 2.857 2.91 0 6.5 0S13 2.857 13 6.382z"/>
+        <filter id="a" width="1238.5%" height="1048.7%" x="-569.2%" y="-410.3%" filterUnits="objectBoundingBox">
+            <feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="23"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.501648173 0 0 0 0 0.423024816 0 0 0 0 0.603396046 0 0 0 0.0847486413 0"/>
+        </filter>
+        <ellipse id="d" cx="6.5" cy="6.382" rx="2.167" ry="2.127"/>
+        <filter id="c" width="3515.4%" height="3578.6%" x="-1707.7%" y="-1504.3%" filterUnits="objectBoundingBox">
+            <feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="23"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.501648173 0 0 0 0 0.423024816 0 0 0 0 0.603396046 0 0 0 0.0847486413 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(6 4)">
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <path fill="#FFF" stroke="#8D959D" stroke-linejoin="square" d="M6.5 14.993a21.136 21.136 0 0 0 2.89-2.488c1.95-2.02 3.11-4.109 3.11-6.123C12.5 3.135 9.816.5 6.5.5s-6 2.635-6 5.882c0 2.014 1.16 4.102 3.11 6.123a21.136 21.136 0 0 0 2.89 2.488z"/>
+        </g>
+        <g transform="translate(6 4)">
+            <use fill="#000" filter="url(#c)" xlink:href="#d"/>
+            <ellipse cx="6.5" cy="6.382" fill="#FFF" stroke="#8D959D" stroke-linejoin="square" rx="1.667" ry="1.627"/>
+        </g>
+    </g>
+</svg>

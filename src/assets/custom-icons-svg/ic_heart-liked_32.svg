@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_heart-liked_32</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ic_heart-liked_32" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2-Copy" transform="translate(2.000000, 4.000000)" fill="#F8596C">
+            <path d="M25.8409383,2.21018133 C24.4591981,0.795061752 22.5847667,-1.21789562e-15 20.630232,0 C18.6756974,6.08947808e-16 16.801266,0.795061752 15.4195257,2.21018133 L13.9996417,3.6636836 L12.5797578,2.21018133 C9.70196411,-0.73574914 5.03613882,-0.735749105 2.15834522,2.21018141 C-0.719448377,5.15611192 -0.719448411,9.93240897 2.15834514,12.8783395 L3.57822912,14.3318418 L13.9996417,25 L24.4210543,14.3318418 L25.8409383,12.8783395 C27.2233274,11.4638841 28,9.54507216 28,7.54426043 C28,5.54344869 27.2233274,3.62463677 25.8409383,2.21018133 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>
