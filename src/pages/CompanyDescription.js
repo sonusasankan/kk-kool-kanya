@@ -233,7 +233,6 @@ export default class CompanyDescription extends Component {
                     <div className="company-details border-top py-3 my-3">
                       <ul>
                         <li
-                          role="location"
                           className="d-flex kk-company-location"
                         >
                           <FiMapPin />
@@ -790,7 +789,7 @@ export default class CompanyDescription extends Component {
               <div className="row mb-5">
                 <div className="col-md-2">
                   <div className="kk-author">
-                    <img className="img-fluid" src={userAvatar} />
+                    <img alt="user image" className="img-fluid" src={userAvatar} />
                   </div>
                 </div>
                 <div className="col-md-10">
@@ -810,7 +809,7 @@ export default class CompanyDescription extends Component {
               <div className="row mb-5">
                 <div className="col-md-2">
                   <div className="kk-author">
-                    <img className="img-fluid" src={userAvatar} />
+                    <img alt="user avatar" className="img-fluid" src={userAvatar} />
                   </div>
                 </div>
                 <div className="col-md-10">

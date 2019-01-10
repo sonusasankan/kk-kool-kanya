@@ -21,7 +21,7 @@ const sectionTitle = ({
       )}
     </div>
     {link ? (
-      <Link to={link}>
+      <Link aria-label={linkText} to={link}>
         <Button
           styleName="d-none d-md-flex align-items-center"
           primary={false}

@@ -146,6 +146,7 @@ class Home extends Component {
                 <div className="kk-home-search-wrapper mt-3 mt-md-5" />
                 <SearchContainer
                   components={components}
+                  id="homeSearch"
                   placeholder="Search by company name, industry or location"
                 />
               </div>

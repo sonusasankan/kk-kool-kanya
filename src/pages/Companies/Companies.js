@@ -35,13 +35,13 @@ import { connect } from "react-redux";
 import { fetchCompanyLists } from "../../store/actions/companyActions";
 
 const list = [
-  <Chip logo={bangalore} alte="bangalore logo" title="Bangalore" />,
-  <Chip logo={bangalore} alte="bangalore logo" title="Delhi" />,
-  <Chip logo={bangalore} alte="bangalore logo" title="Chennai" />,
-  <Chip logo={bangalore} alte="bangalore logo" title="Mumbai" />,
-  <Chip logo={bangalore} alte="bangalore logo" title="Bangalore" />,
-  <Chip logo={bangalore} alte="bangalore logo" title="Pune" />,
-  <Chip logo={bangalore} alte="bangalore logo" title="Hydherabad" />
+  <Chip logo={bangalore} alt="bangalore logo" title="Delhi" />,
+  <Chip logo={bangalore} alt="bangalore logo" title="Bangalore" />,
+  <Chip logo={bangalore} alt="bangalore logo" title="Chennai" />,
+  <Chip logo={bangalore} alt="bangalore logo" title="Mumbai" />,
+  <Chip logo={bangalore} alt="bangalore logo" title="Bangalore" />,
+  <Chip logo={bangalore} alt="bangalore logo" title="Pune" />,
+  <Chip logo={bangalore} alt="bangalore logo" title="Hydherabad" />
 ];
 
 class Companies extends Component {
@@ -88,7 +88,7 @@ class Companies extends Component {
     return (
       <React.Fragment>
         <div className="kk-search text-center">
-            <SearchContainer placeholder="Search by company name, industry or location"/>
+            <SearchContainer id="companySearch" placeholder="Search by company name, industry or location"/>
         </div>
         <section className="kk-companies-listing">
           <div className="container">

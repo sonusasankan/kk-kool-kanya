@@ -42,10 +42,10 @@ const footer = () => (
             <div className="kk-footer__nav__head">Contact Us</div>
             <a href="javascript:void(0)">Feel free to reach out to us</a>
             <div className="d-flex justify-content-between">
-              <Link to="terms-conditions"><span className="icon-ic-facebook-24"></span></Link>
-              <Link to="terms-conditions"><span className="icon-ic-linkedin-24"></span></Link>
-              <Link to="terms-conditions"><span className="icon-ic-twitter-24"></span></Link>
-              <Link to="terms-conditions"><span className="icon-ic-instagram-24"></span></Link>
+              <Link aria-label="facebook" to="terms-conditions"><span className="icon-ic-facebook-24"></span></Link>
+              <Link aria-label="linkedin" to="terms-conditions"><span className="icon-ic-linkedin-24"></span></Link>
+              <Link aria-label="twitter" to="terms-conditions"><span className="icon-ic-twitter-24"></span></Link>
+              <Link aria-label="instagram" to="terms-conditions"><span className="icon-ic-instagram-24"></span></Link>
             </div>
           </nav>
         </div>

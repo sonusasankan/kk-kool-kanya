@@ -67,7 +67,7 @@ class SearchContainer extends Component {
 
   render() {
     const { categorySelected } = this.state;
-    const { components, placeholder} = this.props;
+    const { components, placeholder, id} = this.props;
     return (
       <Context.Consumer>
         {value => {
@@ -101,8 +101,10 @@ class SearchContainer extends Component {
               </div>
               <div />
               <div className="kk-search-input">
-                <input placeholder={placeholder} />
-                <button className="kk-search-button-icon">
+               <label htmlFor={id} className="d-none">
+                <input id={id} placeholder={placeholder} />
+                </label>
+                <button name="search button" aria-label="Search button" role="button" className="kk-search-button-icon">
                   <img src={SearchIcon} alt="" />
                 </button>
               </div>

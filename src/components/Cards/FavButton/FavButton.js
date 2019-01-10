@@ -59,6 +59,8 @@ class FavButton extends Component {
     const { top, right, bottom, left, active } = this.props;
     return (
       <StyledFavButton
+        role="button"
+        aria-label="Favourite button"
         top={top}
         right={right}
         bottom={bottom}

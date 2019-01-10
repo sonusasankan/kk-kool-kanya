@@ -58,6 +58,8 @@ class FavButton extends Component {
     const { top, right, bottom, left, className, red, grey} = this.props;
     return (
       <StyledFavButton
+        role="button"
+        aria-label="Favourite button"
         grey={grey}
         red={red}
         top={top}

@@ -120,7 +120,7 @@ class Header extends Component {
               </Link>
             </div>
             <div className="d-flex align-items-center">
-              <button className="toggleButton" onClick={this.toggle}><IoMdMenu /></button>
+              <button aria-label="toggle button" role="button" name="menu toggle button" className="toggleButton" onClick={this.toggle}><IoMdMenu /></button>
             </div>
             <div className={"kk-sidebar__bg "+(this.state.show ? "show" : "")} onClick={this.toggle}></div>
             <div className={"kk-menu__items "+(this.state.show ? "show" : "")}>

@@ -44,6 +44,7 @@ class Button extends Component {
     const { primary, hasBorder, label, icon, isAlignRight, children, click } = this.props;
     return (
       <StyledButton
+        name="button"
         hasBorder={hasBorder}
         isAlignRight={isAlignRight}
         primary={primary}
