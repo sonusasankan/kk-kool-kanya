@@ -28,7 +28,7 @@ class Login extends Component {
                         label="Sign in"
                     />
                 </div>
-                <Link className="kk-header__login link" to="#">
+                <Link className="kk-header__login link" to="/">
                     <Button
                         primary={false}
                         hasBorder 
