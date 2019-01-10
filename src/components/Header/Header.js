@@ -32,12 +32,13 @@ class Header extends Component {
     }
     else{
       e.target.closest('ul').querySelectorAll('a').forEach((el)=>{
-        if(el.classList.contains('active')){
+        if(el.classList.contains('active') && ( window.location.pathname === e.target.getAttribute('href'))){
           el.classList.remove('active')
         }
       });
       e.target.classList.add('active');
     }
+    console.log(e.target.getAttribute('href'),"============================================================================");
   }
 
   //Sign Un modal//
