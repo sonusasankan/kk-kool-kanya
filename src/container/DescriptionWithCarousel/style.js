@@ -51,6 +51,9 @@ const DescriptionWithCarouselWrapper = styled.div`
     {
         height: 110px;
     }
+    .owl-theme .owl-nav{
+        margin-top: 3px;
+    }
 `;
 
 const HeaderWrapper = styled.div`
