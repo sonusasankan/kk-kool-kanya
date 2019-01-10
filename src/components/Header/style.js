@@ -135,11 +135,12 @@ const HeaderWrapper = styled.div`
         width: 100%;
         justify-content: space-between;
         flex-grow: 1;
-        align-items: flex-end;
+        align-items: center;
         padding-bottom: 8vh;
         @media (min-width: 992px){
             margin: 0 0 0 48px;
             padding-bottom: 0;
+            align-items: 
         }
         &.link{
             text-align: center;
