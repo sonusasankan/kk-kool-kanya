@@ -12,8 +12,12 @@ const HeaderWrapper = styled.div`
         margin: 16px 0 20px 0;
         &__img{
             display: block;
-            min-width: 4rem;
-            width: 4rem;
+            min-width: 3rem;
+            width: 3rem;
+            @media (min-width: 768px){
+                min-width: 4rem;
+                width: 4rem;
+            }
         }
     }
     
@@ -71,13 +75,13 @@ const HeaderWrapper = styled.div`
             &__header{
                 background-color: #e2e2e2;
                 display: flex;
-                height: 98px;
+                height: 80px;
                 @media (min-width: 992px){
                     display: none;
                 }
                 &__img{
-                    min-width: 96px;
-                    width: 96px;
+                    min-width: 80px;
+                    width: 80px;
                     padding: 0 1rem;
                     margin: 16px 0 20px 0;
                 }

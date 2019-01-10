@@ -898,7 +898,7 @@ body:not(.kk-home) {
   // padding-top: 100px;
 }
 .kk-search {
-  margin-top: 98px;
+  margin-top: 80px;
   padding: 10px 0;
   background-color: $bgLight;
   @media (min-width: 768px) {
@@ -909,8 +909,11 @@ body:not(.kk-home) {
 .kk-search-input {
   position: relative;
   max-width: 100%;
-  max-width: 760px;
   margin: auto;
+  max-width: 300px;
+  @media (min-width: 768px){
+    max-width: 760px;
+  }
   input {
     width: 100%;
     min-height: 65px;
