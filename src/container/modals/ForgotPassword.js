@@ -25,12 +25,21 @@ const forgotPassword = ({
     backToLogin();
   };
 
+  const inputAddClass = (e) => {
+    let target = e.target
+   if(target.value){
+     target.classList.add("filled")
+   }else{
+    target.classList.remove("filled")
+   }
+  }
+
   return (
     <Modal title={title} subTitle={subTitle} onClose={onClose}>
       <div className="kk-sign-up-form">
         <form className="mx-2">
           <div className="form-group">
-            <input type="email" className="form-control" id="Email" />
+            <input onChange={inputAddClass} type="email" className="form-control" id="Email" />
             <label className="kk-custom-label" htmlFor="Email">
               Enter your registered Email ID
             </label>

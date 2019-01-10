@@ -17,6 +17,8 @@ import { Main } from "./route";
 const history = createBrowserHistory();
     // const location = history.location;
 
+
+
 class App extends Component {
   static propTypes = {
     match: PropTypes.object.isRequired,
@@ -27,13 +29,19 @@ class App extends Component {
   state = {
     list: []
   };
-
   componentDidMount(){
     if(this.props.location.pathname === '/'){
       document.body.classList.add('kk-home')
     }else{
       document.body.classList.remove('kk-home')
     }
+
+    //adding class on input//
+    const Input = document.getElementsByClassName('.form-control')
+    console.log(Input)
+    // Input.addEventListener("blur", function(){
+    // console.log(this)
+    // })
   }
   componentWillMount() {
     this.unlisten = this.props.history.listen((location, action) => {

@@ -18,6 +18,10 @@ export const StyledButton = styled.button`
     border-color: ${props => (props.primary ? `${colors.primaryDark}` : `${colors.primary}`)};
     }
     &.kk-has-icon{
+        &:hover{
+            background-color: transparent;
+            color: ${colors.primary};
+        }
     &.hovered{
         background: transparent;
         color: ${colors.primary} 

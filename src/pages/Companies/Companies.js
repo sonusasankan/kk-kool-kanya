@@ -14,7 +14,7 @@ import {
   CardRating
 } from "../../components/Cards";
 import { Button } from "../../components/Button";
-import { FiArrowRight } from "react-icons/fi";
+import { FiChevronRight } from "react-icons/fi";
 import { Chip } from "../../components/Chips";
 import FavButton from "../../components/FavButton";
 import SearchContainer from './../../components/Search/SearchContainer';
@@ -101,7 +101,8 @@ class Companies extends Component {
                 primary={false}
                 isAlignRight={true}
                 label="View all"
-                icon={<FiArrowRight className="icon" />}
+                click={()=>{}}
+                icon={<FiChevronRight className="icon" />}
               />
             </div>
             <div className="row">
@@ -154,7 +155,8 @@ class Companies extends Component {
                 primary={false}
                 isAlignRight={true}
                 label="View all"
-                icon={<FiArrowRight className="icon" />}
+                click={()=>{}}
+                icon={<FiChevronRight className="icon" />}
               />
             </div>
             <div className="row">
@@ -200,7 +202,8 @@ class Companies extends Component {
                 primary={false}
                 isAlignRight={true}
                 label="View all"
-                icon={<FiArrowRight className="icon" />}
+                click={()=>{}}
+                icon={<FiChevronRight className="icon" />}
               />
             </div>
             <div className="row">

@@ -12,6 +12,7 @@ import icongetInTouch from "../assets/icons/ic-getintouch.svg";
 import iconTransparency from "../assets/icons/ic-transparency.svg";
 import iconAuthenticity from "../assets/icons/ic-authencity.svg";
 import iconWholeheartedness from "../assets/icons/ic-wholeheartedness.svg";
+import { FiArrowRight } from 'react-icons/fi';
 
 import gridSmallImage from "../assets/images/aboutimg-7.jpg";
 import gridLargeImage from "../assets/images/aboutimg-8.jpg";
@@ -21,6 +22,7 @@ import aboutImage03 from "../assets/images/aboutimg-4.jpg";
 import aboutImage04 from "../assets/images/aboutimg-5.svg";
 import aboutImage05 from "../assets/images/aboutimg-6.jpg";
 import aboutImage09 from "../assets/images/aboutimg-9.png";
+import authorImg from "../assets/images/author.jpg";
 
 export default class About extends Component {
   render() {
@@ -196,6 +198,9 @@ environments which serve best to their requirements </p>
                         cardLink="article-category"
                         imgSrc="https://loremflickr.com/216/262" alt="Alternate text for image"
                         cardTitle="When Are You Going Back? (Or: Maternity Leave is Complicated."
+                        authorImg={authorImg}
+                        authorName="Rosmy George"
+                        Icon={<FiArrowRight className="icon"/>}
                 />
             </div>
             <div className="col-md-4 mb-2 mb-md-0">
@@ -203,6 +208,9 @@ environments which serve best to their requirements </p>
                         cardLink="article-category"
                         imgSrc="https://loremflickr.com/216/262" alt="Alternate text for image"
                         cardTitle="Why Do All Websites Look The Same?"
+                        authorImg={authorImg}
+                        authorName="Rosmy George"
+                        Icon={<FiArrowRight className="icon"/>}
                 />
             </div>
             <div className="col-md-4">
@@ -210,6 +218,9 @@ environments which serve best to their requirements </p>
                         cardLink="article-category"
                         imgSrc="https://loremflickr.com/216/262" alt="Alternate text for image"
                         cardTitle="The Haunting (and Civically Responsible) Beauty of Halloween and..."
+                        authorImg={authorImg}
+                        authorName="Jayati Singh"
+                        Icon={<FiArrowRight className="icon"/>}
                 />
             </div>
           </div>

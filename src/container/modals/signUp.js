@@ -19,6 +19,15 @@ const signUp = ({ title, subTitle, afterClose, onSignIn, hideModal }) => {
     onSignIn();
   };
 
+  const inputAddClass = (e) => {
+    let target = e.target
+   if(target.value){
+     target.classList.add("filled")
+   }else{
+    target.classList.remove("filled")
+   }
+  }
+
   return (
     <Modal title={title} subTitle={subTitle} onClose={onClose}>
       <div className="kk-modal-btn-group">
@@ -34,6 +43,7 @@ const signUp = ({ title, subTitle, afterClose, onSignIn, hideModal }) => {
               className="form-control"
               id="Name"
               aria-describedby="nameHelp"
+              onChange={inputAddClass}
             />
             <label className="kk-custom-label" htmlFor="Name">Name</label>
             {/* <small id="emailHelp" className="form-text text-muted">
@@ -45,6 +55,7 @@ const signUp = ({ title, subTitle, afterClose, onSignIn, hideModal }) => {
               type="email"
               className="form-control"
               id="Email"
+              onChange={inputAddClass}
             />
             <label className="kk-custom-label" htmlFor="Email">Email</label>
           </div>
@@ -53,6 +64,7 @@ const signUp = ({ title, subTitle, afterClose, onSignIn, hideModal }) => {
               type="password"
               className="form-control"
               id="Password"
+              onChange={inputAddClass}
             />
             <label className="kk-custom-label" htmlFor="Password">Password</label>
           </div>
@@ -61,6 +73,7 @@ const signUp = ({ title, subTitle, afterClose, onSignIn, hideModal }) => {
               type="password"
               className="form-control"
               id="RePassword"
+              onChange={inputAddClass}
             />
             <label className="kk-custom-label" htmlFor="RePassword">Re Enter Password</label>
           </div>
