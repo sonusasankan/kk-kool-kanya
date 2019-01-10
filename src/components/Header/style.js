@@ -43,6 +43,8 @@ const HeaderWrapper = styled.div`
         height: 3rem;
         background-color: transparent;
         border: none;
+        line-height: 1;
+        vertical-align: middle;
         @media (min-width: 992px){
             display: none;
         }
