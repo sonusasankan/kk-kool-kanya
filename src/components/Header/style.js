@@ -129,7 +129,7 @@ const HeaderWrapper = styled.div`
     .kk-header__login{
         display: flex;
         align-items: center;
-        margin: 80% auto auto auto;
+        margin: 20vh auto auto auto;
         width: 100%;
         justify-content: space-between;
         @media (min-width: 992px){
@@ -138,6 +138,7 @@ const HeaderWrapper = styled.div`
         &.link{
             text-align: center;
             padding: 0 0 0 0 !important;
+            margin-top:0;
             @media (min-width: 992px){
                 padding: 0 0 0 1rem !important;
                 margin-left: 0;
