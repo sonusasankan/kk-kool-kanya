@@ -71,6 +71,7 @@ const HeaderWrapper = styled.div`
             &__header{
                 background-color: #e2e2e2;
                 display: flex;
+                height: 98px;
                 @media (min-width: 992px){
                     display: none;
                 }
@@ -96,8 +97,10 @@ const HeaderWrapper = styled.div`
             list-style-type: none;
             padding: 0;
             margin-bottom: 0;
+            height: calc(100vh - 98px);
             @media (min-width: 992px){
                 flex-direction: row;
+                height: initial;
             }
             li{
                 a{
@@ -129,11 +132,14 @@ const HeaderWrapper = styled.div`
     .kk-header__login{
         display: flex;
         align-items: center;
-        margin: 20vh auto auto auto;
         width: 100%;
         justify-content: space-between;
+        flex-grow: 1;
+        align-items: flex-end;
+        padding-bottom: 8vh;
         @media (min-width: 992px){
             margin: 0 0 0 48px;
+            padding-bottom: 0;
         }
         &.link{
             text-align: center;

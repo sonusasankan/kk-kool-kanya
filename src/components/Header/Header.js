@@ -104,6 +104,12 @@ class Header extends Component {
       }
       lastScrollTop = parseInt(window.scrollY);
     };
+    if((window.location.pathname === '/settings') || (window.location.pathname === '/edit-settings') || (window.location.pathname === '/profile') || (window.location.pathname === '/edit-profile')){
+      this.setState({isLoggedin: true})
+    }
+    else{
+      this.setState({isLoggedin: false})
+    }
   }
 
   render() {
