@@ -571,6 +571,19 @@ h3.kk-section-title {
 
 // company carousel in homepage
 .kk-home__carousel{
+  &__view-all{
+    display: block;
+    text-align: center;
+    padding: 0.8rem;
+    margin: 0 auto 1rem auto;
+    max-width: 250px;
+    border: 1px solid $primary;
+    border-radius: 4px;
+    &:hover{
+      background: $primary;
+      color: #FFF;
+    }
+  }
 
   &__wrapper{
     z-index: 3;

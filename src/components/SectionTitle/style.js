@@ -39,6 +39,11 @@ const SectionTitle = styled.div`
             margin-top: 0;
         }
     }
+    .kk-home__top__companies{
+        @media (max-width: 768px){
+            display: none;
+        }
+    }
 `;
 
 export default SectionTitle;

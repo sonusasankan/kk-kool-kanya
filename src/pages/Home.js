@@ -73,6 +73,7 @@ const carouselOption = {
   // autoWidth: true,
   margin: 12,
   nav: false,
+  dots: false,
   items: 1,
   stagePadding: 16,
   center: false,
@@ -321,9 +322,10 @@ class Home extends Component {
         <div className="kk-bg-element-dots">
           <img src={BgDotsElement} alt="" />
         </div>
-        <section className="kk-section bg-light">
+        <section className="kk-section kk-home__top__companies bg-light">
           <div className="container">
-            <SectionTitle
+            <SectionTitle    
+              className="kk-home__top-companies__section"          
               link="/companies"
               linkText="View All"
             >Top companies fitting your requirements</SectionTitle>
@@ -337,6 +339,7 @@ class Home extends Component {
                 <Carousel className="kk-home__carousel" option={carouselOption}>
                   { companyList }
                 </Carousel>
+                <Link to="/companies" className="kk-home__carousel__view-all d-md-none">View All (20+)</Link>
               </div>
             </div>
           </div>
