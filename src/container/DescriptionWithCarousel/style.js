@@ -58,6 +58,9 @@ const DescriptionWithCarouselWrapper = styled.div`
 
 const HeaderWrapper = styled.div`
     display: flex;
+    @media (max-width: 768px){
+        padding-top: 1.5rem;
+    }
     p{
         color: ${Colors.secondaryDarkGray};
         font-size: 1.125rem;

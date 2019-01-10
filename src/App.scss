@@ -583,13 +583,18 @@ h3.kk-section-title {
 .kk-home-bg-img {
   position: relative;
   height: 100vh;
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: $primaryColor;
-    opacity: 0.5;
+    transition: all 0.2s ease-out;
+  }
+  &.img-loaded{
+    &::before{
+      opacity: 0.5;
+    }
   }
   img {
     height: 100vh;

@@ -117,18 +117,6 @@ class Home extends Component {
     const companyList = this.props.companyList.items.companylist.slice(0,3).map(element => {
       return (
         <div className="item">
-        {/* <CompanyCard
-          companyid={element._id}
-          badges={[BadgeList.MATERNITY_BENEFITS, BadgeList.SAFETY, BadgeList.WORKLIFE_BALANCE, BadgeList.WORKLIFE_BALANCE]}
-          badgePosition="top left"
-          locations={element.otherlocations.join(", ")}
-          title={element.name}
-          rating={element.ratings}
-          industry={element.industry}
-          openings={element.noofjobs}
-          alt="office image"
-          isFavourite={element.isFavourite}
-        /> */}
         <CompanyCard
           companyid={element._id}
           badges={[BadgeList.MATERNITY_BENEFITS, BadgeList.SAFETY, BadgeList.WORKLIFE_BALANCE]}
@@ -162,12 +150,16 @@ class Home extends Component {
                 />
               </div>
 
-              <div className="kk-home-bg-img w-100">
+              <div id="kk-home-bg-img" className="kk-home-bg-img w-100">
                 <img
                   className="img-fluid"
                   src={homeBg}
                   srcSet={homeBg2x}
                   alt="Home page banner image"
+                  onLoad={(e)=>{
+                      console.log(e.target.closest(".kk-home-bg-img").classList.add('img-loaded'))
+                    }
+                  }
                 />
               </div>
 
@@ -316,7 +308,7 @@ class Home extends Component {
                   list = { ["Culture", "Female Representatives & Opportunities", "Learning Opportunities", "Maternity Benefits", "Safety", "Salary & Benefits", "Work-life Balance", "Work Satisfaction"] } />
               </div>
               <div className="col-md-9 kk-home__carousel__wrapper">
-                <Carousel option={carouselOption}>
+                <Carousel className="kk-home__carousel" option={carouselOption}>
                   { companyList }
                 </Carousel>
               </div>

@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const SectionSpecificStickyHeaderWrapper = styled.div`
     position: fixed;
-    top: -200px;
+    top: -800px;
     left: 0;
     width: 100vw;
-    z-index: 99;
+    z-index: 96;
     background-color: #FFF;
     box-shadow: 0 6px 11px 0 rgba(131, 124, 140, 0.15);
     transition: all 0.2s ease-out;
