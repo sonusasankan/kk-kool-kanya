@@ -68,7 +68,8 @@ Chip.propTypes = {
   logo: PropTypes.string,
   title: PropTypes.string,
   alt: PropTypes.string,
-  isActive: PropTypes.bool
+  isActive: PropTypes.bool,
+  class: PropTypes.string
 };
 
 export default Chip;
