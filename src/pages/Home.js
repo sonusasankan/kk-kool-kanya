@@ -16,10 +16,15 @@ import {BadgeList} from './../components/Cards/Badge';
 import homeBg from "../assets/images/home-bg.png";
 import homeBg2x from "../assets/images/home-bg@2x.png";
 import iconMouse from "../assets/images/ic-mouse.svg";
-import Browse from "../assets/images/ic-search.svg";
-import Score from "../assets/images/ic-koolkanya-score.svg";
-import ApplyJob from "../assets/images/ic-apply-job.svg";
-import TalkToKoolKanya from "../assets/images/ic-talk-to-koolkanya.jpg";
+// import Browse from "../assets/images/ic-search.svg";
+// import Score from "../assets/images/ic-koolkanya-score.svg";
+// import ApplyJob from "../assets/images/ic-apply-job.svg";
+// import TalkToKoolKanya from "../assets/images/ic-talk-to-koolkanya.jpg";
+import Browse from '../assets/images/second-fold/ic-browse-companies-216.png';
+import Score from '../assets/images/second-fold/ic-koolkanya-score-216.png';
+import ApplyJob from '../assets/images/second-fold/ic-apply-job-216.png';
+import TalkToKoolKanya from '../assets/images/second-fold/ic-talk-to-koolkanya-216.png';
+
 import BgCircleElement from "../assets/images/bg-circle-element.svg";
 import BgDotsElement from "../assets/images/bg-dots-element.svg";
 import BgParallax1 from "../assets/images/home-bg-parallax-1.png";
@@ -266,7 +271,7 @@ class Home extends Component {
               <div>
                 <Link className="d-flex text-center text-md-left flex-column" to="/jobs">
                   <div className="kk-home-illustration__wrapper">
-                    <img className="kk-home-illustration out-of-section" src={Browse} alt="An illustration with lense icon" />
+                    <img className="kk-home-illustration out-of-section w-100" src={Browse} alt="An illustration with lense icon" />
                     {/* <Search fill="violet"/> */}
                     <h4 className="kk-home-illustration-header kk-color-black">Browse Companies</h4>
                     <p>Understand what companies fit your lifestyle </p>
@@ -276,7 +281,7 @@ class Home extends Component {
               <div>
                 <Link className="d-flex text-center text-md-left flex-column" to="/company-description">
                 <div className="kk-home-illustration__wrapper">
-                  <img className="kk-home-illustration out-of-section" src={Score} alt="Icon of Score card" />
+                  <img className="kk-home-illustration out-of-section w-100" src={Score} alt="Icon of Score card" />
                   <h4 className="kk-home-illustration-header kk-color-black">
                     Check out the Kool Kanya Score
                   </h4>
@@ -287,7 +292,7 @@ class Home extends Component {
               <div>
                 <Link className="d-flex text-center text-md-left flex-column" to="/company-description">
                   <div className="kk-home-illustration__wrapper ">
-                    <img className="kk-home-illustration out-of-section"
+                    <img className="kk-home-illustration out-of-section w-100"
                       src={TalkToKoolKanya}
                       alt="Lady working working with laptop"
                     />
@@ -302,7 +307,7 @@ class Home extends Component {
               <div>
                 <Link className="d-flex text-center text-md-left flex-column" to="/jobs">
                   <div className="kk-home-illustration__wrapper">
-                    <img className="kk-home-illustration out-of-section" src={ApplyJob} alt="An illustration of Suit case" />
+                    <img className="kk-home-illustration out-of-section w-100" src={ApplyJob} alt="An illustration of Suit case" />
                     <h4 className="kk-home-illustration-header kk-color-black">
                       View and apply for Jobs
                     </h4>
