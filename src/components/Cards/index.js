@@ -1,4 +1,5 @@
 export { default as CardBadge } from './Badge';
+export { default as CardWrapper } from './Wrapper';
 export { default as CardBody } from './Body';
 export { default as CardButtonGroup } from './ButtonGroup';
 export { default as CardDescription } from './Description';

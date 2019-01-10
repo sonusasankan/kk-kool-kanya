@@ -25,7 +25,7 @@ class Article extends Component {
     return (
       <div style={{backgroundColor: "#fbfbfb"}}>
         <div className="kk-search text-center">
-            <SearchContainer placeholder="Search by company name, industry or location"/>
+            <SearchContainer placeholder="Search by article, category"/>
         </div>
         {/* Featured Categories starts */}
         <section className="container pb-0">

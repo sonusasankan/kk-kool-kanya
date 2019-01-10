@@ -21,7 +21,7 @@ class JobDescription extends Component{
         return (
             <React.Fragment>
                 <div className="kk-search text-center">
-                    <SearchContainer placeholder="Search by company name, industry or location"/>
+                    <SearchContainer placeholder="Search by job, industry or location"/>
                 </div>
                 <section className="kk-breadcrumb py-0 d-none d-md-block">
                     <div className="container">

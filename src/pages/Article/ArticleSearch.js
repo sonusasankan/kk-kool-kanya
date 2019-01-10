@@ -67,7 +67,7 @@ class ArticleSearch extends Component {
         return(
             <React.Fragment>
                 <div className="kk-search text-center">
-                    <SearchContainer placeholder="Search by company name, industry or location"/>
+                    <SearchContainer placeholder="Search by article, keywords"/>
                 </div>
                 <section className="container py-0">
                     <BreadCrumb>

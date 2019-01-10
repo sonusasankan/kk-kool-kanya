@@ -86,6 +86,7 @@ class SearchContainer extends Component {
                       name={component}
                       id={component}
                       type="radio"
+                      checked="true"
                       value={component}
                       checked={categorySelected === component }
                       onChange={this.toggleCategory}
@@ -101,6 +102,7 @@ class SearchContainer extends Component {
               </div>
               <div />
               <div className="kk-search-input">
+               <label htmlFor={id} className="d-none"></label>
                 <input id={id} placeholder={placeholder} />
                 <button name="search button" aria-label="Search button" role="button" className="kk-search-button-icon">
                   <img src={SearchIcon} alt="alt text" />

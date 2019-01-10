@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { PropTypes } from "prop-types";
-import { Card, CardBadge, CardImage, CardBody, CardTitle, CardDetails, CardHead, CardLogo, CardRating } from "../Cards";
+import { Card, CardBadge, CardImage, CardBody, CardTitle, CardDetails, CardHead, CardLogo, CardRating, CardWrapper } from "../Cards";
 import FavButton from '../FavButton';
 
 import Logo from '../../assets/images/godrej.png'
@@ -16,9 +16,9 @@ class CompanyCard extends Component {
     this.props.markFavourite((this.props.companyid))
   }
   render() {
-    var {badges, img, alt, title, locations, industry, openings, logo, rating, isFavourite } = this.props
+    var {badges, img, alt, title, locations, industry, openings, logo, rating, isFavourite, link } = this.props
     return (
-      <Card cardType="card__company">
+      <Card link={link} cardType="card__company">
         {badges ? <CardBadge top left badges={badges} /> : ""}
         <FavButton top right isFavourite={isFavourite} markFavourite={ this.markFavourite }/>
         <CardImage src={img} alt={alt} />
@@ -53,7 +53,8 @@ CompanyCard.propTypes = {
   locations: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
   industry: PropTypes.string.isRequired,
-  openings: PropTypes.string.isRequired
+  openings: PropTypes.string.isRequired,
+  link: PropTypes.string
 };
 
 

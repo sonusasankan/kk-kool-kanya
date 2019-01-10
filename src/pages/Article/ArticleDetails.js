@@ -8,13 +8,12 @@ import { ArticleCard } from "../../components/Article";
 
 import Author from '../../assets/images/author.jpg';
 
-
 class ArticleDetails extends Component {
     render(){
         return(
             <React.Fragment>
                 <div className="kk-search text-center">
-                    <SearchContainer placeholder="Search by company name, industry or location"/>
+                    <SearchContainer placeholder="Search by article, keywords"/>
                 </div>
                 <section className="container py-0">
                     <BreadCrumb>
@@ -51,10 +50,10 @@ class ArticleDetails extends Component {
 
                         <div className="article__content__sidebar">
                             <div className="article__content__sidebar__inner d-flex position-sticky">
-                                <div className="mb-4 mr-2">{}</div>
-                                <div className="mb-4 mr-2">{}</div>
-                                <div className="mb-4 mr-2">{}</div>
-                                <div className="mb-4 mr-2">{}</div>
+                                <div className="icon-ic-heart-disable-24 mb-4 mr-2"></div>
+                                <div className="icon-ic-heart-disable-24 mb-4 mr-2"></div>
+                                <div className="icon-ic-heart-disable-24 mb-4 mr-2"></div>
+                                <div className="icon-ic-heart-disable-24 mb-4 mr-2"></div>
                             </div>
                         </div>
                         
@@ -96,13 +95,12 @@ class ArticleDetails extends Component {
                         </div>
                     </div>
 
-                    <div className="article__content__bottom d-flex align-items-center justify-content-end">
-                        {/* <div className="d-flex align-items-center"><span class="icon-ic-heart-active-24 mr-1"></span> 123 likes</div> */}
+                    <div className="article__content__bottom d-flex align-items-center justify-content-between">
+                        <div className="d-flex align-items-center"><span class="icon-ic-heart-active-24 mr-1"></span> 123 likes</div>
                         <div>
-                            <button className="mr-3"></button>
-                            <button className="mr-3"></button>
-                            <button className="mr-3"></button>
-                            <button className="mr-3"></button>
+                            <span className="icon-ic-heart-disable-24 mr-3"></span>
+                            <span className="icon-ic-heart-disable-24 mr-3"></span>
+                            <span className="icon-ic-heart-disable-24 mr-3"></span>
                         </div>
                     </div>
                 </section>

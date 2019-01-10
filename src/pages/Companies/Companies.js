@@ -21,7 +21,8 @@ import SearchContainer from './../../components/Search/SearchContainer';
 import {BadgeList} from '../../components/Cards/Badge';
 import { CompanyCard } from "./../../components/CompanyCard";
 import HorizontalScrollableTags from '../../container/HorizontalScrollableTags';
-
+import SectionTitle from '../../components/SectionTitle';
+import { JobPlainCard } from "../../components/JobPlainCard";
 
 
 import Recommendation from "./../../components/Recommendation/Recommendation";
@@ -34,8 +35,20 @@ import dummyImage from "../../assets/images/img-company-descrition-1.jpg";
 import { connect } from "react-redux";
 import { fetchCompanyLists } from "../../store/actions/companyActions";
 
+//importing all icons dynamically//
+function importAll(r) {
+  return r.keys().map(r);
+}
+const icons = importAll(
+  require.context(
+    "../../assets/icons/home-industries",
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
+
 const list = [
-  <Chip logo={bangalore} alt="bangalore logo" title="Delhi" />,
+  <Chip isActive logo={bangalore} alt="bangalore logo" title="Delhi" />,
   <Chip logo={bangalore} alt="bangalore logo" title="Bangalore" />,
   <Chip logo={bangalore} alt="bangalore logo" title="Chennai" />,
   <Chip logo={bangalore} alt="bangalore logo" title="Mumbai" />,
@@ -49,7 +62,17 @@ class Companies extends Component {
     super();
     this.button = React.createRef();
     this.state = {
-      cities: []
+      cities: [],
+      topIndustries: [
+        "Advertising/ PR/ Events",
+        "Architecture / Interior Designing",
+        "BPOs / KPOs",
+        "Banking / Finance Services /Insurance",
+        "Courier / Logistics",
+        "Education / Teaching",
+        "FMGC",
+        "Hospitals"
+      ]
     };
   }
 
@@ -77,7 +100,6 @@ class Companies extends Component {
     let companyList = this.props.companyList.items.companylist
     let locations = ["Kochi"];
     let loc = [];
-    console.log(this.props);
     companyList.map(company => {
         loc.push(...company.otherlocations);
      });
@@ -101,7 +123,7 @@ class Companies extends Component {
                 primary={false}
                 isAlignRight={true}
                 label="View all"
-                click={()=>{}}
+                click={()=>{ this.props.history.push('company-search-results');}}
                 icon={<FiChevronRight className="icon" />}
               />
             </div>
@@ -148,14 +170,14 @@ class Companies extends Component {
           <div className="container">
             <div className="row-fluid d-flex justify-content-between mb-2 mb-md-4">
               <h3 className="kk-section-title my-auto">
-                Top companies recommended for
+               Recommended companies in top cities
               </h3>
               <Button
                 styleName="d-none d-md-block"
                 primary={false}
                 isAlignRight={true}
                 label="View all"
-                click={()=>{}}
+                click={()=>{this.props.history.push('company-search-results');}}
                 icon={<FiChevronRight className="icon" />}
               />
             </div>
@@ -169,7 +191,7 @@ class Companies extends Component {
                 if(index < 6){
                   return (
                     <div className="col-md-4 kk-card-small">
-                      <Card cardType="card__company">
+                      <Card link="company-description" cardType="card__company">
                         <CardBody>
                           <FavButton grey top right />
                           <CardDetails>
@@ -193,36 +215,17 @@ class Companies extends Component {
         </section>
         <section className="kk-top-industries">
           <div className="container">
-          <div className="row-fluid d-flex justify-content-between mb-2 mb-md-4">
-              <h3 className="kk-section-title my-auto">
-              Job openings in top industries
-              </h3>
-              <Button
-                styleName="d-none d-md-block"
-                primary={false}
-                isAlignRight={true}
-                label="View all"
-                click={()=>{}}
-                icon={<FiChevronRight className="icon" />}
-              />
-            </div>
+          <SectionTitle
+              link="/jobs"
+              linkText="View All"
+            >Top industries</SectionTitle>
             <div className="row">
-              {companyList.map((company, index) => {
-                if(index < 8){
-                  return (
-                    <div className="col-md-3 text-center">
-                      <Card styleName="my-2" cardType="card__company">
-                      <CardBody>
-                        <img src={dummyIcon} alt="something"/>                       
-                         <h6 className="card-title">{company.industry}</h6>
-                         <p className="card-text">
-                            {company.totalOpenings} Openings
-                          </p>
-                      </CardBody>
-                      </Card>
-                    </div>
-                  );
-                }
+              {this.state.topIndustries.map((industry, index) => {
+                return (
+                  <div key={index} className="col-12 col-sm-6 col-md-6 col-lg-3">
+                    <JobPlainCard industry={industry} logo={icons[index]} link="/jobs" />
+                  </div>
+                );
               })}
             </div>
           </div>
