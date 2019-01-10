@@ -213,7 +213,7 @@ class Companies extends Component {
                     <div className="col-md-3 text-center">
                       <Card styleName="my-2" cardType="card__company">
                       <CardBody>
-                        <img src={dummyIcon} alt=""/>                       
+                        <img src={dummyIcon} alt="something"/>                       
                          <h6 className="card-title">{company.industry}</h6>
                          <p className="card-text">
                             {company.totalOpenings} Openings

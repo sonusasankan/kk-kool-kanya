@@ -39,7 +39,7 @@ class Chip extends Component {
   }
 
   _handleClick = () => {
-    if(this.state.class == 'normal'){
+    if(this.state.class === 'normal'){
       this.setState({ 
         class: STATUS.CLICKED,
         selected: this.props.title,

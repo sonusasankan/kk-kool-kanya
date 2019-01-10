@@ -789,7 +789,7 @@ export default class CompanyDescription extends Component {
               <div className="row mb-5">
                 <div className="col-md-2">
                   <div className="kk-author">
-                    <img alt="user image" className="img-fluid" src={userAvatar} />
+                    <img alt="user" className="img-fluid" src={userAvatar} />
                   </div>
                 </div>
                 <div className="col-md-10">
@@ -956,7 +956,7 @@ export default class CompanyDescription extends Component {
                       locations={company.locations.join(",")}
                       title={company.name}
                       img={company.img}
-                      alt="img alt"
+                      alt="something"
                       industry="IT"
                       openings="23"
                     />

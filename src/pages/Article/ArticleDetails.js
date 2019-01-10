@@ -45,7 +45,7 @@ class ArticleDetails extends Component {
                     
                     <div className="d-flex flex-wrap">
                         <div className="article__banner-img flex-grow-1">
-                            <img className="w-100" src="https://loremflickr.com/1160/557" alt="banner image" />
+                            <img className="w-100" src="https://loremflickr.com/1160/557" alt="banner" />
                         </div>
 
                         <div className="article__content__sidebar">
@@ -134,7 +134,7 @@ class ArticleDetails extends Component {
                             <div className="col-12 col-md-6 col-lg-3">
                                 <ArticleCard
                                     cardLink="/article-details"
-                                    imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
+                                    imgSrc="https://loremflickr.com/260/160" alt="Alternate text"
                                     cardTitle="When Are You Going Back? (Or: Maternity Leave is Complicated.)"
                                     authorName="By Sheeba Chaddha"
                                     readingTime="7 min read"
@@ -143,7 +143,7 @@ class ArticleDetails extends Component {
                             <div className="col-12 col-md-6 col-lg-3">
                                 <ArticleCard
                                     cardLink="/article-details"
-                                    imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
+                                    imgSrc="https://loremflickr.com/260/160" alt="Alternate text"
                                     cardTitle="A concise masterclass on how to write infrastructure code"
                                     authorName="By Sheeba Chaddha"
                                     readingTime="7 min read"
@@ -152,7 +152,7 @@ class ArticleDetails extends Component {
                             <div className="col-12 col-md-6 col-lg-3">
                                 <ArticleCard
                                     cardLink="/article-details"
-                                    imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
+                                    imgSrc="https://loremflickr.com/260/160" alt="Alternate text"
                                     cardTitle="A concise masterclass on how to write infrastructure code"
                                     authorName="By Sheeba Chaddha"
                                     readingTime="7 min read"
@@ -161,7 +161,7 @@ class ArticleDetails extends Component {
                             <div className="col-12 col-md-6 col-lg-3">
                                 <ArticleCard
                                     cardLink="/article-details"
-                                    imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
+                                    imgSrc="https://loremflickr.com/260/160" alt="Alternate text"
                                     cardTitle="Google Employees: Our Executives Engaged in Abuse..."
                                     authorName="By Sheeba Chaddha"
                                     readingTime="7 min read"
