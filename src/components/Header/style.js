@@ -140,6 +140,7 @@ const HeaderWrapper = styled.div`
             padding: 0 0 0 0 !important;
             @media (min-width: 992px){
                 padding: 0 0 0 1rem !important;
+                margin-left: 0;
             }
             &:hover{
                 background-color: transparent !important;

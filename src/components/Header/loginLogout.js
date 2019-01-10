@@ -19,7 +19,7 @@ class Login extends Component {
         const {
             loginClick,
             signUpClick
-        } = this.props
+        } = this.props;
         return(
             <React.Fragment>
                 <div className="kk-header__login__signin">
