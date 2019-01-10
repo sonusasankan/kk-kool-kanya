@@ -29,6 +29,9 @@ import BgParallax3 from "../assets/images/home-bg-parallax-3.png";
 //import carousel component
 import Carousel from '../components/Carousel';
 
+// importing onscroll from Interactions for interactions
+import onAppear from '../Interactions/OnAppear';
+
 //parallax plugin
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
@@ -63,7 +66,7 @@ const components = ["Companies", "Jobs", "Articles"];
 
 const carouselOption = {
   // autoWidth: true,
-  margin: 8,
+  margin: 12,
   nav: false,
   items: 1,
   stagePadding: 16,
@@ -77,16 +80,26 @@ const carouselOption = {
       items: 2,
       stagePadding: 16
     },
+    768:{
+      items: 2,
+      margin: 24
+    },
     992:{
       items: 2,
-      margin: 16,
+      margin: 40,
       stagePadding: 24,
     },
     1200:{
-      items: 3
+      items: 3,
+      margin: 40,
+      stagePadding: 0,
+      mouseDrag: false,
+      touchDrag: false,
     }
   }
 }
+
+
 
 class Home extends Component {
   constructor() {
@@ -105,8 +118,16 @@ class Home extends Component {
     };
   }
 
+
+
   componentDidMount() {
     this.props.dispatch(fetchCompanyLists());
+
+    window.addEventListener('scroll', ()=>{
+      document.querySelectorAll('.out-of-section').forEach(el=>{
+        onAppear(el);
+      });
+    })
   } 
   render() {
     if(!this.props.companyList.items.companylist) {
@@ -224,6 +245,8 @@ class Home extends Component {
               </div>
             </div>
           </div>
+        
+        
         {/* <SearchContainer /> */}
         <section className="kk-section kk-home-illustrations">
           {/* parallax bg-5 */}
@@ -237,16 +260,13 @@ class Home extends Component {
           >
             <img className="img-fluid" src={BgCircleElement} alt="decorative image" />
           </Parallax>
-          {/* <div className="kk-bg-element-circle">
-            <img src={BgCircleElement} alt="" />
-          </div> */}
           <div className="container">
           <SectionTitle>We are here to help</SectionTitle>
             <div className="kk-home-illustration__outer-wrapper">
               <div>
                 <Link className="d-flex text-center text-md-left flex-column" to="/jobs">
                   <div className="kk-home-illustration__wrapper">
-                    <img className="kk-home-illustration" src={Browse} alt="An illustration with lense icon" />
+                    <img className="kk-home-illustration out-of-section" src={Browse} alt="An illustration with lense icon" />
                     {/* <Search fill="violet"/> */}
                     <h4 className="kk-home-illustration-header kk-color-black">Browse Companies</h4>
                     <p>Understand what companies fit your lifestyle </p>
@@ -256,7 +276,7 @@ class Home extends Component {
               <div>
                 <Link className="d-flex text-center text-md-left flex-column" to="/company-description">
                 <div className="kk-home-illustration__wrapper">
-                  <img className="kk-home-illustration" src={Score} alt="Icon of Score card" />
+                  <img className="kk-home-illustration out-of-section" src={Score} alt="Icon of Score card" />
                   <h4 className="kk-home-illustration-header kk-color-black">
                     Check out the Kool Kanya Score
                   </h4>
@@ -266,8 +286,8 @@ class Home extends Component {
               </div>
               <div>
                 <Link className="d-flex text-center text-md-left flex-column" to="/company-description">
-                  <div className="kk-home-illustration__wrapper">
-                    <img className="kk-home-illustration"
+                  <div className="kk-home-illustration__wrapper ">
+                    <img className="kk-home-illustration out-of-section"
                       src={TalkToKoolKanya}
                       alt="Lady working working with laptop"
                     />
@@ -282,7 +302,7 @@ class Home extends Component {
               <div>
                 <Link className="d-flex text-center text-md-left flex-column" to="/jobs">
                   <div className="kk-home-illustration__wrapper">
-                    <img className="kk-home-illustration" src={ApplyJob} alt="An illustration of Suit case" />
+                    <img className="kk-home-illustration out-of-section" src={ApplyJob} alt="An illustration of Suit case" />
                     <h4 className="kk-home-illustration-header kk-color-black">
                       View and apply for Jobs
                     </h4>
@@ -325,7 +345,7 @@ class Home extends Component {
             <div className="row">
               {topIndustries.map((industry, index) => {
                 return (
-                  <div key={index} className="col-12 col-sm-6 col-md-6 col-lg-3">
+                  <div key={index} className="col-12 col-sm-6 col-md-6 col-lg-3 kk-JobPlainCard out-of-section">
                     <JobPlainCard industry={industry} logo={icons[index]} link="/jobs" />
                   </div>
                 );

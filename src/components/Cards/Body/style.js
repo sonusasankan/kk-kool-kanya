@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const Body = styled.div`
   padding: 1.5rem;
   background-color: #fff;
+  width: 100%;
   &.overlay{
     position: absolute;
     top: 0;
