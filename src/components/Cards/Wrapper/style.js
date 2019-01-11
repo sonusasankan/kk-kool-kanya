@@ -31,7 +31,13 @@ const Wrapper = styled.div`
     &.article-card{
         .kk-card__title{
             min-height: 60px;
+            @media (min-width: 768px){
+                min-height: 40px;
+            }
             @media (min-width: 992px){
+                min-height: 60px;
+            }
+            @media (min-width: 1200px){
                 min-height: 40px;
             }
         }

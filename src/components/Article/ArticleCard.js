@@ -24,7 +24,7 @@ const articleCard = ({
       <CardFavButton top right />
     </CardImage>
     <CardBody>
-      <CardTitle>{cardTitle}</CardTitle>
+      <CardTitle excerptLength={70} >{cardTitle}</CardTitle>
       <TextMuted>
         <span>{authorName}</span>
         <span>{readingTime}</span>
