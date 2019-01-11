@@ -34,7 +34,7 @@ class ArticleDetails extends Component {
                             <img className="img-fluid" src={Author} alt="Rennie Bradford"></img>
                         </Link>
                         <div className="d-flex justify-content-center flex-column">
-                            <Link to="/author-detail" className="kk-article-details__author__name">Rennie Bradford</Link>
+                            <Link to="/author-detail" className="kk-article-details__author__name mb-2">Rennie Bradford</Link>
                             <TextMuted>
                                 <span>15th October 2018</span>
                                 <span>5 min read</span>
