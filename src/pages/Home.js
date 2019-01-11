@@ -341,7 +341,11 @@ class Home extends Component {
                 <Carousel className="kk-home__carousel" option={carouselOption}>
                   { companyList }
                 </Carousel>
-                <Link to="/companies" className="kk-home__carousel__view-all d-md-none">View All (20+)</Link>
+                <div className="text-center mt-3 mt-md-0">
+                <Link to="/companies" className="kk-home__carousel__view-all d-md-none">
+                  <Button styleName="curved" primary={false} hasBorder label="View All (20+)"/>
+                </Link>
+                </div>
               </div>
             </div>
           </div>
