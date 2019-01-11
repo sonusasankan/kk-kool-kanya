@@ -259,7 +259,7 @@ const PostLoginWrapper = styled.div`
         background-color: #FFF;
         position: absolute;
         bottom: 56px;
-        left: 1rem;
+        left: 0;
         border-radius: 4px;
         overflow: hidden;
         width: 100%;

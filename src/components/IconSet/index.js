@@ -18,6 +18,7 @@ import Location24        from '../../assets/custom-icons-svg/ic-location-24.svg'
 import Experience24      from '../../assets/custom-icons-svg/ic-experience-24.svg';
 import JobType24         from '../../assets/custom-icons-svg/ic-jobtype-24.svg';
 import Mail32            from '../../assets/custom-icons-svg/ic-mail-32.svg';
+import Dob24            from '../../assets/custom-icons-svg/ic-dob-24.svg';
 
 //heart icon
 const IcHeart24 = (className)=>(
@@ -113,10 +114,16 @@ const IcJobType24 = (className) => (
     </Icon24>
 )
 
-const IcMail32 = (className) => (
+const IcDob24 = (className) => (
     <Icon24 className={className}>
-        <img src={Mail32} alt="kk-icon" />
+        <img src={Dob24} alt="kk-icon" />
     </Icon24>
+)
+
+const IcMail32 = (className) => (
+    <Icon32 className={className}>
+        <img src={Mail32} alt="kk-icon" />
+    </Icon32>
 )
 
 
@@ -132,6 +139,7 @@ export {
     IcLocation24,
     IcExperience24,
     IcJobType24,
+    IcDob24,
     IcTwitter32,
     IcHeart32,
     IcLinkedin32,

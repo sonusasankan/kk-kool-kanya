@@ -9,6 +9,9 @@ import {ContentWrapper} from './style';
 import {Sidebar} from '../Saved/style';
 import '../Setting/bgElements.scss';
 
+//importing custom-icons
+import {IcLocation24, IcDob24} from '../../components/IconSet';
+
 import {Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 class Profile extends Component{
@@ -65,8 +68,17 @@ class Profile extends Component{
                                         />
                                         <div className="kk-avatar__text">
                                             <h2>Deepti Agrawal</h2>
-                                            <CardDetails icon="icon-ic-location-24">Banglore, Karnataka</CardDetails>
-                                            <CardDetails icon="icon-ic-dob">20th February, 1995</CardDetails>
+                                            <div className="d-flex">
+                                                <IcLocation24 />
+                                                <div className="p-1" />
+                                                <CardDetails>Banglore, Karnataka</CardDetails>
+                                            </div>
+
+                                            <div className="d-flex">
+                                                <IcDob24 />
+                                                <div className="p-1" />
+                                                <CardDetails>20th February, 1995</CardDetails>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="kk-interest border-bottom">
