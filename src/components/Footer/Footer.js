@@ -8,7 +8,7 @@ import FooterDecElemenet1 from '../../assets/images/img-footer-element-1.svg';
 
 
 import { IoIosArrowForward } from "react-icons/io";
-import {IcFacebook24, IcLinkedin, IcTwitter, IcInstagram} from '../IconSet';
+import {IcFacebook24, IcLinkedin24, IcTwitter24, IcInstagram24} from '../IconSet';
 
 
 const footer = () => (
@@ -44,9 +44,9 @@ const footer = () => (
             <a href="javascript:void(0)" className="no-link">Feel free to reach out to us</a>
             <div className="d-flex justify-content-between">
               <Link aria-label="facebook" to="terms-conditions"><IcFacebook24 /></Link>
-              <Link aria-label="linkedin" to="terms-conditions"><IcLinkedin /></Link>
-              <Link aria-label="twitter" to="terms-conditions"><IcTwitter /></Link>
-              <Link aria-label="instagram" to="terms-conditions"><IcInstagram /></Link>
+              <Link aria-label="linkedin" to="terms-conditions"><IcLinkedin24 /></Link>
+              <Link aria-label="twitter" to="terms-conditions"><IcTwitter24 /></Link>
+              <Link aria-label="instagram" to="terms-conditions"><IcInstagram24 /></Link>
             </div>
           </nav>
         </div>

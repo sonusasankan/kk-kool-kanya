@@ -10,12 +10,12 @@ import { AvatarWraper, Image, Name } from './style';
 
 
 const Avatar = ({
-  className, isLoggedIn, imgSrc, link, avatarTitle,
+  className, imgSrc, link, avatarTitle,
 }) => (
   <Link to={link}>
   <AvatarWraper className={`avatar ${className}`} >
     <Image className="avatar__img">
-      <img src={isLoggedIn === true ? imgSrc : defaultAvatar} alt="User Avatar" />
+      <img src={imgSrc} alt="User Avatar" />
     </Image>
     {(avatarTitle ? <Name className="avatar__title">{avatarTitle}</Name> : "")}
   </AvatarWraper>

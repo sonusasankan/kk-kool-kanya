@@ -7,7 +7,7 @@ import SearchContainer from '../../components/Search/SearchContainer';
 import { ArticleCard } from "../../components/Article";
 
 //importing icons
-import {IcFacebookOutline32} from '../../components/IconSet';
+import {IcHeart32, IcHeartLiked32, IcFacebookOutline32, IcLinkedin32, IcTwitter32} from '../../components/IconSet';
 
 import Author from '../../assets/images/author.jpg';
 
@@ -53,10 +53,10 @@ class ArticleDetails extends Component {
 
                         <div className="article__content__sidebar">
                             <div className="article__content__sidebar__inner d-flex position-sticky">
-                                <div className="icon-ic-heart-disable-24 mb-4 mr-2"><IcFacebookOutline32 /></div>
-                                <div className="icon-ic-heart-disable-24 mb-4 mr-2"></div>
-                                <div className="icon-ic-heart-disable-24 mb-4 mr-2"></div>
-                                <div className="icon-ic-heart-disable-24 mb-4 mr-2"></div>
+                                <button role="button" aria-label="Fav-button"><IcHeart32 /></button>
+                                <button role="button" aria-label="Facebook"><IcFacebookOutline32 /></button>
+                                <button role="button" aria-label="Linkedin"><IcLinkedin32 /></button>
+                                <button role="button" aria-label="Twitter"><IcTwitter32 /></button>
                             </div>
                         </div>
                         
@@ -98,12 +98,13 @@ class ArticleDetails extends Component {
                         </div>
                     </div>
 
-                    <div className="article__content__bottom d-flex align-items-center justify-content-between">
-                        <div className="d-flex align-items-center"><span class="icon-ic-heart-active-24 mr-1"></span> 123 likes</div>
+                    <div className="article__content__bottom d-flex align-items-center">
+                        {/* <div className="d-flex align-items-center"><span class="icon-ic-heart-active-24 mr-1"></span> 123 likes</div> */}
                         <div>
-                            <span className="icon-ic-heart-disable-24 mr-3"></span>
-                            <span className="icon-ic-heart-disable-24 mr-3"></span>
-                            <span className="icon-ic-heart-disable-24 mr-3"></span>
+                            <button role="button" aria-label="Fav-button"><IcHeartLiked32 /></button>
+                            <button role="button" aria-label="Facebook"><IcFacebookOutline32 /></button>
+                            <button role="button" aria-label="Linkedin"><IcLinkedin32 /></button>
+                            <button role="button" aria-label="Twitter"><IcTwitter32 /></button>
                         </div>
                     </div>
                 </section>
@@ -113,16 +114,16 @@ class ArticleDetails extends Component {
                     <div className="row article__readmore__wrapper">
                         <div className="col-12 col-md-6 mt-3">
                             <div className="article__readmore">Read more by</div>
-                            <Link to="/author-detail"><Avatar className="mt-2" avatarTitle="Sheeba Chaudhary" /></Link>
+                            <Link to="/author-detail"><Avatar link="/author-detail" imgSrc={Author} className="mt-2" avatarTitle="Sheeba Chaudhary" /></Link>
                         </div>
                         <div className="col-12 col-md-6 mt-3">
                             <div className="article__readmore">Read more in</div>
                             <div className="row">
                                 <div className="col-12 col-lg-6">
-                                    <Avatar className="mt-2" avatarTitle="Restarting your Career" />
+                                    <Avatar link="/article-category" imgSrc={Author} className="mt-2" avatarTitle="Restarting your Career" />
                                 </div>
                                 <div className="col-12 col-lg-6">
-                                    <Avatar className="mt-2" avatarTitle="Tools & Skills" />
+                                    <Avatar link="/article-category" imgSrc={Author} className="mt-2" avatarTitle="Tools & Skills" />
                                 </div>
                             </div>
                         </div>

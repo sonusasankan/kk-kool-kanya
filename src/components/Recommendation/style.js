@@ -20,6 +20,7 @@ const Wrapper = styled.div`
         font-size: 1.2rem;
         position: relative;
         z-index: 3;
+        text-align: left;
         @media (min-width: 768px){
             display: none;
         }

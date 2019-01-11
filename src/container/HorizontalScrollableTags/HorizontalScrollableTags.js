@@ -12,8 +12,8 @@ const Arrow = ({ text, className }) => {
   return <div className={className}>{text}</div>;
 };
 
-const ArrowLeft = Arrow({ text: <FiChevronLeft />, className: "arrow-prev" });
-const ArrowRight = Arrow({ text: <FiChevronRight />, className: "arrow-next" });
+// const ArrowLeft = Arrow({ text: <FiChevronLeft />, className: "arrow-prev" });
+// const ArrowRight = Arrow({ text: <FiChevronRight />, className: "arrow-next" });
 
 class HorizontalScrollableTags extends Component {
   state = {
@@ -66,8 +66,8 @@ class HorizontalScrollableTags extends Component {
       <ScrollMenu
         ref={el => (this.menu = el)}
         data={menu}
-        arrowLeft={ArrowLeft}
-        arrowRight={ArrowRight}
+        // arrowLeft={ArrowLeft}
+        // arrowRight={ArrowRight}
         hideArrows={hideArrows}
         hideSingleArrow={hideSingleArrow}
         transition={+transition}
