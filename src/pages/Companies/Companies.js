@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 
 import {
   Card,
@@ -148,8 +148,8 @@ class Companies extends Component {
                             badgePosition="top left"
                             locations={company.otherlocations.join(", ")}
                             title={company.name + `this will be next line, and some times third`}
-                            // rating={company.rating % 1 !== 0? company.rating: company.rating + ".0"}
-                            rating={company.rating % 1 !== 0? company.rating: company.rating + ".0"}
+                            // rating={company.rating % 1 !== 0? company.rating: company.rating + ".0"}   use company.rating from API//
+                            rating="4.5"
                             industry={company.industry}
                             openings={company.totalOpenings}
                             img={dummyImage}
@@ -161,6 +161,7 @@ class Companies extends Component {
                     }
                   })}
                 </div>
+                <div className="row-fluid text-center"><Link to="company-search-results"> <Button styleName="curved" primary={false} hasBorder label="View All"/></Link></div>
               </div>
             </div>
           </div>
