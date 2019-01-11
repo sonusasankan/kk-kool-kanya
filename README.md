@@ -3,10 +3,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Running App
-- `npm` to install all dependencies
--  `npm start` to run app
-- `nodemon server.js` to run nodemon server to serve dummy data
+- `npm install` to install all dependencies
+- `npm start` to run app
+- `npm run build` to generate production build
+- `npm eject` to generate production build
 - `npm run storybook` to run storybook
+- `npm run build-storybook` to run storybook
+<!-- - `npm run lint` to run eslint test -->
 
 ## Creating and running Docker image
 - `docker build . -t kool-kanya` to create image of app
