@@ -7,6 +7,9 @@ import AuthorDetailsHeader from './style';
 import SectionTitle from '../../components/SectionTitle';
 import {ArticleCard__Big, ArticleCard} from '../../components/Article';
 
+//importing custom icons
+import {IcFacebookOutline32, IcLinkedin32, IcTwitter32, IcMail32} from '../../components/IconSet';
+
 import Author from '../../assets/images/author.jpg';
 
 const authorDetails = () => (
@@ -34,10 +37,10 @@ const authorDetails = () => (
                         <div className="d-flex align-items-end kk-author-detail__author__social__wrapper">
                             Follow me on:
                             <div className="kk-author-detail__author__social">
-                                <a href="facebook.com" className="icon-ic-fmgc-48"></a>
-                                <a href="twitter.com" className="icon-ic-fmgc-48"></a>
-                                <a href="linkedin.com" className="icon-ic-fmgc-48"></a>
-                                <a href="instagram.com" className="icon-ic-fmgc-48"></a>
+                                <a href="facebook.com" className="ml-3"><IcFacebookOutline32 /></a>
+                                <a href="twitter.com" className="ml-3"><IcLinkedin32 /></a>
+                                <a href="linkedin.com" className="ml-3"><IcTwitter32 /></a>
+                                <a href="instagram.com" className="ml-3"><IcMail32 /></a>
                             </div>
                         </div>
                     </div>

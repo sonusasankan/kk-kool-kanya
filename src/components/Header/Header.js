@@ -31,7 +31,7 @@ class Header extends Component {
       }))
     }
     else{
-      e.target.closest('ul').querySelectorAll('a').forEach((el)=>{
+      e.target.closest('ul').querySelectorAll('.active').forEach((el)=>{
         if(el.classList.contains('active') && ( window.location.pathname === e.target.getAttribute('href'))){
           el.classList.remove('active')
         }

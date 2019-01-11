@@ -17,6 +17,7 @@ import Share24           from '../../assets/custom-icons-svg/ic-share-24.svg';
 import Location24        from '../../assets/custom-icons-svg/ic-location-24.svg';
 import Experience24      from '../../assets/custom-icons-svg/ic-experience-24.svg';
 import JobType24         from '../../assets/custom-icons-svg/ic-jobtype-24.svg';
+import Mail32            from '../../assets/custom-icons-svg/ic-mail-32.svg';
 
 //heart icon
 const IcHeart24 = (className)=>(
@@ -112,22 +113,29 @@ const IcJobType24 = (className) => (
     </Icon24>
 )
 
+const IcMail32 = (className) => (
+    <Icon24 className={className}>
+        <img src={Mail32} alt="kk-icon" />
+    </Icon24>
+)
+
 
 
 export {
     IcHeart24,
-    IcHeart32,
     IcHeartLiked24,
-    IcHeartLiked32,
-    IcLinkedin32,
     IcFacebook24,
-    IcFacebookOutline32,
     IcLinkedin24,
     IcTwitter24,
-    IcTwitter32,
     IcInstagram24,
     IcShare24,
     IcLocation24,
     IcExperience24,
-    IcJobType24
+    IcJobType24,
+    IcTwitter32,
+    IcHeart32,
+    IcLinkedin32,
+    IcHeartLiked32,
+    IcFacebookOutline32,
+    IcMail32
 };

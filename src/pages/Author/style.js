@@ -59,6 +59,13 @@ const AuthorDetailsHeader = styled.section`
                 }
                 a{
                     color: ${Colors.secondaryDarkGray};
+                    color: #4f565e;
+                    height: 32px;
+                    width: 32px;
+                    img{
+                        position: relative;
+                        top: -2px;
+                    }
                     &:hover{
                         color: ${Colors.brandColor};
                     }
