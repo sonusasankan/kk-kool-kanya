@@ -11,6 +11,7 @@ import {
 import {TextMuted} from '../TextMuted';
 
 const articleCard__big = ({
+    isFav,
     cardLink,
     imgSrc, alt,
     cardTitle,
@@ -21,7 +22,7 @@ const articleCard__big = ({
 }) => (
     <Card big cardType="article-card" link={cardLink}>
         <CardImage src={imgSrc} alt={alt}>
-            <CardFavButton top right />
+            <CardFavButton top right isFav={isFav}/>
         </CardImage>
         <CardBody>
             <CardTitle>{cardTitle}</CardTitle>
