@@ -93,6 +93,7 @@ class Article extends Component {
                 </div>
                 <div className="col-12">
                 <ArticleCard__Big
+                    isFav
                     cardLink="article-details"
                     imgSrc="https://loremflickr.com/560/242" alt="Alternate text for image"
                     cardTitle="Tech Companies Are Getting Free Work Out of Job Applicants"
