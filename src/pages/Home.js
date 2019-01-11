@@ -396,6 +396,7 @@ class Home extends Component {
                 <ArticleCard__Trending
                   cardLink="article-details"
                   imgSrc="https://loremflickr.com/160/210"
+                  favButton
                   alt="Alternate text for image"
                   cardTitle="Tools I use to learn, work and travel anywhereTools I use to learn, work and travel anywhereTools I use to learn, work and travel anywhere Tools I use to learn, work and travel anywhereTools I use to learn, work and travel anywhereTools I use to learn, work and travel anywhere  "
                   authorName="By Sheeba Chaddha"
@@ -405,6 +406,7 @@ class Home extends Component {
                 <ArticleCard__Trending
                   cardLink="article-details"
                   imgSrc="https://loremflickr.com/160/210"
+                  favButton
                   alt="Alternate text for image"
                   cardTitle="For those who stand in the rain because you don’t trust the sun"
                   authorName="By Sheeba Chaddha"
