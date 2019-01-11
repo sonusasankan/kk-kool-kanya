@@ -145,6 +145,7 @@ class Home extends Component {
       return (
         <div className="item">
         <CompanyCard
+          link="/company-description"
           companyid={element._id}
           badges={[BadgeList.MATERNITY_BENEFITS, BadgeList.SAFETY, BadgeList.WORKLIFE_BALANCE]}
           badgePosition="top left"

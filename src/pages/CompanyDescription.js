@@ -266,8 +266,10 @@ export default class CompanyDescription extends Component {
                           <p className="text-muted">Interaction Design</p>
                         </li>
                         <li className="d-flex kk-company-location">
-                          <FiGlobe />
-                          <p className="text-muted">www.godrej.com</p>
+                          <a href="www.godrej.com" target="_blank" className="d-flex">
+                            <FiGlobe />
+                            <span>www.godrej.com</span>
+                          </a>
                         </li>
                       </ul>
                       <p>

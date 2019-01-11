@@ -6,12 +6,20 @@ import { DetailsWrapper, Details, Icon } from './style';
 const details = ({
   icon,
   children,
-
+  link
 }) => (
-  <DetailsWrapper  center className="d-flex align-items-center kk-card-details__wrapper">
-    {icon ? <Icon style={{"marginRight": 10}} className={`${icon} card__details__icon`} /> : ''}
-    <Details className="kk-card-details">{children}</Details>
-  </DetailsWrapper>
+  (link
+    ?<a href={link}>
+        <DetailsWrapper  center className="d-flex align-items-center kk-card-details__wrapper">
+          {icon ? <Icon style={{"marginRight": 10}} className={`${icon} card__details__icon`} /> : ''}
+          <Details className="kk-card-details">{children}</Details>
+        </DetailsWrapper>
+      </a>
+    : <DetailsWrapper  center className="d-flex align-items-center kk-card-details__wrapper">
+        {icon ? <Icon style={{"marginRight": 10}} className={`${icon} card__details__icon`} /> : ''}
+        <Details className="kk-card-details">{children}</Details>
+      </DetailsWrapper>
+  )
 );
 
 details.propTypes = {

@@ -5,7 +5,8 @@ import {Button} from '../Button';
 import getExcerpt from '../Cards/getExcerpt';
 
 import {PostLoginWrapper} from './style';
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp, IoIosLogOut } from "react-icons/io";
+import { FiUser, FiHeart, FiUserPlus, FiSettings  } from "react-icons/fi";
 
 //importing icons for profile dropdown
 import User from '../../assets/images/postLoginIcons/ic-profile-active.svg';
@@ -80,35 +81,35 @@ class PostLogin extends Component {
                         onClick={linkClick}
                         to="/profile"
                         className="kk-postlogin-dropdown__item d-flex align-items-center">
-                            <img src={User} alt="Profile" className="px-2" />
-                            <span>My Porfile</span>
+                            <span className="px-2 kk-post-login-icons"><FiUser /></span>
+                            <span>My Profile</span>
                     </Link>
                     <Link
                         onClick={linkClick}
                         to="/favourites"
-                        className="kk-postlogin-dropdown__item d-flex align-items-center">
-                            <img src={Favourites} alt="Favourites" className="px-2" />
+                        className="kk-postlogin-dropdown__item  d-flex align-items-center">
+                            <span className="px-2 kk-post-login-icons"><FiHeart /></span>
                             <span>Favourites</span>
                     </Link>
                     <Link
                         onClick={linkClick}
                         to="/profile"
                         className="kk-postlogin-dropdown__item d-flex align-items-center">
-                            <img src={BKK} alt="Become a Kool Kanya" className="px-2" />
+                            <span className="px-2 kk-post-login-icons"><FiUserPlus /></span>
                             <span>Become a Kool Kanya</span>
                     </Link>
                     <Link
                         onClick={linkClick}
                         to="/settings"
                         className="kk-postlogin-dropdown__item d-flex align-items-center">
-                            <img src={Settings} alt="Settings" className="px-2" />
+                            <span className="px-2 kk-post-login-icons"><FiSettings /></span>
                             <span>Settings</span>
                     </Link>
                     <Link
                         onClick={linkClick}
                         to="/"
                         className="kk-postlogin-dropdown__item d-flex align-items-center">
-                            <img src={Signout} alt="Signout" className="px-2" />
+                            <span className="px-2 kk-post-login-icons" style={{fontSize: "18px"}}><IoIosLogOut /></span>
                             <span>Signout</span>
                     </Link>
                 </div>

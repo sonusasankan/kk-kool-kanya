@@ -10,6 +10,7 @@ const savedArticles = () =>(
             <div className="row">
                 <div className="col-12 col-md-6 col-lg-4">
                     <ArticleCard
+                        isFav
                         cardLink="article-details"
                         imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
                         cardTitle="So I’m Not As Great As I Thought I Was: The Bright Side"
@@ -19,6 +20,7 @@ const savedArticles = () =>(
                 </div>
                 <div className="col-12 col-md-6 col-lg-4">
                     <ArticleCard
+                        isFav
                         cardLink="article-details"
                         imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
                         cardTitle="So I’m Not As Great As I Thought I Was: The Bright Side"
@@ -28,6 +30,7 @@ const savedArticles = () =>(
                 </div>
                 <div className="col-12 col-md-6 col-lg-4">
                     <ArticleCard
+                        isFav
                         cardLink="article-details"
                         imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
                         cardTitle="So I’m Not As Great As I Thought I Was: The Bright Side"
@@ -37,6 +40,7 @@ const savedArticles = () =>(
                 </div>
                 <div className="col-12 col-md-6 col-lg-4">
                     <ArticleCard
+                        isFav
                         cardLink="article-details"
                         imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
                         cardTitle="So I’m Not As Great As I Thought I Was: The Bright Side"
@@ -46,6 +50,7 @@ const savedArticles = () =>(
                 </div>
                 <div className="col-12 col-md-6 col-lg-4">
                     <ArticleCard
+                        isFav
                         cardLink="article-details"
                         imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
                         cardTitle="So I’m Not As Great As I Thought I Was: The Bright Side"
@@ -55,6 +60,7 @@ const savedArticles = () =>(
                 </div>
                 <div className="col-12 col-md-6 col-lg-4">
                     <ArticleCard
+                        isFav
                         cardLink="article-details"
                         imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
                         cardTitle="So I’m Not As Great As I Thought I Was: The Bright Side"
@@ -64,6 +70,7 @@ const savedArticles = () =>(
                 </div>
                 <div className="col-12 col-md-6 col-lg-4">
                     <ArticleCard
+                        isFav
                         cardLink="article-details"
                         imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
                         cardTitle="So I’m Not As Great As I Thought I Was: The Bright Side"
@@ -73,6 +80,7 @@ const savedArticles = () =>(
                 </div>
                 <div className="col-12 col-md-6 col-lg-4">
                     <ArticleCard
+                        isFav
                         cardLink="article-details"
                         imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
                         cardTitle="So I’m Not As Great As I Thought I Was: The Bright Side"
@@ -82,6 +90,7 @@ const savedArticles = () =>(
                 </div>
                 <div className="col-12 col-md-6 col-lg-4">
                     <ArticleCard
+                        isFav
                         cardLink="article-details"
                         imgSrc="https://loremflickr.com/260/160" alt="Alternate text for image"
                         cardTitle="So I’m Not As Great As I Thought I Was: The Bright Side"

@@ -13,6 +13,10 @@ import Linkedin32        from '../../assets/custom-icons-svg/ic-linkedin-32.svg'
 import Twitter24         from '../../assets/custom-icons-svg/ic-twitter-24.svg';
 import Twitter32         from '../../assets/custom-icons-svg/ic-twitter-32.svg';
 import Instagram24       from '../../assets/custom-icons-svg/ic-instagram-24.svg';
+import Share24           from '../../assets/custom-icons-svg/ic-share-24.svg';
+import Location24        from '../../assets/custom-icons-svg/ic-location-24.svg';
+import Experience24      from '../../assets/custom-icons-svg/ic-experience-24.svg';
+import JobType24         from '../../assets/custom-icons-svg/ic-jobtype-24.svg';
 
 //heart icon
 const IcHeart24 = (className)=>(
@@ -77,10 +81,34 @@ const IcTwitter32 = (className) => (
     </Icon24>
 )
 
-
 const IcInstagram24 = (className) => (
     <Icon24 className={className}>
         <img src={Instagram24} alt="kk-icon" />
+    </Icon24>
+)
+
+
+const IcShare24 = (className) => (
+    <Icon24 className={className}>
+        <img src={Share24} alt="kk-icon" />
+    </Icon24>
+)
+
+const IcLocation24 = (className) => (
+    <Icon24 className={className}>
+        <img src={Location24} alt="kk-icon" />
+    </Icon24>
+)
+
+const IcExperience24 = (className) => (
+    <Icon24 className={className}>
+        <img src={Experience24} alt="kk-icon" />
+    </Icon24>
+)
+
+const IcJobType24 = (className) => (
+    <Icon24 className={className}>
+        <img src={JobType24} alt="kk-icon" />
     </Icon24>
 )
 
@@ -97,4 +125,9 @@ export {
     IcLinkedin24,
     IcTwitter24,
     IcTwitter32,
-    IcInstagram24};
+    IcInstagram24,
+    IcShare24,
+    IcLocation24,
+    IcExperience24,
+    IcJobType24
+};

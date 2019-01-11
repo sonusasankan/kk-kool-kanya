@@ -54,6 +54,9 @@ const DescriptionWithCarouselWrapper = styled.div`
     .owl-theme .owl-nav{
         margin-top: 3px;
     }
+    .card__fav-button{
+        position: static !important;
+    }
 `;
 
 const HeaderWrapper = styled.div`
@@ -95,8 +98,10 @@ const HeaderWrapper = styled.div`
 `;
 
 const DetailsWrapper = styled.div`
-    .kk-card-details__wrapper{
-        margin-top: 1rem;
+    span{
+        font-size: 1.125rem;
+        color: ${Colors.secondaryLightGray};
+        margin-left: 6px;
     }
 `;
 

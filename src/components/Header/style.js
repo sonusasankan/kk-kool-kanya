@@ -269,6 +269,7 @@ const PostLoginWrapper = styled.div`
         }
 
         &__item{
+            padding-left: 0 !important;
             font-size: 0.75rem;
             height: 2.5rem;
             color: ${Colors.secondaryDarkGray} !important;
@@ -277,7 +278,16 @@ const PostLoginWrapper = styled.div`
             &:hover{
                 border-left: 1px solid ${Colors.brandColor};
                 background-color: rgba(237, 224, 253, 0.3) !important;
+                color: ${Colors.brandColor} !important;
+                path{
+                    color: ${Colors.brandColor}
+                }
             }
+        }
+        .kk-post-login-icons{
+            font-size: 1rem;
+            position: relative; 
+            top: -2px;
         }
     }
 `;
