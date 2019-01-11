@@ -16,7 +16,8 @@ const option = {
     callbacks: true,
     responsive: {
         0: {
-            items: 1
+            items: 1,
+            stagePadding: 48
         },
         768: {
             items: 2,
@@ -49,10 +50,6 @@ const descriptionWithCarousel = () => (
                     <div className="d-flex">
                         <div className="ml-3"><IcShare24 /></div>
                         <div className="ml-3"><CardFavButton /></div>
-                        {/* <button className="kk-icon-wrapper">
-                            <FiShare2 />
-                        </button>
-                        <Fav grey/> */}
                     </div>
                 </HeaderWrapper>
                 <DetailsWrapper className="mr-align kk-description__details">
@@ -74,7 +71,7 @@ const descriptionWithCarousel = () => (
                     Established in 1897, the Godrej Group has its roots in India's Independence and Swadeshi movement. They enjoy the patronage of 1.1 billion consumers globally.
                 </Description>
 
-                <div className="mr-align">
+                <div className="mr-align kk-btn__wrapper">
                     <Button
                         styleName="curved mr-3 mb-2 mb-md-0"
                         label="Apply Now"

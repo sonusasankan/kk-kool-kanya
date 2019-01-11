@@ -3,7 +3,6 @@ import Colors from '../../themes/color';
 
 const DescriptionWithCarouselWrapper = styled.div`
     .mr-align{
-        margin-left: 61px!important;
         @media (min-width: 768px){
             margin-left: 88px !important;
         }
@@ -53,9 +52,18 @@ const DescriptionWithCarouselWrapper = styled.div`
     }
     .owl-theme .owl-nav{
         margin-top: 3px;
+        height: 90% !important;
     }
     .card__fav-button{
         position: static !important;
+    }
+    .kk-btn__wrapper{
+        button{
+            width: 100%;
+            @media (min-width: 354px){
+                width: auto;
+            }
+        }
     }
 `;
 
