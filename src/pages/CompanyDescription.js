@@ -81,7 +81,8 @@ const option = {
   callbacks: true,
   responsive: {
     0: {
-      items: 1
+      items: 1,
+      stagePadding: 48
     },
     768: {
       items: 2,

@@ -10,7 +10,10 @@ const SectionSpecificStickyHeaderWrapper = styled.div`
     box-shadow: 0 6px 11px 0 rgba(131, 124, 140, 0.15);
     transition: all 0.2s ease-out;
     &.show{
-        top: 64px;
+        top: 56px;
+        @media (min-width: 768px){
+            top: 64px;
+        }
         &.up{
             top: 0;
         }
@@ -25,6 +28,11 @@ const SectionSpecificStickyHeaderWrapper = styled.div`
         top: 5px;
         margin-left: 24px;
         font-size: 1.8rem;
+    }
+    h3{
+        @media (max-width: 768px){
+            font-size: 1erm;
+        }
     }
 `;
 
