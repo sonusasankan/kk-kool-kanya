@@ -98,6 +98,18 @@ const Footer = styled.footer`
             &__contact{
                 a{
                     display: inline-block;
+                    &:hover{
+                        img{
+                            filter:brightness(300%);
+                        }
+                    }
+                }
+                .no-link{
+                    color: #7c7c91;
+                    cursor: default;
+                    &:hover{
+                        color: #7c7c91;
+                    }
                 }
             }
         }

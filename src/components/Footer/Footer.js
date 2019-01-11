@@ -8,6 +8,7 @@ import FooterDecElemenet1 from '../../assets/images/img-footer-element-1.svg';
 
 
 import { IoIosArrowForward } from "react-icons/io";
+import {IcFacebook24, IcLinkedin, IcTwitter, IcInstagram} from '../IconSet';
 
 
 const footer = () => (
@@ -40,12 +41,12 @@ const footer = () => (
         <div className="kk-footer">
           <nav className="kk-footer__nav kk-footer__nav__contact">
             <div className="kk-footer__nav__head">Contact Us</div>
-            <a href="javascript:void(0)">Feel free to reach out to us</a>
+            <a href="javascript:void(0)" className="no-link">Feel free to reach out to us</a>
             <div className="d-flex justify-content-between">
-              <Link aria-label="facebook" to="terms-conditions"><span className="icon-ic-facebook-24"></span></Link>
-              <Link aria-label="linkedin" to="terms-conditions"><span className="icon-ic-linkedin-24"></span></Link>
-              <Link aria-label="twitter" to="terms-conditions"><span className="icon-ic-twitter-24"></span></Link>
-              <Link aria-label="instagram" to="terms-conditions"><span className="icon-ic-instagram-24"></span></Link>
+              <Link aria-label="facebook" to="terms-conditions"><IcFacebook24 /></Link>
+              <Link aria-label="linkedin" to="terms-conditions"><IcLinkedin /></Link>
+              <Link aria-label="twitter" to="terms-conditions"><IcTwitter /></Link>
+              <Link aria-label="instagram" to="terms-conditions"><IcInstagram /></Link>
             </div>
           </nav>
         </div>
