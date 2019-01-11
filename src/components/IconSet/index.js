@@ -3,7 +3,7 @@ import React from 'react';
 import {Icon24, Icon32} from './style';
 
 import Heart24           from '../../assets/custom-icons-svg/ic-heart-grey-unlike-24.svg';
-import Heart32           from '../../assets'
+// import Heart32           from '../../assets'
 import HeartLiked24      from '../../assets/custom-icons-svg/ic-heart-liked-24.svg';
 import Facebook24        from '../../assets/custom-icons-svg/ic-facebook-24.svg';
 import FacebookOutline32 from '../../assets/custom-icons-svg/ic-facebook_32.svg';
@@ -27,7 +27,7 @@ const IcHeartLiked24 = (className)=>(
 //bigger heart icon
 const IcHeart32 = (className) => (
     <Icon32 className={className}>
-        <img src={Heart32} alt="favIcon" />
+        {/* <img src={Heart32} alt="favIcon" /> */}
     </Icon32>
 )
 
