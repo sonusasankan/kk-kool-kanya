@@ -246,8 +246,10 @@ class Home extends Component {
               </Parallax>
 
 
-              <div className="kk-home-scroll-icon-wrap">
-                <img src={iconMouse} alt="" />
+              <div onClick={()=>{
+                document.body.parentElement.scrollTop = 600
+              }} className="kk-home-scroll-icon-wrap">
+                <img src={iconMouse} alt="Mouse icon" />
               </div>
             </div>
           </div>
@@ -312,7 +314,7 @@ class Home extends Component {
                     <h4 className="kk-home-illustration-header kk-color-black">
                       View and apply for Jobs
                     </h4>
-                    <p>View the jobs theat companies has and apply</p>
+                    <p>View the jobs the companies have and apply</p>
                   </div>
                 </Link>
               </div>
@@ -326,7 +328,7 @@ class Home extends Component {
           <div className="container">
             <SectionTitle    
               className="kk-home__top-companies__section"          
-              link="/companies"
+              link="/compan-search-results"
               linkText="View All"
             >Top companies fitting your requirements</SectionTitle>
             <div className="row">
@@ -377,7 +379,7 @@ class Home extends Component {
           </div> */}
           <div className="container">
           <SectionTitle
-              link="/articles"
+              link="/article-search"
               linkText="View All"
             >Trending articles</SectionTitle>
             <div className="row">

@@ -54,7 +54,6 @@ const list = [
   <Chip logo={bangalore} alt="bangalore logo" title="Mumbai" />,
   <Chip logo={bangalore} alt="bangalore logo" title="Bangalore" />,
   <Chip logo={bangalore} alt="bangalore logo" title="Pune" />,
-  <Chip logo={bangalore} alt="bangalore logo" title="Hydherabad" />
 ];
 
 class Companies extends Component {
@@ -114,7 +113,7 @@ class Companies extends Component {
         </div>
         <section className="kk-companies-listing">
           <div className="container">
-            <div className="kk-section-header d-flex align-items-center flex-column flex-md-row justify-content-md-between mb-2 mb-md-4">
+            <div className="kk-section-header d-flex align-items-center flex-column flex-md-row justify-content-md-between mb-4 mt-4 mb-md-4">
               <h3 className="kk-section-title my-auto">
                 Top companies recommended for
               </h3>
