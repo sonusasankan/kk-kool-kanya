@@ -3,6 +3,7 @@ import React from 'react';
 import {Icon24} from './style';
 
 import Heart24           from '../../assets/custom-icons-svg/ic-heart-grey-unlike-24.svg';
+import HeartLiked24      from '../../assets/custom-icons-svg/ic-heart-liked-24.svg';
 // import Heart24Liked      from '../../assets/custom-icons-svg/ic-heart-liked-24.svg';
 // import Heart32           from '../../assets/custom-icons-svg/ic-heart-32.svg';
 // import Heart32Liked      from '../../assets/custom-icons-svg/ic_heart-liked_32.svg';
@@ -14,13 +15,21 @@ import Heart24           from '../../assets/custom-icons-svg/ic-heart-grey-unlik
 // import Facebook          from '../../assets/custom-icons-svg/ic-facebook'
 
 
+//heart icon
 const IcHeart24 = ()=>(
     <Icon24 className="">
         <img src={Heart24} alt="favIcon" />
     </Icon24>
 )
+//heart icon LIKED
+const IcHeartLiked24 = ()=>(
+    <Icon24 className="">
+        <img src={HeartLiked24} alt="favIcon" />
+    </Icon24>
+)
 
-export {IcHeart24};
+
+export {IcHeart24, IcHeartLiked24};
 
 
 /**
