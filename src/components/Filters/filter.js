@@ -92,9 +92,9 @@ class Filters extends Component{
             <FilterWrapper>
                 <div className="kk-filter-head d-flex justify-content-between align-items-center mb-3">
                     <h5 className="mb-0">Filters</h5>
-                    {/* <button class="kk-filter-clear btn btn-link pr-0">
+                    <button class="kk-filter-clear btn btn-link pr-0">
                     Clear All
-                    </button> */}
+                    </button>
                 </div>
                 <div className="d-md-none kk-filter-head__item-count">158 results</div>
                 <div className="kk-filters-section">
