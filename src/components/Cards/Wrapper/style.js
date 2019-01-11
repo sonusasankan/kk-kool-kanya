@@ -29,6 +29,12 @@ const Wrapper = styled.div`
     }
     
     &.article-card{
+        .kk-card__title{
+            min-height: 60px;
+            @media (min-width: 992px){
+                min-height: 40px;
+            }
+        }
         .card__text-wrapper{
             position: relative;
             background-color: #fff;
@@ -117,6 +123,7 @@ const Wrapper = styled.div`
         .kk-card__title{
             color: #FFF;
             height: auto;
+            min-height: 0;
         }
         &:hover{
             .card__img{

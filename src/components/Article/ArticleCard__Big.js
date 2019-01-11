@@ -22,7 +22,7 @@ const articleCard__big = ({
 }) => (
     <Card big cardType="article-card" link={cardLink}>
         <CardImage src={imgSrc} alt={alt}>
-            <CardFavButton top right isFav/>
+            <CardFavButton top right isFav={isFav}/>
         </CardImage>
         <CardBody>
             <CardTitle>{cardTitle}</CardTitle>
