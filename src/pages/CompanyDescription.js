@@ -19,6 +19,7 @@ import { Button } from "../components/Button";
 import { CompanyCard } from "../components/CompanyCard";
 import BreadCrumb from "../components/BreadCrumb";
 import SectionSpecificStickyHeader from "./../container/SectionSpecificStickyHeader/SectionSpecificStickyHeader";
+import BgCircleElement from "../assets/images/bg-circle-element.svg";
 
 import { FaStar } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
@@ -1013,7 +1014,10 @@ export default class CompanyDescription extends Component {
             </div>
           </div>
         </section>
-        <section className="kk-company-openings">
+        <section className="kk-company-openings kk-section">
+          <div className="kk-company-desc-bg-element">
+            <img className="img-fluid" src={BgCircleElement} alt="decorative image" />
+          </div>
           <div className="container">
             <div className="row-fluid mb-2 mb-md-5">
               <h3 className="kk-section-title">Current Openings </h3>
