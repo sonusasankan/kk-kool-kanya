@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom';
 
 import Dropdown from '../../components/Dropdown';
 import Filter from '../../components/Filters';
@@ -114,6 +115,8 @@ export default class JobLanding extends Component {
                           <JobCardWrapper>
                             <JobCard
                               companyLogo={Logo}
+                              companyName="Gogrej Consumer Product"
+                              rating={4.2}
                               jobTitle="UI/UX Designer"
                               location="Bengaluru"
                               experienceRequired="2+ years"
@@ -127,6 +130,8 @@ export default class JobLanding extends Component {
                           <JobCardWrapper>
                             <JobCard
                               companyLogo={Logo}
+                              companyName="Gogrej Consumer Product"
+                              rating={4.2}
                               jobTitle="UI/UX Designer"
                               location="Bengaluru"
                               experienceRequired="2+ years"
@@ -140,6 +145,8 @@ export default class JobLanding extends Component {
                           <JobCardWrapper>
                             <JobCard
                               companyLogo={Logo}
+                              companyName="Gogrej Consumer Product"
+                              rating={4.2}
                               jobTitle="UI/UX Designer"
                               location="Bengaluru"
                               experienceRequired="2+ years"
@@ -153,6 +160,8 @@ export default class JobLanding extends Component {
                           <JobCardWrapper>
                             <JobCard
                               companyLogo={Logo}
+                              companyName="Gogrej Consumer Product"
+                              rating={4.2}
                               jobTitle="UI/UX Designer"
                               location="Bengaluru"
                               experienceRequired="2+ years"
@@ -166,6 +175,8 @@ export default class JobLanding extends Component {
                           <JobCardWrapper>
                             <JobCard
                               companyLogo={Logo}
+                              companyName="Gogrej Consumer Product"
+                              rating={4.2}
                               jobTitle="UI/UX Designer"
                               location="Bengaluru"
                               experienceRequired="2+ years"
@@ -179,6 +190,8 @@ export default class JobLanding extends Component {
                           <JobCardWrapper>
                             <JobCard
                               companyLogo={Logo}
+                              companyName="Gogrej Consumer Product"
+                              rating={4.2}
                               jobTitle="UI/UX Designer"
                               location="Bengaluru"
                               experienceRequired="2+ years"

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import BreadCrumb from '../../components/BreadCrumb';
 import SectionTitle from '../../components/SectionTitle';
 import SearchContainer from "../../components/Search/SearchContainer";
@@ -55,8 +56,9 @@ class Category extends Component {
                 </div>
                 <section className="container py-0">
                     <BreadCrumb>
-                        <li>Home</li>
-                        <li>Articles</li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/articles">Article</Link></li>
+                        <li><Link to="/articles">Article</Link></li>
                         <li>Category: Career Advice</li>
                     </BreadCrumb>
                 </section>

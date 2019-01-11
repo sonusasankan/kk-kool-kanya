@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import BreadCrumb from '../../components/BreadCrumb';
 import Dropdown from '../../components/Dropdown';
-import Capsule from '../../components/Cards/Capsule';
-import Carousel from '../../components/Carousel';
 import SearchContainer from '../../components/Search/SearchContainer';
 import { ArticleCard } from '../../components/Article';
 
@@ -71,9 +70,10 @@ class ArticleSearch extends Component {
                 </div>
                 <section className="container py-0">
                     <BreadCrumb>
-                        <li>Home</li>
-                        <li>Articles</li>
-                        <li>How to start with UX</li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/articles">Articles</Link></li>
+                        <li><Link to="/article-search">Search results</Link></li>
+                        <li><Link to="/article-details">How to start with UX</Link></li>
                     </BreadCrumb>
                     <div className="article-search__header__wrapper">
                         <div className="article-search__header">

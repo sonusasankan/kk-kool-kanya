@@ -6,7 +6,8 @@ import {
     CardLogo,
     CardTitle,
     CardDetails,
-    CardFavButton
+    CardFavButton,
+    CardRating
 } from '../Cards';
 import JobCardWrapper from './style';
 
@@ -18,6 +19,7 @@ const jobCard = ({
     companyLogo,
     jobTitle,
     companyName,
+    rating,
     location,
     experienceRequired,
     typeOfJob,
@@ -31,10 +33,13 @@ const jobCard = ({
                 <CardHead>
                     <div>
                         <CardTitle>{jobTitle}</CardTitle>
-                        <p className="mb-2 kk-font-secondaryDarkGray">{companyName}</p>
+                        <div className="d-flex align-items-center">
+                            <p className="mb-0 kk-font-secondaryDarkGray">{companyName}</p>
+                            <CardRating>{rating}</CardRating>
+                        </div>
                     </div>
                 </CardHead>
-                <div className="d-flex kk-card__details__wrapper">
+                <div className="pt-2 d-flex kk-card__details__wrapper">
                     <CardDetails>
                         {location}
                     </CardDetails>
