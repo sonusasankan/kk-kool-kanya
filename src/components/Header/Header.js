@@ -38,7 +38,6 @@ class Header extends Component {
       });
       e.target.classList.add('active');
     }
-    console.log(e.target.getAttribute('href'),"============================================================================");
   }
 
   //Sign Un modal//
@@ -105,7 +104,7 @@ class Header extends Component {
       }
       lastScrollTop = parseInt(window.scrollY);
     };
-    if((window.location.pathname === '/settings') || (window.location.pathname === '/edit-settings') || (window.location.pathname === '/profile') || (window.location.pathname === '/edit-profile')){
+    if((window.location.pathname === '/settings') || (window.location.pathname === '/edit-settings') || (window.location.pathname === '/profile') || (window.location.pathname === '/edit-profile') || (window.location.pathname === '/favourites')){
       this.setState({isLoggedin: true})
     }
     else{

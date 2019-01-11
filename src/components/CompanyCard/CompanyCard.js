@@ -16,11 +16,11 @@ class CompanyCard extends Component {
     this.props.markFavourite((this.props.companyid))
   }
   render() {
-    var {badges, img, alt, title, locations, industry, openings, logo, rating, isFavourite, link } = this.props
+    var {badges, img, alt, title, locations, industry, openings, logo, rating, isFav, link } = this.props
     return (
       <Card link={link} cardType="card__company">
         {badges ? <CardBadge top left badges={badges} /> : ""}
-        <CardFavButton top right isFavourite={isFavourite} markFavourite={ this.markFavourite }/>
+        <CardFavButton top right isFav={isFav} markFavourite={ this.markFavourite }/>
         <CardImage src={img} alt={alt} />
         <CardHead>
           <CardLogo src={logo} alt="Godrej Logo" />

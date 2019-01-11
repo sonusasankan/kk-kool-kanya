@@ -12,8 +12,8 @@ class Saved extends Component{
     constructor(props){
         super(props);
         this.state = {
-            list : ["Articles","Companies","Jobs"],
-            active : "Articles"
+            list : ["Companies", "Jobs", "Articles"],
+            active : "Companies"
         }
     }
 
@@ -32,13 +32,13 @@ class Saved extends Component{
                         <div className="col-12 col-md-3">
                             <Sidebar>
                                 <ul className="kk">
-                                    <li className="d-none d-md-block"><Link to="#"><h3>My Profile</h3></Link></li>
+                                    <li className="d-none d-md-block"><Link to="/profile"><h3>My Profile</h3></Link></li>
                                     <li>
                                         <h3 className="active">Favourites</h3>
                                         <Recommendation list={this.state.list} active={this.state.active} switchTab={this.switchTab.bind(this)}/>
                                     </li>
                                     <li className="d-none d-md-block"><Link to="#"><h3>Become a Kool Kanya</h3></Link></li>
-                                    <li className="d-none d-md-block"><Link to="#"><h3>Settings</h3></Link></li>
+                                    <li className="d-none d-md-block"><Link to="settings"><h3>Settings</h3></Link></li>
                                 </ul>
                             </Sidebar>
                         </div>
@@ -55,32 +55,3 @@ class Saved extends Component{
 }
 
 export default Saved;
-
-// const saved = () =>(
-
-//     <React.Fragment>
-//         <section className="container" style={{marginTop: "73px"}}>
-//             <div className="row">
-//                 <div className="col-12 col-md-3">
-//                     <Sidebar>
-//                         <ul className="kk">
-//                             <li className="d-none d-md-block"><Link to="#"><h3>My Profile</h3></Link></li>
-//                             <li>
-//                                 <h3 className="active">Favourites</h3>
-//                                 <Recommendation list={list} active={active}  />
-//                             </li>
-//                             <li className="d-none d-md-block"><Link to="#"><h3>Become a Kool Kanya</h3></Link></li>
-//                             <li className="d-none d-md-block"><Link to="#"><h3>Settings</h3></Link></li>
-//                         </ul>
-//                     </Sidebar>
-//                 </div>
-//                 <div className="col-12 col-md-9">
-//                     {/* to be added */}
-//                 </div>
-//             </div>
-//         </section>
-//     </React.Fragment>
-
-// )
-
-// export default saved;

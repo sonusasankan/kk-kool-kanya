@@ -129,6 +129,8 @@ class JobDescription extends Component{
                     <JobCardWrapper>
                         <JobCard
                             companyLogo={Logo}
+                            companyName="Gogrej Consumer Product"
+                            rating={4.2}
                             jobTitle="UI/UX Designer"
                             location="Bengaluru"
                             experienceRequired="2+ years"
@@ -140,45 +142,53 @@ class JobDescription extends Component{
                     <JobCardWrapper>
                         <JobCard
                             companyLogo={Logo}
-                            jobTitle="UI/UX Designer"
-                            location="Bengaluru"
-                            experienceRequired="2+ years"
-                            typeOfJob="Full Time"
-                            postedOn="Posted 3 weeks ago"
-                            detailLink="/job-description"
+                              companyName="Gogrej Consumer Product"
+                              rating={4.2}
+                              jobTitle="UI/UX Designer"
+                              location="Bengaluru"
+                              experienceRequired="2+ years"
+                              typeOfJob="Full Time"
+                              postedOn="Posted 3 weeks ago"
+                              detailLink="/job-description"
                         />
                     </JobCardWrapper>
                     <JobCardWrapper>
                         <JobCard
                             companyLogo={Logo}
-                            jobTitle="UI/UX Designer"
-                            location="Bengaluru"
-                            experienceRequired="2+ years"
-                            typeOfJob="Full Time"
-                            postedOn="Posted 3 weeks ago"
-                            detailLink="/job-description"
+                              companyName="Gogrej Consumer Product"
+                              rating={4.2}
+                              jobTitle="UI/UX Designer"
+                              location="Bengaluru"
+                              experienceRequired="2+ years"
+                              typeOfJob="Full Time"
+                              postedOn="Posted 3 weeks ago"
+                              detailLink="/job-description"
                         />
                     </JobCardWrapper>
                     <JobCardWrapper>
                         <JobCard
                             companyLogo={Logo}
-                            jobTitle="UI/UX Designer"
-                            location="Bengaluru"
-                            experienceRequired="2+ years"
-                            typeOfJob="Full Time"
-                            postedOn="Posted 3 weeks ago"
-                            detailLink="/job-description"
+                              companyName="Gogrej Consumer Product"
+                              rating={4.2}
+                              jobTitle="UI/UX Designer"
+                              location="Bengaluru"
+                              experienceRequired="2+ years"
+                              typeOfJob="Full Time"
+                              postedOn="Posted 3 weeks ago"
+                              detailLink="/job-description"
                         />
                     </JobCardWrapper>
                     <JobCardWrapper>
                         <JobCard
                             companyLogo={Logo}
-                            jobTitle="UI/UX Designer"
-                            location="Bengaluru"
-                            experienceRequired="2+ years"
-                            typeOfJob="Full Time"
-                            postedOn="Posted 3 weeks ago"
-                            detailLink="/job-description"
+                              companyName="Gogrej Consumer Product"
+                              rating={4.2}
+                              jobTitle="UI/UX Designer"
+                              location="Bengaluru"
+                              experienceRequired="2+ years"
+                              typeOfJob="Full Time"
+                              postedOn="Posted 3 weeks ago"
+                              detailLink="/job-description"
                         />
                     </JobCardWrapper>
                 </section>

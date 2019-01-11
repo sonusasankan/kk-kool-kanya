@@ -1,12 +1,11 @@
 import React from 'react';
 
 import {DescriptionWithCarouselWrapper, HeaderWrapper, DetailsWrapper, TabsWrapper, Capsule, Description, ImgHolder} from './style';
-import {CardLogo, CardDetails} from '../../components/Cards';
+import {CardLogo, CardDetails, CardFavButton} from '../../components/Cards';
 import { Button } from "../../components/Button";
-import Fav from "../../components/FavButton";
 
 //importing assets
-import { FiShare2 } from "react-icons/fi";
+import {IcShare24, IcLocation24, IcExperience24, IcJobType24} from '../../components/IconSet';
 import godrej from "../../assets/images/godrej.png";
 import Carousel from '../../components/Carousel';
 
@@ -47,17 +46,19 @@ const descriptionWithCarousel = () => (
                         <h2>UI/UX Designer</h2>
                         <p>Godrej Consumer Product</p>
                     </div>
-                    <div>
-                        <button className="kk-icon-wrapper">
+                    <div className="d-flex">
+                        <div className="ml-3"><IcShare24 /></div>
+                        <div className="ml-3"><CardFavButton /></div>
+                        {/* <button className="kk-icon-wrapper">
                             <FiShare2 />
                         </button>
-                        <Fav grey/>
+                        <Fav grey/> */}
                     </div>
                 </HeaderWrapper>
-                <DetailsWrapper className="mr-align">
-                    <CardDetails icon="icon-ic-location-24">Banglore</CardDetails>
-                    <CardDetails icon="icon-ic-industry-24">0-2 years experience</CardDetails>
-                    <CardDetails icon="icon-ic-industry-24">Full time</CardDetails>
+                <DetailsWrapper className="mr-align kk-description__details">
+                    <div className="d-flex mt-3"><IcLocation24 /><span>Banglore</span></div>
+                    <div className="d-flex mt-3"><IcExperience24 /><span>0-2 years experience</span></div>
+                    <div className="d-flex mt-3"><IcJobType24 /><span>Full time</span></div>
                 </DetailsWrapper>
 
                 <TabsWrapper className="mr-align">

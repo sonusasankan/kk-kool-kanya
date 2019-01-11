@@ -10,6 +10,7 @@ const savedJobs = () =>(
         <div className="row">
             <div className="col-12">
                 <JobCard
+                    isFav
                     favButton
                     companyLogo={Logo}
                     jobTitle="UI/UX Designer"
@@ -22,6 +23,7 @@ const savedJobs = () =>(
             </div>
             <div className="col-12">
                 <JobCard
+                    isFav
                     favButton
                     companyLogo={Logo}
                     jobTitle="UI/UX Designer"
@@ -34,6 +36,7 @@ const savedJobs = () =>(
             </div>
             <div className="col-12">
                 <JobCard
+                    isFav
                     favButton
                     companyLogo={Logo}
                     jobTitle="UI/UX Designer"
@@ -46,6 +49,7 @@ const savedJobs = () =>(
             </div>
             <div className="col-12">
                 <JobCard
+                    isFav
                     favButton
                     companyLogo={Logo}
                     jobTitle="UI/UX Designer"
@@ -58,6 +62,7 @@ const savedJobs = () =>(
             </div>
             <div className="col-12">
                 <JobCard
+                    isFav
                     favButton
                     companyLogo={Logo}
                     jobTitle="UI/UX Designer"
@@ -70,6 +75,7 @@ const savedJobs = () =>(
             </div>
             <div className="col-12">
                 <JobCard
+                    isFav
                     favButton
                     companyLogo={Logo}
                     jobTitle="UI/UX Designer"
@@ -82,6 +88,7 @@ const savedJobs = () =>(
             </div>
             <div className="col-12">
                 <JobCard
+                    isFav
                     favButton
                     companyLogo={Logo}
                     jobTitle="UI/UX Designer"
@@ -94,6 +101,7 @@ const savedJobs = () =>(
             </div>
             <div className="col-12">
                 <JobCard
+                    isFav
                     favButton
                     companyLogo={Logo}
                     jobTitle="UI/UX Designer"

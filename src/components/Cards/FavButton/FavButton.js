@@ -33,7 +33,7 @@ class FavButton extends Component {
   }
 
   render(){
-    const {className, top, right, bottom, left, active } = this.props;
+    const {isFav, className, top, right, bottom, left, active } = this.props;
     return (
       <StyledFavButton
         role="button"
