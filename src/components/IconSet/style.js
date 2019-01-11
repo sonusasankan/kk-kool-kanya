@@ -10,4 +10,10 @@ const Icon24 = styled.div`
     cursor: pointer;
 `;  
 
-export {Icon24};
+const Icon32 = styled.div`
+    height: 32px;
+    min-height: 32px;
+    width: 32px;
+    min-width: 32px;
+`;
+export {Icon24, Icon32};

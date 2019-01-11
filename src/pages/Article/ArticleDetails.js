@@ -6,6 +6,9 @@ import Avatar from '../../components/Avatar';
 import SearchContainer from '../../components/Search/SearchContainer';
 import { ArticleCard } from "../../components/Article";
 
+//importing icons
+import {IcFacebookOutline32} from '../../components/IconSet';
+
 import Author from '../../assets/images/author.jpg';
 
 class ArticleDetails extends Component {
@@ -50,7 +53,7 @@ class ArticleDetails extends Component {
 
                         <div className="article__content__sidebar">
                             <div className="article__content__sidebar__inner d-flex position-sticky">
-                                <div className="icon-ic-heart-disable-24 mb-4 mr-2"></div>
+                                <div className="icon-ic-heart-disable-24 mb-4 mr-2"><IcFacebookOutline32 /></div>
                                 <div className="icon-ic-heart-disable-24 mb-4 mr-2"></div>
                                 <div className="icon-ic-heart-disable-24 mb-4 mr-2"></div>
                                 <div className="icon-ic-heart-disable-24 mb-4 mr-2"></div>

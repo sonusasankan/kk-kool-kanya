@@ -1,10 +1,12 @@
 import React from 'react';
 
-import {Icon24} from './style';
+import {Icon24, Icon32} from './style';
 
 import Heart24           from '../../assets/custom-icons-svg/ic-heart-grey-unlike-24.svg';
+import Heart32           from '../../assets'
 import HeartLiked24      from '../../assets/custom-icons-svg/ic-heart-liked-24.svg';
 import Facebook24        from '../../assets/custom-icons-svg/ic-facebook-24.svg';
+import FacebookOutline32 from '../../assets/custom-icons-svg/ic-facebook_32.svg';
 import Linkedin24        from '../../assets/custom-icons-svg/ic-linkedin-24.svg';
 import Twitter24        from '../../assets/custom-icons-svg/ic-twitter-24.svg';
 import Instagram24        from '../../assets/custom-icons-svg/ic-instagram-24.svg';
@@ -22,6 +24,13 @@ const IcHeartLiked24 = (className)=>(
     </Icon24>
 )
 
+//bigger heart icon
+const IcHeart32 = (className) => (
+    <Icon32 className={className}>
+        <img src={Heart32} alt="favIcon" />
+    </Icon32>
+)
+
 const IcFacebook24 = (className) => (
     <Icon24 className={className}>
         <img src={Facebook24} alt="favIcon" />
@@ -30,7 +39,7 @@ const IcFacebook24 = (className) => (
 
 const IcFacebookOutline32 = (className) => (
     <Icon24 className={className}>
-        <img src={Facebook32} />
+        <img src={FacebookOutline32} />
     </Icon24>
 )
 
