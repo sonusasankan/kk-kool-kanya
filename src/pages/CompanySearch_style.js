@@ -18,6 +18,19 @@ const FilterWrapperOuter = styled.div`
         }
         margin-left: -15px;
         margin-right: -15px;
+        &::before{
+            content: "";
+            height: 100vh;
+            width: 100vw;
+            background-color: #FFF;
+            position: absolute;
+            top: -66px;
+            left: 15px;
+        }
+        &>div{
+            position: relative;
+            z-index: 2; 
+        }
     }
     .kk-filters-wrapper{
         .kk-filter-btn{
@@ -26,8 +39,13 @@ const FilterWrapperOuter = styled.div`
             }
         }
         .custom-checkbox{
-            @media (max-width: 767px){
-                margin-right: 2.5rem;
+            .custom-control-label{
+                &::before{
+                    right: -0.5rem;
+                }
+                &::after{
+                    right: -0.5rem!important;
+                }
             }
         }
     }

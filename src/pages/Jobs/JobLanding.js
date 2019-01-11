@@ -34,6 +34,7 @@ export default class JobLanding extends Component {
   _closeFilters(){
     document.querySelector('#kk-filter-wrapper-outer').classList.toggle('show');
     document.querySelector('.kk-header').classList.remove('down');
+    
   }
   render() {
     let filters = [

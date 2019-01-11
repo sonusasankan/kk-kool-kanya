@@ -35,17 +35,17 @@ class CompanySearch extends Component {
     document.querySelector('.kk-sort-filters').classList.remove('show');
   }
   _openFilters(){
-
+    console.log('heheeh');
     if(document.querySelector('.kk-sort-filters').classList.contains('show')){
       document.querySelector('.kk-sort-filters').classList.remove('show');
     }
 
     document.querySelector('#kk-filter-wrapper-outer').classList.toggle('show');
-    document.querySelector('.kk-header').classList.add('down');
   }
   _closeFilters(){
+    document.querySelector('#root').classList.remove('no-scroll');
+
     document.querySelector('#kk-filter-wrapper-outer').classList.toggle('show');
-    document.querySelector('.kk-header').classList.remove('down');
   }
 
   componentWillMount() {
