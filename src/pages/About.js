@@ -173,7 +173,7 @@ We want to help make this happen. You are no longer alone on this journey we cal
             <div className="row">
             <div className="card-content col-md-8">
               <h4>Want to become a part of Kool Kanya community?</h4>
-              <p>We believe women should have the flexibility of having the option to search for work
+              <p className="mb-0">We believe women should have the flexibility of having the option to search for work
 environments which serve best to their requirements </p>
             </div>
             <div className="col-md-4 d-flex justify-content-center align-items-center">
@@ -187,7 +187,7 @@ environments which serve best to their requirements </p>
         </div>
         </div>
       </section>
-      <section className="mt-5">
+      <section  className="mt-5 kk-about-article-list">
         <div className="container">
           <div className="row-fluid text-center mt-md-5">
             <h2 className="kk-section-title mb-3 mb-md-5">Press releases</h2>

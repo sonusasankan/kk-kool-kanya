@@ -25,7 +25,9 @@ class Button extends Component {
 
   _handleClick = () => {
     this.setState({ class: STATUS.CLICKED });
-    this.props.click();
+    if(this.props.click){
+      this.props.click();
+    }
   };
 
   //hovered stated for button
@@ -75,7 +77,7 @@ Button.propTypes = {
   hasBorder: PropTypes.bool,
   isAlignRight: PropTypes.bool,
   styleName: PropTypes.string,
-  click: PropTypes.func.isRequired
+  click: PropTypes.func
 };
 
 export { Button };
