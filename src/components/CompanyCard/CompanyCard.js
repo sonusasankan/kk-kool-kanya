@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { PropTypes } from "prop-types";
-import { Card, CardBadge, CardImage, CardBody, CardTitle, CardDetails, CardHead, CardLogo, CardRating, CardWrapper } from "../Cards";
+import { Card, CardBadge, CardFavButton, CardImage, CardBody, CardTitle, CardDetails, CardHead, CardLogo, CardRating } from "../Cards";
 import FavButton from '../FavButton';
 
 import Logo from '../../assets/images/godrej.png'
@@ -20,7 +20,7 @@ class CompanyCard extends Component {
     return (
       <Card link={link} cardType="card__company">
         {badges ? <CardBadge top left badges={badges} /> : ""}
-        <FavButton top right isFavourite={isFavourite} markFavourite={ this.markFavourite }/>
+        <CardFavButton top right isFavourite={isFavourite} markFavourite={ this.markFavourite }/>
         <CardImage src={img} alt={alt} />
         <CardHead>
           <CardLogo src={logo} alt="Godrej Logo" />

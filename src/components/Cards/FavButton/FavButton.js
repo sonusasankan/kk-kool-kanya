@@ -3,18 +3,8 @@ import PropTypes from 'prop-types';
 
 import StyledFavButton from './style';
 
+import {IcHeart24, IcHeartLiked24} from '../../IconSet';
 
-const STATUS = {
-  HOVERED: "hovered",
-  NORMAL: "normal",
-  CLICKED: "clicked",
-  LEAVE: "leave"
-};
-
-const ICON = {
-  ACTIVE: "icon-ic-heart-active-24",
-  NORMAL: "icon-ic-heart-disable-24"
-}
 
 class FavButton extends Component {
   constructor(props) {
@@ -23,40 +13,27 @@ class FavButton extends Component {
     this._handleClick = this._handleClick.bind(this);
 
     this.state = {
-      class: STATUS.NORMAL,
-      icon: ICON.NORMAL
+      isFav: false,
     };
   }
 
   _handleClick = (event) => {
     event.preventDefault();
-    let newIcon = (this.state.icon === ICON.NORMAL ? this.state.icon = ICON.ACTIVE : this.state.icon = ICON.NORMAL)
+    let newfavState = !this.state.isFav;
     this.setState({
-      class: STATUS.CLICKED,
-      icon: newIcon
+      isFav: newfavState,
     });
   };
 
-  _onMouseEnter = () => {
-    this.setState({
-      class: STATUS.HOVERED
-    });
-    console.log('entered');
-  }
-  _onMouseLeave = () => {
-    this.setState({class: STATUS.LEAVE });
-  }
 
   componentDidMount(){
-    if(this.props.active){
-      this.setState({
-        icon : ICON.ACTIVE
-      })
-    }
+    this.setState({
+      isFav: this.props.isFav
+    })
   }
 
   render(){
-    const { top, right, bottom, left, active } = this.props;
+    const {className, top, right, bottom, left, active } = this.props;
     return (
       <StyledFavButton
         role="button"
@@ -65,10 +42,10 @@ class FavButton extends Component {
         right={right}
         bottom={bottom}
         left={left}
-        className={"card__fav-button "+ this.state.icon +" "+this.state.class}
-        onClick={this._handleClick}
-        onMouseEnter={this._onMouseEnter}
-        onMouseLeave={this._onMouseLeave} />
+        className={"card__fav-button "+{className}}
+        onClick={this._handleClick}>
+          {this.state.isFav ? <IcHeartLiked24 /> : <IcHeart24 />}
+        </StyledFavButton>
     )
   }
 }
