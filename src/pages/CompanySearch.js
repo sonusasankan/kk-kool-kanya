@@ -13,6 +13,7 @@ import { Chip } from "./../components/Chips";
 
 //external components//
 import { FiChevronDown } from "react-icons/fi";
+import {IoIosClose} from 'react-icons/io';
 
 //images//
 import companyImage from "../assets/images/img-company-descrition-1.jpg";
@@ -72,11 +73,6 @@ class CompanySearch extends Component {
     )
   }
 
-
-  //pagination
-  // nextPage = () => {
-  //   this.displayCompanies()
-  // }
  
   render() {
     if(!this.props.companyList.items.companylist) {
@@ -148,14 +144,16 @@ class CompanySearch extends Component {
                     </div>
                     <div className="d-md-none kk-filter-head__item-count mt-0 mb-3">Showing 158 results</div>
                   </div>
-                  <div className="d-none d-md-flex justify-content-end w-100 mb-3">
-                    <Chip title="Delhi"/>
+                  <div className="d-none d-md-flex w-100 justify-content-center mb-3">
+                    <div className="mr-auto ml-3"><Chip title="Delhi" close={<IoIosClose className="icon"/>}/></div>
+                    <div className="d-flex align-items-center">
                     <div className="mr-2">Sort</div>
                     <Dropdown
                         options={['Latest', 'Popularity', 'Recommended']}
                         onSelect={console.log(this)}
                         defualtOption="Recommended"
                     />
+                    </div>
                   </div>
                     
                   {

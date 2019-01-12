@@ -422,6 +422,11 @@ class Home extends Component {
                 />
               </div>
             </div>
+            <div className="row-fluid mt-2 text-center">
+              <Link to="/articles" className="kk-home__carousel__view-all d-md-none">
+                  <Button styleName="curved" primary={false} hasBorder label="View All (20+)"/>
+              </Link>
+            </div>
           </div>
         </section>
       </ParallaxProvider>

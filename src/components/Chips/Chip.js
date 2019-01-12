@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { PropTypes } from "prop-types";
 import { colors } from "../../themes";
 import styled from "styled-components";
+import $ from "jquery";
 
 const Btn = styled.button`
   background-color:${props => (props.isActive? "#703db2": "#efefef")};
@@ -50,6 +51,9 @@ class Chip extends Component {
     }
   };
 
+close = (e) => {
+  $(e.target).closest('.kk-chips').remove()
+}
   render() {
     return (
       <Btn isActive={this.props.isActive} className={"btn kk-chips " + this.state.class} onClick={this._handleClick}>
@@ -57,6 +61,7 @@ class Chip extends Component {
           <img src={this.props.logo} alt={this.props.alt} />
         </span>
         {this.props.title}
+        <span className="ml-2 kk-chip-close" onClick={this.close}>{this.props.close}</span>
       </Btn>
     );
   }
@@ -69,7 +74,8 @@ Chip.propTypes = {
   title: PropTypes.string,
   alt: PropTypes.string,
   isActive: PropTypes.bool,
-  class: PropTypes.string
+  class: PropTypes.string,
+  close: PropTypes.string
 };
 
 export default Chip;
