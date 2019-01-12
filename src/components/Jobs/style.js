@@ -27,10 +27,10 @@ const JobCardWrapper = styled.div`
         }
         .kk-card__details__wrapper{
             .kk-card-details__wrapper{
-                padding: 0 10px 8px 10px;
+                padding: 0.5rem 10px 0 10px;
                 position: relative;
                 @media (min-width: 768px){
-                    padding: 0 18px 8px 18px;
+                    padding: 0 18px 0 18px;
                 }
                 &::after{
                     content: "";
@@ -59,6 +59,18 @@ const JobCardWrapper = styled.div`
             font-weight: 600;
             @media (min-width: 768px){
                 min-width: 100px;
+            }
+            &__vm{
+                &-indicator{
+                    position: relative;
+                    transition: all 0.2s ease-out;
+                    right: 0;
+                }
+                &:hover{
+                    .kk-view-more__vm-indicator{
+                        right: -0.2rem;
+                    }
+                }
             }
         }
     }

@@ -97,13 +97,13 @@ class EditProfile extends Component{
                                             </div>
                                         </div>
                                         <div>
-                                            <label for="name" className="kk-input kk-input--required">
+                                            <label for="name" className="kk-input kk-input--required kk-sm-only-align-center kk-sm-only-edit-profile__input__center">
                                                 <div className="kk-input__label">
                                                     <span>Name</span>
                                                 </div>
                                                 <input id="name" type="text" placeholder="Enter your name" required/>
                                             </label>
-                                            <div className="kk-input kk-input--required">
+                                            <div className="kk-input kk-input--required kk-sm-only-align-center kk-sm-only-edit-profile__input__center">
                                                 <div className="kk-input__label">
                                                     <span>Date of birth</span>
                                                 </div>
@@ -131,7 +131,7 @@ class EditProfile extends Component{
                                                     </div>
                                                 </div>
                                             </div>
-                                            <label for="location" className="kk-input kk-input--required">
+                                            <label for="location" className="kk-input kk-input--required kk-sm-only-align-center kk-sm-only-edit-profile__input__center">
                                                 <div className="kk-input__label">
                                                     <span>Location</span>
                                                 </div>

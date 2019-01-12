@@ -14,7 +14,7 @@ class Carousel extends Component {
                 navContainer: false,
                 dots: false,
                 startPosition: 0,
-                margin: 10,
+                margin: 20,
                 nav: false,
                 stagePadding: 16,
                 responsive: {

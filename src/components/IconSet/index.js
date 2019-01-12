@@ -127,12 +127,6 @@ const IcMail32 = (className) => (
     </Icon32>
 )
 
-const IcMail32 = (className) => (
-    <Icon32 className={className}>
-        <img src={Mail32} alt="kk-icon" />
-    </Icon32>
-)
-
 
 
 export {

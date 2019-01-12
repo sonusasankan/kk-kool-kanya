@@ -55,8 +55,8 @@ const jobCard = ({
             </div>
             <div className={"d-flex kk-view-more "+(favButton ? "flex-column justify-content-between" : "align-items-center")}>
                 {favButton ? <div className="d-flex justify-content-end"><CardFavButton active isFav={isFav} /></div> : ""}
-                <div>
-                    <span className="d-none d-sm-none d-md-inline-block">View details </span><IoIosArrowForward />
+                <div className="kk-view-more__vm">
+                    <span className="d-none d-sm-none d-md-inline-block">View Job Details </span><span className="kk-view-more__vm-indicator"><IoIosArrowForward /></span>
                 </div>
             </div>
         </Card>

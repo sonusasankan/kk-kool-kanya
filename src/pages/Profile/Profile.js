@@ -68,13 +68,13 @@ class Profile extends Component{
                                         />
                                         <div className="kk-avatar__text">
                                             <h2>Deepti Agrawal</h2>
-                                            <div className="d-flex">
+                                            <div className="d-flex kk-sm-only-align-center">
                                                 <IcLocation24 />
                                                 <div className="p-1" />
                                                 <CardDetails>Banglore, Karnataka</CardDetails>
                                             </div>
 
-                                            <div className="d-flex">
+                                            <div className="d-flex kk-sm-only-align-center">
                                                 <IcDob24 />
                                                 <div className="p-1" />
                                                 <CardDetails>20th February, 1995</CardDetails>

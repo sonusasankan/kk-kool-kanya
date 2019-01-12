@@ -6,7 +6,7 @@ import companyImage from "../../assets/images/img-company-descrition-1.jpg";
 import {BadgeList} from '../../components/Cards/Badge';
 const savedCompanies = () =>(
 
-    <ContentWrapper>
+    <ContentWrapper className="pl-0">
         <div className="row">
             <div className="col-12 col-md-6 col-lg-4">
                 <CompanyCard

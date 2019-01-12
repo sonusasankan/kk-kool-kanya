@@ -6,7 +6,7 @@ import {ContentWrapper} from './style';
 import Logo from "../../assets/images/godrej.png";
 
 const savedJobs = () =>(
-    <ContentWrapper>
+    <ContentWrapper className="pl-0">
         <div className="row">
             <div className="col-12">
                 <JobCard

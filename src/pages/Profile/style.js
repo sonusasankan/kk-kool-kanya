@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Colors from '../../themes/color';
 
 const ContentWrapper = styled.div`
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 0.5rem;
     background-color: #FFF;
     box-shadow: 0 2px 8px 0 rgba(52, 52, 53, 0.19);
     @media (min-width: 768px){
@@ -317,6 +317,27 @@ const ContentWrapper = styled.div`
     }
     .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
         background-color: ${Colors.brandColor};
+    }
+
+    //align items in center only for mobile screens
+    .kk-sm-only-align-center{
+       @media (max-width: 768px){
+        justify-content: center;
+        margin: auto;
+       }
+    }
+
+    //for edit-profile text only
+    .kk-sm-only-edit-profile__input__center{
+        @media (max-width:768px){
+            display: block;
+            width:228px;
+            margin-left: auto;
+            margin-right: auto;
+            .kk-input-button{
+                right: 24px;
+            }
+        }
     }
 `;
 

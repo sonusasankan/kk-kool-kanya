@@ -6,7 +6,7 @@ import {ContentWrapper} from './style';
 const savedArticles = () =>(
 
     <React.Fragment>
-        <ContentWrapper>
+        <ContentWrapper className="pl-0">
             <div className="row">
                 <div className="col-12 col-md-6 col-lg-4">
                     <ArticleCard
