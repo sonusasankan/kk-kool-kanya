@@ -37,7 +37,7 @@ class Saved extends Component{
                                         <h3 className="active">Favourites</h3>
                                         <Recommendation list={this.state.list} active={this.state.active} switchTab={this.switchTab.bind(this)}/>
                                     </li>
-                                    <li className="d-none d-md-block"><Link to="#"><h3>Become a Kool Kanya</h3></Link></li>
+                                    <li className="d-none d-md-block"><Link to={window.location.pathname}><h3>Become a Kool Kanya</h3></Link></li>
                                     <li className="d-none d-md-block"><Link to="settings"><h3>Settings</h3></Link></li>
                                 </ul>
                             </Sidebar>

@@ -49,6 +49,10 @@ const AuthorDetailsHeader = styled.section`
                 }
                 &__wrapper{
                     display: flex;
+                    flex-direction: column;
+                    @media (min-width: 992px){
+                        flex-direction: row;
+                    }
                 }
             }
             &__social{
