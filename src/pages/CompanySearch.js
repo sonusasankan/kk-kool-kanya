@@ -9,7 +9,7 @@ import BreadCrumb from "../components/BreadCrumb";
 import { Button } from "../components/Button";
 import { CompanyCard } from "../components/CompanyCard";
 import SearchContainer from "../components/Search/SearchContainer"
-import {Pagination} from "../components/Pagination"
+import { Chip } from "./../components/Chips";
 
 //external components//
 import { FiChevronDown } from "react-icons/fi";
@@ -148,6 +148,15 @@ class CompanySearch extends Component {
                     </div>
                     <div className="d-md-none kk-filter-head__item-count mt-0 mb-3">Showing 158 results</div>
                   </div>
+                  <div className="d-none d-md-flex justify-content-end w-100 mb-3">
+                    <Chip title="Delhi"/>
+                    <div className="mr-2">Sort</div>
+                    <Dropdown
+                        options={['Latest', 'Popularity', 'Recommended']}
+                        onSelect={console.log(this)}
+                        defualtOption="Recommended"
+                    />
+                  </div>
                     
                   {
                     this.displayCompanies()
@@ -168,7 +177,6 @@ class CompanySearch extends Component {
                   // })
                   }
                 </div>
-                <Pagination nextPage={()=>{this.displayCompanies()}}/>
               </div>
             </div>
           </div>
