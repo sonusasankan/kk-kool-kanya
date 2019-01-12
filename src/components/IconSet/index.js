@@ -53,9 +53,9 @@ const IcFacebook24 = (className) => (
 )
 
 const IcFacebookOutline32 = (className) => (
-    <Icon24 className={className}>
+    <Icon32 className={className}>
         <img src={FacebookOutline32} alt="kk-icon" />
-    </Icon24>
+    </Icon32>
 )
 
 const IcLinkedin24 = (className) => (
@@ -65,9 +65,9 @@ const IcLinkedin24 = (className) => (
 )
 
 const IcLinkedin32 = (className)=>(
-    <Icon24 className={className} alt="kk-icon">
+    <Icon32 className={className} alt="kk-icon">
         <img src={Linkedin32} alt="kk-icon" />
-    </Icon24>
+    </Icon32>
 )
 
 const IcTwitter24 = (className) => (
@@ -77,9 +77,9 @@ const IcTwitter24 = (className) => (
 )
 
 const IcTwitter32 = (className) => (
-    <Icon24 className={className}>
+    <Icon32 className={className}>
         <img src={Twitter32} alt="kk-icon" />
-    </Icon24>
+    </Icon32>
 )
 
 const IcInstagram24 = (className) => (
@@ -114,9 +114,9 @@ const IcJobType24 = (className) => (
 )
 
 const IcMail32 = (className) => (
-    <Icon24 className={className}>
+    <Icon32 className={className}>
         <img src={Mail32} alt="kk-icon" />
-    </Icon24>
+    </Icon32>
 )
 
 

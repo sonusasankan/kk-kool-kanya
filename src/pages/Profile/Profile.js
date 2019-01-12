@@ -51,7 +51,7 @@ class Profile extends Component{
                                     <ul>
                                         <li><h3>My Profile</h3></li>
                                         <li><Link to='/favourites'><h3>Favourites</h3></Link></li>
-                                        <li><Link to='/'><h3>Become a Kool Kanya</h3></Link></li>
+                                        <li><Link to={window.location.pathname}><h3>Become a Kool Kanya</h3></Link></li>
                                         <li><Link to='/settings'><h3>Settings</h3></Link></li>
                                     </ul>
                                 </Sidebar>
