@@ -31,12 +31,12 @@ class Header extends Component {
       }))
     }
     else{
-      e.target.closest('ul').querySelectorAll('.active').forEach((el)=>{
-        if(el.classList.contains('active') && ( window.location.pathname === e.target.getAttribute('href'))){
-          el.classList.remove('active')
-        }
-      });
-      e.target.classList.add('active');
+      // e.target.closest('ul').querySelectorAll('.active').forEach((el)=>{
+      //   if(el.classList.contains('active') && ( window.location.pathname === e.target.getAttribute('href'))){
+      //     el.classList.remove('active')
+      //   }
+      // });
+      // e.target.classList.add('active');
     }
   }
 
@@ -139,7 +139,7 @@ class Header extends Component {
                   </div>
                 </div>
                 <ul>
-                  <li><NavLink exact activeClassName="active" onClick={this.toggle} to="/">Home</NavLink></li>
+                  <li><NavLink exact  activeClassName="active" onClick={this.toggle} to="/">Home</NavLink></li>
                   <li><NavLink exact activeClassName="active" onClick={this.toggle} to="/companies">Companies</NavLink></li>
                   <li><NavLink exact activeClassName="active" onClick={this.toggle} to="/jobs">Job</NavLink></li>
                   <li><NavLink exact activeClassName="active" onClick={this.toggle} to="/articles">Article</NavLink></li>
